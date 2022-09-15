@@ -1,9 +1,15 @@
 import time
 import tkinter as tk
+from simplemagic import sm
 
 def main():
 
-    matches = ["Angela", "Pamela", "Samantha", "Amanda", "Tamara", "Dale", "Hank", "Bill", "Bobby", "Boomhauer"]
+    matches = []
+    maj = sm()
+
+    ppl = maj.find("Columbus")
+
+    print(ppl)
 
     window = tk.Tk()
 
@@ -24,8 +30,8 @@ def main():
 
     def e_click():
 
-        for i in range(0,10):
-            output.insert(0,"  #" + str(i+1) + " match: " + matches[i])
+        for i in range(0,len(ppl)):
+            output.insert(0,"  #" + str(i+1) + " match: " + ppl[i]["name"])
         
         print("enter")
         return
