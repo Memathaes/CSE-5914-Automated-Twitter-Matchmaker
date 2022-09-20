@@ -1,5 +1,4 @@
 import json
-from abc import ABC
 
 class sm:
     def find(self, usr):
