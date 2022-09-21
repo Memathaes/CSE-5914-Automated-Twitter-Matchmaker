@@ -1,8 +1,12 @@
-import time
+import time, tweepy, config
 import tkinter as tk
 from simplemagic import sm
+import DataGetter
 
 def main():
+
+    client = tweepy.Client(bearer_token=config.bearer_token)
+    #tweets = DataGetter.TwitterDataGetter.get_Data("katyperry",10,client)
 
     matches = []
     maj = sm()
@@ -14,7 +18,7 @@ def main():
     window = tk.Tk()
 
     window.rowconfigure(0, minsize=50)
-    window.columnconfigure([0, 1, 2,3], minsize=50)
+    window.columnconfigure([0, 1, 2, 3], minsize=50)
 
     greeting = tk.Label(text="Mockup UI")
 
@@ -28,12 +32,16 @@ def main():
     label2 = tk.Label(text="Matches:")
     output = tk.Entry()
 
-    def e_click():
+    tweetList = tk.Listbox(width=150)
 
-        for i in range(0,len(ppl)):
-            output.insert(0,"  #" + str(i+1) + " match: " + ppl[i]["name"])
-        
-        print("enter")
+    def e_click():
+        user = e.get()
+        matches = DataGetter.TwitterDataGetter.get_matches(user,5,client)
+        #tweets = DataGetter.TwitterDataGetter.get_Data(user,10,    client)
+        for match in matches:
+            tweetList.insert(tk.END,match)
+            for tweet in matches[match]:
+                tweetList.insert(tk.END,tweet)
         return
 
     enter = tk.Button(
@@ -45,13 +53,14 @@ def main():
         fg="black",
     )
 
-    label1.grid(row = 2, column = 0)
-    e.grid(row=2,column=1)
+    label1.grid(row = 2, column = 0,padx=5,pady=5)
+    e.grid(row=2,column=1,padx=5,pady=5)
 
-    label2.grid(row = 2, column = 2)
-    output.grid(row=2,column=3)
+    label2.grid(row = 3, column = 0,padx=5,pady=5)
+    output.grid(row=3,column=1,padx=5,pady=5)
 
-    enter.grid(row=3, column=1)
+    enter.grid(row=2, column=3,padx=5,pady=5)
+    tweetList.grid(row = 4, column = 1,padx=5,pady=5)
 
     window.mainloop()
 
