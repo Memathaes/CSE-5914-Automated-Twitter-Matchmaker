@@ -36,13 +36,12 @@ def main():
 
     def e_click():
         user = e.get()
-        matches = DataGetter.TwitterDataGetter.get_matches(user,5,client)
-        #tweets = DataGetter.TwitterDataGetter.get_Data(user,10,    client)
+        matches = DataGetter.TwitterDataGetter.get_data(user,10,client)
         for match in matches:
             tweetList.insert(tk.END,match)
             for tweet in matches[match]:
                 tweetList.insert(tk.END,tweet)
-        return
+        return 
 
     enter = tk.Button(
         text="Enter",

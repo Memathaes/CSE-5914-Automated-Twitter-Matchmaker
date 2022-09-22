@@ -4,16 +4,16 @@ import tweepy, csv
 
 class DataGetter(ABC):
     @abstractmethod
-    def get_Data(usrname):
+    def get_data(usrname):
         pass
     
     @abstractmethod
-    def get_Matches(usrname):
+    def get_users_tweets(usrname):
         pass
 
 
 class TwitterDataGetter(DataGetter):
-    def get_Data(usrname, numberoftweets, client):
+    def get_users_tweets(usrname, numberoftweets, client):
         if numberoftweets > 20:
             numberoftweets = 20
         elif numberoftweets < 10:
@@ -26,7 +26,7 @@ class TwitterDataGetter(DataGetter):
                 tweets.append(tweet.text)
         return tweets
     
-    def get_matches(usrname,numberoftweets,client):
+    def get_data(usrname,numberofmatches,client):
         handles = []
         with open('Top-1000-Celebrity-Twitter-Accounts.csv',encoding="utf_8") as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
@@ -38,5 +38,5 @@ class TwitterDataGetter(DataGetter):
 
         results = {}
         for date in dates:
-            results[date] = TwitterDataGetter.get_Data(date,numberoftweets,client)
+            results[date] = TwitterDataGetter.get_users_tweets(date,10,client)
         return results
