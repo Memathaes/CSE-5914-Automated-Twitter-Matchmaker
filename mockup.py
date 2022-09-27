@@ -12,8 +12,8 @@ class Profile:
         self.score = score
 
 class style:
-   YELLOW = '\033[43m'
-   END = '\033[0m'
+    YELLOW = '\033[43m'
+    END = '\033[0m'
 
 usr = input("Enter Social Media Profile Username: ")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")

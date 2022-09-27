@@ -1,5 +1,5 @@
 [pylint]
-ignore=
+disable=
     C0301,
     W0611,
     C0412,
@@ -7,4 +7,5 @@ ignore=
     R0903,
     C0103,
     C0410,
-    R0903
+    R0903,
+    R0913
