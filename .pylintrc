@@ -1,0 +1,8 @@
+[pylint]
+ignore=
+    C0301
+disable=
+    import-error,
+    missing-module-docstring,
+    missing-function-docstring,
+    format
