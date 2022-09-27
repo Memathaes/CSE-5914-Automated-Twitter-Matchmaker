@@ -16,8 +16,9 @@ def main():
 
     client = tweepy.Client(bearer_token=config.bearer_token)
 
+    user = "70"
     Profiles = []
-    matches = DataGetter.TwitterDataGetter.get_data("",10,client)
+    matches = DataGetter.TwitterDataGetter.get_data(10,client)
     for potential in matches:
         avglen = 0
         numtweet = 0
@@ -37,7 +38,7 @@ def main():
     #greeting.pack()
     greeting.grid(row=0,column=1)
 
-    label1 = tk.Label(text="Enter Your Average Tweet Length:")
+    label1 = tk.Label(text="Enter Your Username:")
     e = tk.Entry()
 
 
@@ -48,7 +49,8 @@ def main():
 
     def e_click():
         tweetList.delete(0,tk.END)
-        user = e.get()
+        usr = e.get()
+        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,10,client)
         lengthsim = {}
         for pot in Profiles:
             lengthsim.update({pot.username: pot.avglen - float(user)})

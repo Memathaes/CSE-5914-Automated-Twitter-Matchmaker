@@ -26,7 +26,7 @@ class TwitterDataGetter(DataGetter):
                 tweets.append(tweet.text)
         return tweets
     
-    def get_data(usrname,numberofmatches,client):
+    def get_data(numberofmatches,client):
         handles = []
         with open('Top-1000-Celebrity-Twitter-Accounts.csv',encoding="utf_8") as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
