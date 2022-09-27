@@ -2,18 +2,30 @@ import time, tweepy, config
 import tkinter as tk
 from simplemagic import sm
 import DataGetter
+import meaningcloud
+
+class Profile:
+    def __init__(self, username, tweets, avglen, topics, positivity):
+        self.username = username
+        self.tweets = tweets
+        self.avglen = avglen
+        self.topics = topics
+        self.positivity = positivity
 
 def main():
 
     client = tweepy.Client(bearer_token=config.bearer_token)
-    #tweets = DataGetter.TwitterDataGetter.get_Data("katyperry",10,client)
 
-    matches = []
-    maj = sm()
-
-    ppl = maj.find("Columbus")
-
-    print(ppl)
+    Profiles = []
+    matches = DataGetter.TwitterDataGetter.get_data("",10,client)
+    for potential in matches:
+        avglen = 0
+        numtweet = 0
+        for tweet in matches[potential]:
+            avglen = avglen + len(tweet)
+            numtweet = numtweet + 1
+        avglen = avglen / numtweet
+        Profiles.append(Profile(potential, matches[potential],avglen,0,0))
 
     window = tk.Tk()
 
@@ -25,22 +37,28 @@ def main():
     #greeting.pack()
     greeting.grid(row=0,column=1)
 
-    label1 = tk.Label(text="Enter Social Media Profile:")
+    label1 = tk.Label(text="Enter Your Average Tweet Length:")
     e = tk.Entry()
 
 
     label2 = tk.Label(text="Matches:")
     output = tk.Entry()
 
-    tweetList = tk.Listbox(width=150)
+    tweetList = tk.Listbox(width=150, height=30)
 
     def e_click():
+        tweetList.delete(0,tk.END)
         user = e.get()
-        matches = DataGetter.TwitterDataGetter.get_data(user,10,client)
-        for match in matches:
-            tweetList.insert(tk.END,match)
-            for tweet in matches[match]:
-                tweetList.insert(tk.END,tweet)
+        lengthsim = {}
+        for pot in Profiles:
+            lengthsim.update({pot.username: pot.avglen - float(user)})
+        matchesmade = dict(sorted(lengthsim.items(), key=lambda item: abs(item[1])))
+        for match in matchesmade:
+            tweetList.insert(tk.END,"Twitter handle: " + str(match))
+            tweetList.insert(tk.END,"Average Tweet Length: " + str(round(matchesmade[match] + float(user),1)))
+            tweetList.insert(tk.END,"Closeness to your length: " + str(round(matchesmade[match],1)))
+            tweetList.insert(tk.END,"")
+
         return 
 
     enter = tk.Button(
@@ -62,15 +80,5 @@ def main():
     tweetList.grid(row = 4, column = 1,padx=5,pady=5)
 
     window.mainloop()
-
-    # usr = input("Enter Social Media Profile:")
-
-    # print("Welcome " + usr + "! Finding you matches")
-    # matches = ["Angela", "Pamela", "Samantha", "Amanda", "Tamara", "Dale", "Hank", "Bill", "Bobby", "Boomhauer"]
-    # time.sleep(5)
-    # print("Matches found!")
-    # for i in range(0,10):
-    #     print("#" + str(i+1) + " match: " + matches[i])
-    # time.sleep(15)
 
 if __name__ == "__main__": main()
