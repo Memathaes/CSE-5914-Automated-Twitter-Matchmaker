@@ -16,7 +16,6 @@ def main():
 
     client = tweepy.Client(bearer_token=config.bearer_token)
 
-    user = "70"
     Profiles = []
     matches = DataGetter.TwitterDataGetter.get_data(10,client)
     for potential in matches:
@@ -49,15 +48,24 @@ def main():
 
     def e_click():
         tweetList.delete(0,tk.END)
-        usr = e.get()
-        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,10,client)
+        user = e.get()
+        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(user,10,client)
+        avglen = 0
+        numtweet = 0
+        for tweet in yourTweets:
+            avglen = avglen + len(tweet)
+            numtweet = numtweet + 1
+        avglen = avglen / numtweet
+        you = Profile(user, yourTweets,avglen,0,0)
+        print(you.avglen)
+
         lengthsim = {}
         for pot in Profiles:
-            lengthsim.update({pot.username: pot.avglen - float(user)})
+            lengthsim.update({pot.username: pot.avglen - you.avglen})
         matchesmade = dict(sorted(lengthsim.items(), key=lambda item: abs(item[1])))
         for match in matchesmade:
             tweetList.insert(tk.END,"Twitter handle: " + str(match))
-            tweetList.insert(tk.END,"Average Tweet Length: " + str(round(matchesmade[match] + float(user),1)))
+            tweetList.insert(tk.END,"Average Tweet Length: " + str(round(matchesmade[match] + you.avglen,1)))
             tweetList.insert(tk.END,"Closeness to your length: " + str(round(matchesmade[match],1)))
             tweetList.insert(tk.END,"")
 
