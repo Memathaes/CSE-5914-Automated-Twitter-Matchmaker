@@ -24,7 +24,8 @@ def main():
         for tweet in matches[potential]:
             avglen = avglen + len(tweet)
             numtweet = numtweet + 1
-        avglen = avglen / numtweet
+        if numtweet != 0:
+            avglen = avglen / numtweet
         Profiles.append(Profile(potential, matches[potential],avglen,0,0))
 
     window = tk.Tk()
@@ -41,34 +42,40 @@ def main():
     e = tk.Entry()
 
 
-    label2 = tk.Label(text="Matches:")
+    label2 = tk.Label(text="Enter how many matches you want:")
     output = tk.Entry()
 
     tweetList = tk.Listbox(width=150, height=30)
 
     def e_click():
         tweetList.delete(0,tk.END)
-        user = e.get()
-        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(user,10,client)
+        usr = e.get()
+        numberofmatches = int(output.get())
+        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,10,client)
+
         avglen = 0
         numtweet = 0
         for tweet in yourTweets:
             avglen = avglen + len(tweet)
             numtweet = numtweet + 1
         avglen = avglen / numtweet
-        you = Profile(user, yourTweets,avglen,0,0)
-        print(you.avglen)
+        yourProfile = Profile(usr,yourTweets,avglen,0,0)
+
+
 
         lengthsim = {}
         for pot in Profiles:
-            lengthsim.update({pot.username: pot.avglen - you.avglen})
+            lengthsim.update({pot.username: pot.avglen - yourProfile.avglen})
         matchesmade = dict(sorted(lengthsim.items(), key=lambda item: abs(item[1])))
+        count = 0
         for match in matchesmade:
             tweetList.insert(tk.END,"Twitter handle: " + str(match))
-            tweetList.insert(tk.END,"Average Tweet Length: " + str(round(matchesmade[match] + you.avglen,1)))
+            tweetList.insert(tk.END,"Average Tweet Length: " + str(round(matchesmade[match] + yourProfile.avglen,1)))
             tweetList.insert(tk.END,"Closeness to your length: " + str(round(matchesmade[match],1)))
             tweetList.insert(tk.END,"")
-
+            count +=1
+            if count == numberofmatches:
+                break
         return 
 
     enter = tk.Button(

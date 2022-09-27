@@ -32,7 +32,7 @@ class TwitterDataGetter(DataGetter):
             csv_reader = csv.reader(csv_file, delimiter=',')
             for row in csv_reader:
                 handles.append(row[0])
-        dates = [21-1,767-1,47-1,294-1,16-1]
+        dates = [21-1,767-1,47-1,294-1,16-1,5-1,27-1,34-1,35-1,44-1,51-1,64-1,67-1,83-1,102-1]
         for i in range(len(dates)):
             dates[i] = handles[dates[i]]
 
