@@ -33,7 +33,7 @@ def main():
     window.rowconfigure(0, minsize=50)
     window.columnconfigure([0, 1, 2, 3], minsize=50)
 
-    greeting = tk.Label(text="Mockup UI")
+    greeting = tk.Label(text="MVP UI")
 
     #greeting.pack()
     greeting.grid(row=0,column=1)
@@ -68,6 +68,8 @@ def main():
             lengthsim.update({pot.username: pot.avglen - yourProfile.avglen})
         matchesmade = dict(sorted(lengthsim.items(), key=lambda item: abs(item[1])))
         count = 0
+        tweetList.insert(tk.END,"Your Average Tweet Length: " + str(round(yourProfile.avglen,1)))
+        tweetList.insert(tk.END,"")
         for match in matchesmade:
             tweetList.insert(tk.END,"Twitter handle: " + str(match))
             tweetList.insert(tk.END,"Average Tweet Length: " + str(round(matchesmade[match] + yourProfile.avglen,1)))
