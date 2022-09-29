@@ -17,17 +17,52 @@ def main():
     client = tweepy.Client(bearer_token=config.bearer_token)
 
     Profiles = []
-    matches = DataGetter.TwitterDataGetter.get_data(10,client)
+    matches = DataGetter.TwitterDataGetter.get_data(client)
     for potential in matches:
         avglen = 0
         numtweet = 0
+        sentimentScore = 0.0
+        sentimentedTweets = 0
+        topics = {}
         for tweet in matches[potential]:
             avglen = avglen + len(tweet)
             numtweet = numtweet + 1
+
+            sent = meaningcloud.SentimentResponse(meaningcloud.SentimentRequest(config.mc_token, txt = tweet, lang='en').sendReq())
+            time.sleep(1)
+            score = sent.getGlobalScoreTag()
+
+            top = meaningcloud.ClassResponse(meaningcloud.ClassRequest(config.mc_token, txt = tweet, model='SocialMedia_en').sendReq())
+            time.sleep(1)
+            topic = top.getCategories()
+
+            sentimentIncrement = 0
+            if (score != "NONE"):
+                sentimentedTweets += 1
+                if (score == "P+"):
+                    sentimentIncrement = 2
+                elif (score == "P"):
+                    sentimentIncrement = 1
+                elif (score == "N"):
+                    sentimentIncrement = -1
+                elif (score == "N+"):
+                    sentimentIncrement = -2
+                sentimentScore += sentimentIncrement
+            
+            for elem in topic:
+                if elem['label'] in topics:
+                    topics[elem['label']][0] += 1
+                    topics[elem['label']][1] += sentimentIncrement
+                else:
+                    topics[elem['label']] = [1, sentimentIncrement]
         if numtweet != 0:
             avglen = avglen / numtweet
-        Profiles.append(Profile(potential, matches[potential],avglen,0,0))
-
+        if sentimentedTweets != 0:
+            sentimentScore = sentimentScore / sentimentedTweets
+        for elem in topics:
+            topics[elem][1] = topics[elem][1] / topics[elem][0]
+        Profiles.append(Profile(potential, matches[potential],avglen,topics,sentimentScore))
+    
     window = tk.Tk()
 
     window.rowconfigure(0, minsize=50)
