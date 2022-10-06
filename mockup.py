@@ -46,7 +46,7 @@ def main():
         tweetList.delete(0,tk.END)
         usr = e.get()
         numberofmatches = int(output.get())
-        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,10,client)
+        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,10,client,"2022-04-06T16:44:53Z")
 
         avglen = 0
         numtweet = 0

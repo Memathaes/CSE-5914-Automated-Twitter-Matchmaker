@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from encodings import utf_8
-from numpy import number
 import tweepy, csv, json, datetime
 
 class DataGetter(ABC):
@@ -14,13 +13,13 @@ class DataGetter(ABC):
 
 
 class TwitterDataGetter(DataGetter):
-    def get_users_tweets(usrname, numberoftweets, client):#, previousRetrieval):
+    def get_users_tweets(usrname, numberoftweets, client, previousRetrieval):
         if numberoftweets > 20:
             numberoftweets = 20
         elif numberoftweets < 10:
             numberoftweets = 10
         Id = client.get_user(username = usrname).data.id
-        results = client.get_users_tweets(id=Id, exclude = "retweets,replies",end_time = "2022-10-06T15:37:44Z") 
+        results = client.get_users_tweets(id=Id,max_results = 100, exclude = "retweets,replies",start_time = previousRetrieval) 
         
         tweets = []
         print(results)
@@ -41,17 +40,15 @@ class TwitterDataGetter(DataGetter):
 
         fileName = "userData.json"
         file = open(fileName)
-        data = {}#json.load(file)
+        data = json.load(file)
         file.close()
         for date in dates:
-            results = TwitterDataGetter.get_users_tweets(date,10,client)#data[date].pop())
-            #for tweet in results:
-            #    data[date].append(tweet)
-            data[date] = results
+            results = TwitterDataGetter.get_users_tweets(date,10,client,data[date].pop())
+            for tweet in results:
+                data[date].append(tweet)
             data[date].append(str(datetime.datetime.now().isoformat())[:-7]+"Z")
 
         with open(fileName, "w") as outfile:
-            json.dump(data,outfile)
-        
+            json.dump(data,outfile,indent=2)
 
-        return results
+        return data
