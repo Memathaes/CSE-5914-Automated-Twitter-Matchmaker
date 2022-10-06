@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from encodings import utf_8
-from numpy import number
 import tweepy, csv, json, datetime
 
 class DataGetter(ABC):
@@ -20,7 +19,7 @@ class TwitterDataGetter(DataGetter):
         elif numberoftweets < 10:
             numberoftweets = 10
         Id = client.get_user(username = usrname).data.id
-        results = client.get_users_tweets(id=Id, exclude = "retweets,replies",end_time = previousRetrieval) 
+        results = client.get_users_tweets(id=Id,max_results = 100, exclude = "retweets,replies",start_time = previousRetrieval) 
         
         tweets = []
         print(results)
@@ -45,12 +44,11 @@ class TwitterDataGetter(DataGetter):
         file.close()
         for date in dates:
             results = TwitterDataGetter.get_users_tweets(date,10,client,data[date].pop())
-            #for tweet in results:
-            #    data[date].append(tweet)
-            data[date] = results
+            for tweet in results:
+                data[date].append(tweet)
             data[date].append(str(datetime.datetime.now().isoformat())[:-7]+"Z")
 
         with open(fileName, "w") as outfile:
-            json.dump(data,outfile)
+            json.dump(data,outfile,indent=2)
 
         return data
