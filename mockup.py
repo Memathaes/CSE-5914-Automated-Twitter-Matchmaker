@@ -4,14 +4,8 @@ import tkinter as tk
 from simplemagic import sm
 import DataGetter
 import meaningcloud
+import profile
 
-class Profile:
-    def __init__(self, username, tweets, avglen, topics, positivity):
-        self.username = username
-        self.tweets = tweets
-        self.avglen = avglen
-        self.topics = topics
-        self.positivity = positivity
 
 def main():
 
@@ -27,7 +21,7 @@ def main():
             numtweet = numtweet + 1
         if numtweet != 0:
             avglen = avglen / numtweet
-        Profiles.append(Profile(potential, matches[potential],avglen,0,0))
+        Profiles.append(profile.Profile(potential, matches[potential],avglen,0,0))
 
     window = tk.Tk()
 
@@ -60,7 +54,7 @@ def main():
             avglen = avglen + len(tweet)
             numtweet = numtweet + 1
         avglen = avglen / numtweet
-        yourProfile = Profile(usr,yourTweets,avglen,0,0)
+        yourProfile = profile.Profile(usr,yourTweets,avglen,0,0)
 
 
 
