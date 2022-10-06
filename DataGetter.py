@@ -46,6 +46,8 @@ class TwitterDataGetter(DataGetter):
             results = TwitterDataGetter.get_users_tweets(date,10,client,data[date].pop())
             for tweet in results:
                 data[date].append(tweet)
+                
+            data[date] = list(dict.fromkeys(data[date])) 
             data[date].append(str(datetime.datetime.now().isoformat())[:-7]+"Z")
 
         with open(fileName, "w") as outfile:
