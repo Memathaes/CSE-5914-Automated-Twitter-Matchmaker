@@ -25,4 +25,8 @@ jobs:
         pylint $(git ls-files '*.py') --rcfile .pylintrc
     - name: Test with pytest
       run: |
-        pytest
+        pip install pytest
+        pip install pytest-cov
+        pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+
+
