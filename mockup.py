@@ -5,23 +5,28 @@ from simplemagic import sm
 import DataGetter
 import meaningcloud
 import profile
+import json
 
 
 def main():
 
     client = tweepy.Client(bearer_token=config.bearer_token)
 
-    Profiles = []
-    matches = DataGetter.TwitterDataGetter.get_data(10,client)
-    for potential in matches:
-        avglen = 0
-        numtweet = 0
-        for tweet in matches[potential]:
-            avglen = avglen + len(tweet)
-            numtweet = numtweet + 1
-        if numtweet != 0:
-            avglen = avglen / numtweet
-        Profiles.append(profile.Profile(potential, matches[potential],avglen,0,0))
+    getdata = input("yes for getting data: ")
+    if (getdata == "yes"):
+        getdatareturn = DataGetter.TwitterDataGetter.get_data(10,client)
+    fileName = "testDataBoogaloo.json"
+    file = open(fileName)
+    Profiles = json.load(file)
+    file.close()
+    #
+    #get 10 tweets
+    #if in profiles
+    #   add tweets to profile's tweets
+    #else
+    #   create profile with tweets
+    #
+    #
 
     window = tk.Tk()
 
@@ -46,21 +51,13 @@ def main():
         tweetList.delete(0,tk.END)
         usr = e.get()
         numberofmatches = int(output.get())
-        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,10,client,"2022-04-06T16:44:53Z")
+        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,10,client)
 
-        avglen = 0
-        numtweet = 0
-        for tweet in yourTweets:
-            avglen = avglen + len(tweet)
-            numtweet = numtweet + 1
-        avglen = avglen / numtweet
-        yourProfile = profile.Profile(usr,yourTweets,avglen,0,0)
-
-
+        yourProfile = DataGetter.TwitterDataGetter.generateProfile(usr,yourTweets)
 
         lengthsim = {}
         for pot in Profiles:
-            lengthsim.update({pot.username: pot.avglen - yourProfile.avglen})
+            lengthsim.update({Profiles[pot]['username']: Profiles[pot]['avglen'] - yourProfile.avglen})
         matchesmade = dict(sorted(lengthsim.items(), key=lambda item: abs(item[1])))
         count = 0
         tweetList.insert(tk.END,"Your Average Tweet Length: " + str(round(yourProfile.avglen,1)))

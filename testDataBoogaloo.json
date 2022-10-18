@@ -1,0 +1,82 @@
+{
+  "KimKardashian": {
+    "avglen": 49.8,
+    "positivity": 1.0,
+    "topics": {
+      "economy and finances": [
+        1,
+        1.0
+      ]
+    },
+    "tweets": [
+      {
+        "sentiment": "P",
+        "tID": 1582448576025612288,
+        "tText": "Friends Foreva https://t.co/MI4F9UzLpm",
+        "topic": []
+      },
+      {
+        "sentiment": "NONE",
+        "tID": 1582052778062491649,
+        "tText": "Recording The System \ud83c\udf99\ufe0fNew episode is out now. https://t.co/1TYi1yQFnp https://t.co/6UimL7lvO4",
+        "topic": []
+      },
+      {
+        "sentiment": "P",
+        "tID": 1581038393454080000,
+        "tText": "After the show is the after party \u2728 https://t.co/I4eD52TZE1",
+        "topic": []
+      },
+      {
+        "sentiment": "P",
+        "tID": 1580967041296609284,
+        "tText": "just added new items for sale on my #kardashiankloset \ud83d\udecd\ufe0f https://t.co/fTHv96YJsu",
+        "topic": [
+          {
+            "abs_relevance": "0.15020801",
+            "code": "04",
+            "label": "economy and finances",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "sentiment": "NONE",
+        "tID": 1580772935622459398,
+        "tText": "\ud83d\udc7d https://t.co/tQWW21oY5s",
+        "topic": []
+      },
+      {
+        "sentiment": "NONE",
+        "tID": 1580772845835063297,
+        "tText": "\ud83d\udc7d https://t.co/oyqQEZcKCi",
+        "topic": []
+      },
+      {
+        "sentiment": "NONE",
+        "tID": 1580753088016658438,
+        "tText": "#FreeGunna https://t.co/r1a4NzbL6L",
+        "topic": []
+      },
+      {
+        "sentiment": "NONE",
+        "tID": 1580358806172639232,
+        "tText": "\ud83d\udda4 https://t.co/GfloFgQ3k6",
+        "topic": []
+      },
+      {
+        "sentiment": "P",
+        "tID": 1580274820037586945,
+        "tText": "Low quality pics, high quality fits https://t.co/ML0gRYOtp1",
+        "topic": []
+      },
+      {
+        "sentiment": "P",
+        "tID": 1580274780422361088,
+        "tText": "Low quality pics, high quality fits https://t.co/kXjq4koxzE",
+        "topic": []
+      }
+    ],
+    "username": "KimKardashian"
+  }
+}
