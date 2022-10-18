@@ -5,28 +5,16 @@ from simplemagic import sm
 import DataGetter
 import meaningcloud
 import profile
-import json
+import json, jsons
 
 
 def main():
 
     client = tweepy.Client(bearer_token=config.bearer_token)
 
-    getdata = input("yes for getting data: ")
+    getdata = input("yes to update/create profiles: ")
     if (getdata == "yes"):
-        getdatareturn = DataGetter.TwitterDataGetter.get_data(10,client)
-    fileName = "testDataBoogaloo.json"
-    file = open(fileName)
-    Profiles = json.load(file)
-    file.close()
-    #
-    #get 10 tweets
-    #if in profiles
-    #   add tweets to profile's tweets
-    #else
-    #   create profile with tweets
-    #
-    #
+        DataGetter.TwitterDataGetter.get_data(10,client)
 
     window = tk.Tk()
 
@@ -47,34 +35,83 @@ def main():
 
     tweetList = tk.Listbox(width=150, height=30)
 
-    def e_click():
+    def u_click():
         tweetList.delete(0,tk.END)
+
+        fileName = "testDataBoogaloo.json"
+        file = open(fileName)
+        Profiles = json.load(file)
+        file.close()
+
         usr = e.get()
-        numberofmatches = int(output.get())
         yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,10,client)
 
-        yourProfile = DataGetter.TwitterDataGetter.generateProfile(usr,yourTweets)
+        if usr.lower() in Profiles.keys():
+            tweetList.insert(tk.END,"Updating your profile! This may take awhile...")
+            Profiles[usr.lower()] = DataGetter.TwitterDataGetter.updateProfile(Profiles[usr.lower()], yourTweets)
+            tweetList.insert(tk.END,"Your profile has been updated! Press \"Enter\" to find matches!")
+        else:
+            tweetList.insert(tk.END,"Creating your profile! This may take awhile...")
+            Profiles[usr.lower()] = DataGetter.TwitterDataGetter.generateProfile(usr.lower(), yourTweets)
+            tweetList.insert(tk.END,"Your profile has been created! Press \"Enter\" to find matches!")
+        
+        with open(fileName, "w") as outfile:
+            json.dump(jsons.dump(Profiles),outfile,indent=2)
+        return
 
-        lengthsim = {}
-        for pot in Profiles:
-            lengthsim.update({Profiles[pot]['username']: Profiles[pot]['avglen'] - yourProfile.avglen})
-        matchesmade = dict(sorted(lengthsim.items(), key=lambda item: abs(item[1])))
-        count = 0
-        tweetList.insert(tk.END,"Your Average Tweet Length: " + str(round(yourProfile.avglen,1)))
-        tweetList.insert(tk.END,"")
-        for match in matchesmade:
-            tweetList.insert(tk.END,"Twitter handle: " + str(match))
-            tweetList.insert(tk.END,"Average Tweet Length: " + str(round(matchesmade[match] + yourProfile.avglen,1)))
-            tweetList.insert(tk.END,"Closeness to your length: " + str(round(matchesmade[match],1)))
+
+    def e_click():
+        tweetList.delete(0,tk.END)
+
+        fileName = "testDataBoogaloo.json"
+        file = open(fileName)
+        Profiles = json.load(file)
+        file.close()
+
+        usr = e.get()
+        numInput = output.get()
+
+        if numInput != '':
+            numberofmatches = int(numInput)
+        else:
+            numberofmatches = 0
+            
+        
+        if usr.lower() in Profiles.keys():
+            yourProfile = Profiles[usr.lower()]
+
+            lengthsim = {}
+            for pot in Profiles:
+                lengthsim.update({Profiles[pot]['username']: Profiles[pot]['avglen'] - yourProfile['avglen']})
+            matchesmade = dict(sorted(lengthsim.items(), key=lambda item: abs(item[1])))
+            count = 0
+            tweetList.insert(tk.END,"Your Average Tweet Length: " + str(round(yourProfile['avglen'],1)))
             tweetList.insert(tk.END,"")
-            count +=1
-            if count == numberofmatches:
-                break
-        return 
+            for match in matchesmade:
+                if count == numberofmatches:
+                    break
+                if match != yourProfile['username']:
+                    tweetList.insert(tk.END,"Twitter handle: " + str(match))
+                    tweetList.insert(tk.END,"Average Tweet Length: " + str(round(matchesmade[match] + yourProfile['avglen'],1)))
+                    tweetList.insert(tk.END,"Closeness to your length: " + str(round(matchesmade[match],1)))
+                    tweetList.insert(tk.END,"")
+                    count +=1
+        else:
+            tweetList.insert(tk.END,"Your twitter handle isn't in the database! Press \"Update\" to add yourself to it!")
+        return
 
     enter = tk.Button(
         text="Enter",
         command = e_click,
+        width=25,
+        height=2,
+        bg="white",
+        fg="black",
+    )
+
+    update = tk.Button(
+        text="Update",
+        command = u_click,
         width=25,
         height=2,
         bg="white",
@@ -88,6 +125,7 @@ def main():
     output.grid(row=3,column=1,padx=5,pady=5)
 
     enter.grid(row=2, column=3,padx=5,pady=5)
+    update.grid(row=3, column=3,padx=5,pady=5)
     tweetList.grid(row = 4, column = 1,padx=5,pady=5)
 
     window.mainloop()

@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from encodings import utf_8
-import tweepy, csv, json, jsons, datetime, time, config, profile, tweetws
+import tweepy, csv, json, jsons, datetime, time, config, os
+import profile, tweetws
 import meaningcloud as mc
 
 class DataGetter(ABC):
@@ -25,10 +26,56 @@ class TwitterDataGetter(DataGetter):
         tweets = []
         if results.meta["result_count"] != 0:
             for tweet in results.data:
-                tweets.append([tweet.id, tweet.text])
+                tweets.insert(0,[tweet.id, tweet.text])
         return tweets
     
-    def generateProfile(date, tweets):
+    def updateProfile(prevProfile, newTweets):
+        avglen = prevProfile['avglen'] * len(prevProfile['tweets'])
+        numtweet = len(prevProfile['tweets'])
+        sentimentScore = prevProfile['positivity']
+        sentimentedTweets = prevProfile['sntmntTweets']
+        topics = prevProfile['topics']
+        tweetsWithData = prevProfile['tweets']
+
+        for tweet in newTweets:
+            if tweet[0] > tweetsWithData[0]['tID']:
+                avglen = avglen + len(tweet[1])
+                numtweet = numtweet + 1
+
+                top = mc.ClassResponse(mc.ClassRequest(config.mc_token, txt = tweet[1], model='SocialMedia_en').sendReq())
+                time.sleep(1)
+                topic = top.getCategories()
+
+                sent = mc.SentimentResponse(mc.SentimentRequest(config.mc_token, txt = tweet[1], lang='en').sendReq())
+                time.sleep(1)
+                score = sent.getGlobalScoreTag()
+
+                tweetsWithData.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),topic,score))
+
+                sentimentIncrement = 0
+                if (score != "NONE"):
+                    sentimentedTweets += 1
+                    if (score == "P+"):
+                        sentimentIncrement = 2
+                    elif (score == "P"):
+                        sentimentIncrement = 1
+                    elif (score == "N"):
+                        sentimentIncrement = -1
+                    elif (score == "N+"):
+                        sentimentIncrement = -2
+                    sentimentScore += sentimentIncrement
+                
+                for elem in topic:
+                    if elem['label'] in topics:
+                        topics[elem['label']][0] += 1
+                        topics[elem['label']][1] += sentimentIncrement
+                    else:
+                        topics[elem['label']] = [1, sentimentIncrement]
+        if numtweet != 0:
+            avglen = avglen / numtweet
+        return profile.Profile(prevProfile['username'],tweetsWithData,avglen,topics,sentimentScore,sentimentedTweets)
+    
+    def generateProfile(username, tweets):
         avglen = 0
         numtweet = 0
         sentimentScore = 0.0
@@ -47,7 +94,7 @@ class TwitterDataGetter(DataGetter):
             time.sleep(1)
             score = sent.getGlobalScoreTag()
 
-            tweetsWithData.append(tweetws.Tweetws(tweet[0],tweet[1],topic,score))
+            tweetsWithData.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),topic,score))
 
             sentimentIncrement = 0
             if (score != "NONE"):
@@ -70,11 +117,8 @@ class TwitterDataGetter(DataGetter):
                     topics[elem['label']] = [1, sentimentIncrement]
         if numtweet != 0:
             avglen = avglen / numtweet
-        if sentimentedTweets != 0:
-            sentimentScore = sentimentScore / sentimentedTweets
-        for elem in topics:
-            topics[elem][1] = topics[elem][1] / topics[elem][0]
-        return profile.Profile(date,tweetsWithData,avglen,topics,sentimentScore)
+
+        return profile.Profile(username,tweetsWithData,avglen,topics,sentimentScore,sentimentedTweets)
     
     def get_data(numberoftweets,client):
         handles = []
@@ -83,14 +127,17 @@ class TwitterDataGetter(DataGetter):
             for row in csv_reader:
                 handles.append(row[0])
         #dates = [21-1,767-1,47-1,294-1,16-1,5-1,27-1,34-1,35-1,44-1,51-1,83-1,102-1]
-        dates = [21-1]
-        for i in range(len(dates)):
-            dates[i] = handles[dates[i]]
+        dates = ["KimKardashian","ElonMusk","NICKIMINAJ","POTUS","Halsey"]
+        #for i in range(len(dates)):
+            #dates[i] = handles[dates[i]]
 
         fileName = "testDataBoogaloo.json"
-        file = open(fileName)
-        data = {}
-        file.close()
+        if os.path.getsize(fileName) != 0:
+            file = open(fileName)
+            data = json.load(file)
+            file.close()
+        else:
+            data = {}
 
         for date in dates:
             print("Getting " + date)
@@ -98,14 +145,17 @@ class TwitterDataGetter(DataGetter):
                 #results = TwitterDataGetter.get_users_tweets(date,numberoftweets,client,data[date].pop())
             #else:
             results = TwitterDataGetter.get_users_tweets(date,numberoftweets,client)
-            
-            data[date] = TwitterDataGetter.generateProfile(date, results)
+
+            if date.lower() in data.keys():
+                print("updating")
+                data[date.lower()] = TwitterDataGetter.updateProfile(data[date.lower()], results)
+            else:
+                print("creating")
+                data[date.lower()] = TwitterDataGetter.generateProfile(date.lower(), results)
+
             #data[date] = list(dict.fromkeys(data[date])) 
             #data[date].append(str(datetime.datetime.now().isoformat())[:-7]+"Z")
 
         print("writing to file")
         with open(fileName, "w") as outfile:
             json.dump(jsons.dump(data),outfile,indent=2)
-
-        print("returning data")
-        return data

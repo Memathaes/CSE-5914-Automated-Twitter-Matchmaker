@@ -1,33 +1,38 @@
 {
-  "KimKardashian": {
+  "kimkardashian": {
     "avglen": 49.8,
-    "positivity": 1.0,
+    "positivity": 5.0,
+    "sntmntTweets": 5,
     "topics": {
       "economy and finances": [
         1,
-        1.0
+        1
       ]
     },
     "tweets": [
       {
+        "length": 38,
         "sentiment": "P",
         "tID": 1582448576025612288,
         "tText": "Friends Foreva https://t.co/MI4F9UzLpm",
         "topic": []
       },
       {
+        "length": 94,
         "sentiment": "NONE",
         "tID": 1582052778062491649,
         "tText": "Recording The System \ud83c\udf99\ufe0fNew episode is out now. https://t.co/1TYi1yQFnp https://t.co/6UimL7lvO4",
         "topic": []
       },
       {
+        "length": 59,
         "sentiment": "P",
         "tID": 1581038393454080000,
         "tText": "After the show is the after party \u2728 https://t.co/I4eD52TZE1",
         "topic": []
       },
       {
+        "length": 80,
         "sentiment": "P",
         "tID": 1580967041296609284,
         "tText": "just added new items for sale on my #kardashiankloset \ud83d\udecd\ufe0f https://t.co/fTHv96YJsu",
@@ -41,42 +46,1056 @@
         ]
       },
       {
+        "length": 25,
         "sentiment": "NONE",
         "tID": 1580772935622459398,
         "tText": "\ud83d\udc7d https://t.co/tQWW21oY5s",
         "topic": []
       },
       {
+        "length": 25,
         "sentiment": "NONE",
         "tID": 1580772845835063297,
         "tText": "\ud83d\udc7d https://t.co/oyqQEZcKCi",
         "topic": []
       },
       {
+        "length": 34,
         "sentiment": "NONE",
         "tID": 1580753088016658438,
         "tText": "#FreeGunna https://t.co/r1a4NzbL6L",
         "topic": []
       },
       {
+        "length": 25,
         "sentiment": "NONE",
         "tID": 1580358806172639232,
         "tText": "\ud83d\udda4 https://t.co/GfloFgQ3k6",
         "topic": []
       },
       {
+        "length": 59,
         "sentiment": "P",
         "tID": 1580274820037586945,
         "tText": "Low quality pics, high quality fits https://t.co/ML0gRYOtp1",
         "topic": []
       },
       {
+        "length": 59,
         "sentiment": "P",
         "tID": 1580274780422361088,
         "tText": "Low quality pics, high quality fits https://t.co/kXjq4koxzE",
         "topic": []
       }
     ],
-    "username": "KimKardashian"
+    "username": "kimkardashian"
+  },
+  "elonmusk": {
+    "avglen": 49.0,
+    "positivity": 4.0,
+    "sntmntTweets": 6,
+    "topics": {
+      "economy and finances": [
+        1,
+        0
+      ],
+      "lifestyle and leisure": [
+        1,
+        1
+      ],
+      "unrest, conflicts and war": [
+        1,
+        -1
+      ]
+    },
+    "tweets": [
+      {
+        "length": 35,
+        "sentiment": "N",
+        "tID": 1582379931983499264,
+        "tText": "Drone War I\nhttps://t.co/erVME0CbbN",
+        "topic": [
+          {
+            "abs_relevance": "0.09225903",
+            "code": "16",
+            "label": "unrest, conflicts and war",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 47,
+        "sentiment": "NONE",
+        "tID": 1581986552246603776,
+        "tText": "Exceptionally well-said https://t.co/UT8fXG0MeF",
+        "topic": []
+      },
+      {
+        "length": 43,
+        "sentiment": "P",
+        "tID": 1581903277347999744,
+        "tText": "Ok, we will add a donate option to Starlink",
+        "topic": []
+      },
+      {
+        "length": 89,
+        "sentiment": "P",
+        "tID": 1581901615552155648,
+        "tText": "Are there others that want to donate Starlinks to places in need? https://t.co/M0ASMenMRD",
+        "topic": []
+      },
+      {
+        "length": 14,
+        "sentiment": "NONE",
+        "tID": 1581764872702132224,
+        "tText": "Deus X Machina",
+        "topic": []
+      },
+      {
+        "length": 31,
+        "sentiment": "P",
+        "tID": 1581652738768654338,
+        "tText": "So true https://t.co/PwmxUVU2Fc",
+        "topic": []
+      },
+      {
+        "length": 52,
+        "sentiment": "P",
+        "tID": 1581514716890865664,
+        "tText": "Fancy a game of meme tennis? https://t.co/d9tqIlg7nB",
+        "topic": [
+          {
+            "abs_relevance": "0.13585256",
+            "code": "11",
+            "label": "lifestyle and leisure",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 46,
+        "sentiment": "NONE",
+        "tID": 1581513703400570880,
+        "tText": "Buy Burnt Hair from a company that digs holes!",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "04",
+            "label": "economy and finances",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 60,
+        "sentiment": "NONE",
+        "tID": 1581508126595244032,
+        "tText": "Did you hear about the dyslexic KBG agent \u2013 it\u2019s pot secret!",
+        "topic": []
+      },
+      {
+        "length": 73,
+        "sentiment": "P",
+        "tID": 1581506733117431812,
+        "tText": "Venn diagram intersection of those two audiences is pretty small, I guess",
+        "topic": []
+      }
+    ],
+    "username": "elonmusk"
+  },
+  "nickiminaj": {
+    "avglen": 94.0,
+    "positivity": 1.0,
+    "sntmntTweets": 7,
+    "topics": {
+      "art and culture": [
+        1,
+        0
+      ]
+    },
+    "tweets": [
+      {
+        "length": 28,
+        "sentiment": "P",
+        "tID": 1582473006604951552,
+        "tText": "\ud83e\udd84\ud83c\udf80\ud83d\ude4f\ud83c\udffd https://t.co/WxKqFJHu42",
+        "topic": []
+      },
+      {
+        "length": 81,
+        "sentiment": "NONE",
+        "tID": 1582465305669906433,
+        "tText": "But when the wind blows, I\u2019m so Marilyn \u26c8\ud83c\udf43\ud83d\udca8 @InterviewMag https://t.co/IToG1767mB",
+        "topic": []
+      },
+      {
+        "length": 56,
+        "sentiment": "NONE",
+        "tID": 1582464182896631808,
+        "tText": "#InterviewMagazine @InterviewMag https://t.co/EzIiLwgtsE",
+        "topic": []
+      },
+      {
+        "length": 110,
+        "sentiment": "P",
+        "tID": 1582392842713866241,
+        "tText": "9 weeks in the Top 10 of Billboard Hot 100. Debuted @ #1. Thanks to you guys. Love you https://t.co/PTyoGaC4Ev",
+        "topic": []
+      },
+      {
+        "length": 80,
+        "sentiment": "NONE",
+        "tID": 1582368359517036545,
+        "tText": "The \u201che\u201d I\u2019m talking about here (prior to Bia) is Skeng. https://t.co/zLqW2JAOJg",
+        "topic": []
+      },
+      {
+        "length": 93,
+        "sentiment": "NEU",
+        "tID": 1582362404070969345,
+        "tText": "#InterviewMagazine \nFall Cover. \nInterviewed by \nJada Pinkett Smith \u2728 https://t.co/2uoMmuFTXn",
+        "topic": []
+      },
+      {
+        "length": 108,
+        "sentiment": "N",
+        "tID": 1582358058453196801,
+        "tText": "Interviewed by my idol- Jada Pinkett Smith; for the Fall Cover of #InterviewMagazine https://t.co/kxNZILk9Ci",
+        "topic": []
+      },
+      {
+        "length": 290,
+        "sentiment": "NEU",
+        "tID": 1582257128781119488,
+        "tText": "Exactly. \u201cCan\u2019t touch this\u201d sampled the SAME song &amp; was a HUGE GLOBAL SMASH. and STILL was kept in the RAP category. And now that I know y\u2019all so mad about me speaking up about injustice @ my OWN work place ima KEEP ON DOING IT!!!!! \ud83e\udd23\ud83d\ude2c\ud83d\ude02\ud83d\ude02\ud83d\ude02 https://t.co/qwwpji6WI0 https://t.co/ATlqHqI0dU",
+        "topic": [
+          {
+            "abs_relevance": "0.34931853",
+            "code": "01",
+            "label": "art and culture",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 67,
+        "sentiment": "P",
+        "tID": 1582212736460632064,
+        "tText": "Who r some smart barbz that would like to join the live? Nominate 3",
+        "topic": []
+      },
+      {
+        "length": 27,
+        "sentiment": "N",
+        "tID": 1582207587436535808,
+        "tText": "Is it too late for my live?",
+        "topic": []
+      }
+    ],
+    "username": "nickiminaj"
+  },
+  "potus": {
+    "avglen": 177.5,
+    "positivity": 4.0,
+    "sntmntTweets": 8,
+    "topics": {
+      "education": [
+        2,
+        3
+      ],
+      "social issue": [
+        1,
+        1
+      ],
+      "health": [
+        3,
+        1
+      ],
+      "labour": [
+        1,
+        0
+      ],
+      "economy and finances": [
+        3,
+        -2
+      ]
+    },
+    "tweets": [
+      {
+        "length": 92,
+        "sentiment": "P",
+        "tID": 1582474927822757889,
+        "tText": "Americans are going to start seeing hearing aids on their store shelves.\n\nThat\u2019s a big deal.",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "07",
+            "label": "health",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 278,
+        "sentiment": "N",
+        "tID": 1582446417582428178,
+        "tText": "Thanks to the Inflation Reduction Act, if Big Pharma tries to raise drug prices faster than inflation, they\u2019ll have to write a check to Medicare to cover the difference.\n\nInstead of that money going to drug companies, it\u2019ll go in folks' pockets in the form of lower drug prices.",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "04",
+            "label": "economy and finances",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 118,
+        "sentiment": "N",
+        "tID": 1582436867668340736,
+        "tText": "Student loan debt relief is a game changer for millions.\n\nGet moving: https://t.co/DYpFtPY70p. https://t.co/JfqykMBJB3",
+        "topic": [
+          {
+            "abs_relevance": "0.23697084",
+            "code": "04",
+            "label": "economy and finances",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 280,
+        "sentiment": "NONE",
+        "tID": 1582417473537601555,
+        "tText": "We must do more to transform how we address mental health.\n\nMy Administration is announcing funding to expand Certified Community Behavioral Health Clinics \u2013 centers that deliver mental health and substance use care to folks who need it, no matter who they are or if they can pay.",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "07",
+            "label": "health",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 123,
+        "sentiment": "P+",
+        "tID": 1582401115857252352,
+        "tText": "Working people and the middle class will benefit from my Administration's student loan debt relief.\n \nNot those at the top.",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "05",
+            "label": "education",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 263,
+        "sentiment": "NEU",
+        "tID": 1582386017222684677,
+        "tText": "More than 40 million Americans stand to benefit from our student loan debt relief. Nearly 20 million of them could see their debts canceled. About 90% will go to those making under $75,000 a year.\n\nAnd not a dime will go to those in the top 5% of incomes. Period.",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "04",
+            "label": "economy and finances",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 142,
+        "sentiment": "NONE",
+        "tID": 1582370971230834690,
+        "tText": "We\u2019ve invested in infrastructure.\nJobs.\nLower costs.\nManufacturing.\nHealth care.\n\nAnd we\u2019re not stopping anytime soon. https://t.co/CKVyR6WBQO",
+        "topic": [
+          {
+            "abs_relevance": "0.33893138",
+            "code": "07",
+            "label": "health",
+            "relevance": "100"
+          },
+          {
+            "abs_relevance": "0.3057402",
+            "code": "09",
+            "label": "labour",
+            "relevance": "90"
+          }
+        ]
+      },
+      {
+        "length": 169,
+        "sentiment": "P",
+        "tID": 1582355831416553472,
+        "tText": "Most families are focused on putting three meals on the table, taking care of their kids, and paying their bills.\n\nHelping you do that is my job. https://t.co/Z8KUZc6mkm",
+        "topic": [
+          {
+            "abs_relevance": "0.44293728",
+            "code": "08",
+            "label": "social issue",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 227,
+        "sentiment": "P",
+        "tID": 1582182024919425024,
+        "tText": "Today's opening of the student loan debt relief application marks a big step, among others that my Administration is taking, to make education a ticket to the middle class that folks can actually afford. https://t.co/qagQXWx8mo",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "05",
+            "label": "education",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 83,
+        "sentiment": "P",
+        "tID": 1582149202184130560,
+        "tText": "Apply today and share with others.\n\nhttps://t.co/WFCPfWoLhi https://t.co/ZMWySfS5hl",
+        "topic": []
+      }
+    ],
+    "username": "potus"
+  },
+  "halsey": {
+    "avglen": 136.1,
+    "positivity": 4.0,
+    "sntmntTweets": 4,
+    "topics": {
+      "art and culture": [
+        1,
+        1
+      ],
+      "crime, law and justice": [
+        1,
+        1
+      ],
+      "science and technology": [
+        2,
+        0
+      ]
+    },
+    "tweets": [
+      {
+        "length": 66,
+        "sentiment": "NONE",
+        "tID": 1582130889571848195,
+        "tText": "and if you have an android, listen in at https://t.co/3wJJgv5LFc \ud83d\udcfb",
+        "topic": []
+      },
+      {
+        "length": 156,
+        "sentiment": "NONE",
+        "tID": 1582130532745621507,
+        "tText": "going LIVE on my new radio show, Halsey: For The Record on Amp in 2 hours! Download the amp app now &amp; tune in at 8pm ET / 5pm PT https://t.co/9LSsPJgjHi",
+        "topic": [
+          {
+            "abs_relevance": "0.26806074",
+            "code": "14",
+            "label": "science and technology",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 166,
+        "sentiment": "NONE",
+        "tID": 1580696380309270529,
+        "tText": "My very own radio show!! Tune into my first Halsey: For The Record show this Monday, October 17 at 5p PT on @onamp. \ud83d\udcfb  https://t.co/imYAVLKJ4Q https://t.co/T8SyhIhQsy",
+        "topic": [
+          {
+            "abs_relevance": "0.19528054",
+            "code": "14",
+            "label": "science and technology",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 122,
+        "sentiment": "NONE",
+        "tID": 1578830244412170240,
+        "tText": "\u201cI dream. Sometimes I think that\u2019s the only right thing to do.\u201d @CHANEL in Paris by @adamkudeimati https://t.co/7ma2jX9LRD",
+        "topic": []
+      },
+      {
+        "length": 215,
+        "sentiment": "P",
+        "tID": 1577731519115763713,
+        "tText": "Yep. This party look was one of my favorites this week. They said \u201cHalsey leaves nothing to the imagination.\u201d I said, \u201cI promise you\u2019ll be imagining something..\u201d @lynalyson you killed this. \ud83e\udeb2 https://t.co/ioAttf27Ce",
+        "topic": [
+          {
+            "abs_relevance": "0.25209832",
+            "code": "02",
+            "label": "crime, law and justice",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 205,
+        "sentiment": "P",
+        "tID": 1577454646502707201,
+        "tText": "f\u00e9licitations @CHANEL \ud83e\udd0d\ud83d\udda4 what an amazing show. Thank you Chanel team for such a dreamy experience. My first fashion show ever was Chanel 6 years ago and I\u2019m just as awestruck today! https://t.co/EorLOQwwto",
+        "topic": [
+          {
+            "abs_relevance": "0.66364336",
+            "code": "01",
+            "label": "art and culture",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 57,
+        "sentiment": "P",
+        "tID": 1576281513544384512,
+        "tText": "Viv girl 4ever \u2764\ufe0f @FollowWestwood https://t.co/lm8rC4XKtl",
+        "topic": []
+      },
+      {
+        "length": 52,
+        "sentiment": "NONE",
+        "tID": 1574497776498458624,
+        "tText": "seeing red all month long. \ud83e\ude78 https://t.co/YpjSSXqp8S",
+        "topic": []
+      },
+      {
+        "length": 45,
+        "sentiment": "NONE",
+        "tID": 1574106415647444993,
+        "tText": "\u26d3 20 hours in Vegas \u26d3 https://t.co/ViMcKrkthA",
+        "topic": []
+      },
+      {
+        "length": 277,
+        "sentiment": "P",
+        "tID": 1572303817844363269,
+        "tText": "TRUTH OR GLARE.\u26d3 my favorite @aboutfacebeauty drop of the year! two new eye products - the 1994 volumizing mascara &amp; the vinyl effect eye gloss. for looks grungy and wet, dewy and sweet, or editorial and sharp. Available now: https://t.co/0Psz9kbmQW https://t.co/bqGFr6dOeK",
+        "topic": []
+      }
+    ],
+    "username": "halsey"
+  },
+  "nyjets": {
+    "avglen": 80.6,
+    "positivity": 2.0,
+    "sntmntTweets": 5,
+    "topics": {
+      "politics": [
+        1,
+        -1
+      ]
+    },
+    "tweets": [
+      {
+        "length": 128,
+        "sentiment": "N",
+        "tID": 1582485735587819520,
+        "tText": "You heard @iamSauceGardner...the belt does not leave 1 Jets Dr.\n\nVote @BreeceH \u279c https://t.co/UceF1dgc5W https://t.co/aP8snxZnm7",
+        "topic": [
+          {
+            "abs_relevance": "0.08854302",
+            "code": "12",
+            "label": "politics",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 53,
+        "sentiment": "NONE",
+        "tID": 1582469818715889681,
+        "tText": "We've released OL Eric Smith from the practice squad.",
+        "topic": []
+      },
+      {
+        "length": 196,
+        "sentiment": "P",
+        "tID": 1582462418000699392,
+        "tText": "\"My brother was my best friend.\"\n\n@TheCDavis84's brother, Titus, passed in 2020 but he's still with Corey every day.\n\nCD joined Jets Pod this week \u279c https://t.co/dHpE2Zdyoo https://t.co/L4mYTXu2ns",
+        "topic": []
+      },
+      {
+        "length": 72,
+        "sentiment": "N",
+        "tID": 1582426340065615873,
+        "tText": "new @iamSauceGardner coverage angle just dropped https://t.co/GAlP4M7SnG",
+        "topic": []
+      },
+      {
+        "length": 51,
+        "sentiment": "NONE",
+        "tID": 1582401124954357760,
+        "tText": "Our cards are on the table. https://t.co/f9pVRCc2iL",
+        "topic": []
+      },
+      {
+        "length": 99,
+        "sentiment": "NONE",
+        "tID": 1582387275106635776,
+        "tText": "You know what to do, #JetsTwitter.\n\nVote @BreeceH \u279c https://t.co/aYhbfyhZlL https://t.co/rcwyjmsmCG",
+        "topic": []
+      },
+      {
+        "length": 54,
+        "sentiment": "NONE",
+        "tID": 1582382179094614016,
+        "tText": "We've signed OL Conor McDermott to the practice squad.",
+        "topic": []
+      },
+      {
+        "length": 48,
+        "sentiment": "NONE",
+        "tID": 1582366135420346369,
+        "tText": "Mike (and) Will made it. https://t.co/VDTZTwmngG",
+        "topic": []
+      },
+      {
+        "length": 61,
+        "sentiment": "P+",
+        "tID": 1582351218512252929,
+        "tText": "Our pleasure, @KyleBrandt &amp; @gmfb https://t.co/l0XIVURWe1",
+        "topic": []
+      },
+      {
+        "length": 44,
+        "sentiment": "P",
+        "tID": 1582147192533397505,
+        "tText": "This team is SO FUN. https://t.co/kH2YYDKWY1",
+        "topic": []
+      }
+    ],
+    "username": "nyjets"
+  },
+  "michelleobama": {
+    "avglen": 240.9,
+    "positivity": 9.0,
+    "sntmntTweets": 8,
+    "topics": {
+      "education": [
+        4,
+        6
+      ],
+      "politics": [
+        3,
+        2
+      ],
+      "health": [
+        1,
+        0
+      ],
+      "art and culture": [
+        1,
+        1
+      ],
+      "lifestyle and leisure": [
+        1,
+        1
+      ],
+      "science and technology": [
+        1,
+        1
+      ]
+    },
+    "tweets": [
+      {
+        "length": 298,
+        "sentiment": "P",
+        "tID": 1582371492536651776,
+        "tText": "It was such an honor to have been a part of yesterday\u2019s WOW Circle\u2014a Working on Womanhood program at Hyde Park Academy that creates space for young women to reflect on how to own their narrative in a world that isn\u2019t always set up to empower them.\n\u00a0\nI\u2019m so proud of you all! https://t.co/4o8XU9LUzB",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "14",
+            "label": "science and technology",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 162,
+        "sentiment": "P+",
+        "tID": 1582167235497336832,
+        "tText": "I\u2019m so happy to be back home in Chicago\u2014and even happier to have spent the afternoon on the South Side with students at Hyde Park Academy! https://t.co/qcd7DiYEij",
+        "topic": [
+          {
+            "abs_relevance": "0.78968996",
+            "code": "05",
+            "label": "education",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 109,
+        "sentiment": "NONE",
+        "tID": 1582081765077766145,
+        "tText": "Visit https://t.co/PA4LvmXrSb to check your voter registration and make a plan to vote ahead of the midterms.",
+        "topic": [
+          {
+            "abs_relevance": "0.31771705",
+            "code": "12",
+            "label": "politics",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 252,
+        "sentiment": "NONE",
+        "tID": 1582081762552729600,
+        "tText": "Today, I voted early in the 2022 midterm elections! I want to see you turning out to vote with your voting squad.\n\nBarack\u2019s in my #VotingSquad \u2014 who\u2019s in yours? Tag them below and remind them to register and make a plan to vote. https://t.co/Oo1KMGCbwn",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "12",
+            "label": "politics",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 304,
+        "sentiment": "P",
+        "tID": 1581994173221113856,
+        "tText": "Waffles and Mochi are back!\n\nYour favorite chefs are now running their own restaurant\u2014learning about new foods and ingredients, meeting new friends, and working to make their dreams come true.\n\u00a0\nTune into all new episodes of Waffles + Mochi\u2019s Restaurant now streaming on @Netflix! https://t.co/cpV9LNxmUY",
+        "topic": [
+          {
+            "abs_relevance": "0.5915145",
+            "code": "11",
+            "label": "lifestyle and leisure",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 217,
+        "sentiment": "P",
+        "tID": 1581706916614483968,
+        "tText": "It\u2019s here! It\u2019s such a surreal feeling to finally be holding copies of my new book, The Light We Carry. I can\u2019t wait for you to read it!\n\nPre-order your copy today at https://t.co/IZWLMRYueD. \u2728 https://t.co/IKsZ0yVIPe",
+        "topic": [
+          {
+            "abs_relevance": "0.15916997",
+            "code": "01",
+            "label": "art and culture",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 266,
+        "sentiment": "NEU",
+        "tID": 1581661867008737282,
+        "tText": "Today is #WorldFoodDay and every person, in every zip code, deserves access to good food that builds lasting health. \n\nVisit @PHAnews\u2019 new Food Equity Action Center to learn how you can help make food equity a reality: https://t.co/WPbk1VitxD https://t.co/ww0FisUhx4",
+        "topic": [
+          {
+            "abs_relevance": "0.46088713",
+            "code": "07",
+            "label": "health",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 298,
+        "sentiment": "P",
+        "tID": 1580174119563563008,
+        "tText": "I'm thrilled to share that @PenguinRandom and @DiverseBooks are launching the Michelle Obama Award for Memoir, a new creative writing award focused on memoir for public high school students. \n\nApply today and learn more about the $10,000 scholarship: https://t.co/ZEi8SGe6M5 https://t.co/p7B4fkAvyx",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "05",
+            "label": "education",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 256,
+        "sentiment": "P+",
+        "tID": 1579841992569556993,
+        "tText": "I spoke with @MarsaiMartin and Ingrid Tuy, a student from the @GirlsAlliance community, about our new #GetHerThere campaign and ways we can come together to support girls\u2019 empowerment on the #DayOfTheGirl and beyond. \n\nCheck it out: https://t.co/HxpvIDTvKZ",
+        "topic": [
+          {
+            "abs_relevance": "0.1923466",
+            "code": "12",
+            "label": "politics",
+            "relevance": "100"
+          },
+          {
+            "abs_relevance": "0.18806669",
+            "code": "05",
+            "label": "education",
+            "relevance": "98"
+          }
+        ]
+      },
+      {
+        "length": 247,
+        "sentiment": "P",
+        "tID": 1579811556287815682,
+        "tText": "Today is #DayOfTheGirl, and the @GirlsAlliance is launching #GetHerThere, a global call to action to empower and educate adolescent girls around the world.\n\nJoin us and donate to support girls today: https://t.co/MfNQzmavDT https://t.co/5uiTglDBSb",
+        "topic": [
+          {
+            "abs_relevance": "0.15955046",
+            "code": "05",
+            "label": "education",
+            "relevance": "100"
+          }
+        ]
+      }
+    ],
+    "username": "michelleobama"
+  },
+  "lilnasx": {
+    "avglen": 103.6,
+    "positivity": -7.0,
+    "sntmntTweets": 7,
+    "topics": {
+      "lifestyle and leisure": [
+        1,
+        -2
+      ],
+      "art and culture": [
+        2,
+        0
+      ],
+      "religion and belief": [
+        1,
+        -1
+      ],
+      "environment, weather and energy": [
+        1,
+        0
+      ],
+      "crime, law and justice": [
+        1,
+        -1
+      ]
+    },
+    "tweets": [
+      {
+        "length": 80,
+        "sentiment": "N",
+        "tID": 1582060038188695552,
+        "tText": "ladies stop bringing ur fine ass boyfriends to gay clubs https://t.co/bizsQAvZMp",
+        "topic": [
+          {
+            "abs_relevance": "0.22682771",
+            "code": "02",
+            "label": "crime, law and justice",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 92,
+        "sentiment": "NONE",
+        "tID": 1581342949559787520,
+        "tText": "i dare those climate activists to even think of getting soup on this https://t.co/rpowGSSRsQ",
+        "topic": [
+          {
+            "abs_relevance": "0.15240677",
+            "code": "06",
+            "label": "environment, weather and energy",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 279,
+        "sentiment": "N",
+        "tID": 1581342586526048256,
+        "tText": "when the van gogh painting was hit, my husband and i woke up out of our sleep, we could feel a disturbance in the universe. it was as if the world stopped. i lay awake in fear, what\u2019s the next piece of priceless art to be hit, mona lisa, the montero album cover, the last supper?",
+        "topic": [
+          {
+            "abs_relevance": "1.0",
+            "code": "01",
+            "label": "art and culture",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 106,
+        "sentiment": "N",
+        "tID": 1581341009979797504,
+        "tText": "prayers to those affected by the van gogh tomato soup tragedy. i am with you, i hear you, and i see you. \ud83e\udd0d",
+        "topic": [
+          {
+            "abs_relevance": "0.33076248",
+            "code": "13",
+            "label": "religion and belief",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 143,
+        "sentiment": "N+",
+        "tID": 1580061470485712898,
+        "tText": "me after cummin before the other person and not wanting to do any more sex stuff because secx gross now eww yucky yucky https://t.co/xNa0xbpK4F",
+        "topic": []
+      },
+      {
+        "length": 69,
+        "sentiment": "P",
+        "tID": 1580058974635712512,
+        "tText": "good on them for having goated taste in music https://t.co/2c4GtzglRM",
+        "topic": [
+          {
+            "abs_relevance": "0.2141169",
+            "code": "01",
+            "label": "art and culture",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 72,
+        "sentiment": "N",
+        "tID": 1580043201527717888,
+        "tText": "i hope i die with my dick on hard so that im serving print in the casket",
+        "topic": []
+      },
+      {
+        "length": 85,
+        "sentiment": "NONE",
+        "tID": 1579872402322116608,
+        "tText": "me correr\u00e9 duro dentro de argentina para demostrar mi dominio https://t.co/kMYq4tgmlt",
+        "topic": []
+      },
+      {
+        "length": 65,
+        "sentiment": "NONE",
+        "tID": 1579865514712903680,
+        "tText": "n\u00e3o vejo a hora de comer o cu do brasil\n\ud83e\udd0d https://t.co/LnVDificbS",
+        "topic": []
+      },
+      {
+        "length": 45,
+        "sentiment": "N+",
+        "tID": 1579696297220919298,
+        "tText": "houston gay niggas what club y\u2019all at tonight",
+        "topic": [
+          {
+            "abs_relevance": "0.1856838",
+            "code": "11",
+            "label": "lifestyle and leisure",
+            "relevance": "100"
+          }
+        ]
+      }
+    ],
+    "username": "lilnasx"
+  },
+  "jackharlow": {
+    "avglen": 47.3,
+    "positivity": -2.0,
+    "sntmntTweets": 3,
+    "topics": {
+      "religion and belief": [
+        1,
+        0
+      ],
+      "art and culture": [
+        1,
+        -1
+      ]
+    },
+    "tweets": [
+      {
+        "length": 136,
+        "sentiment": "NONE",
+        "tID": 1582437387254517760,
+        "tText": "Been waiting to do the Yum Center my whole life.\n\nSee y\u2019all in December for the 2nd annual\u2026\n\nNo Place Like Home. https://t.co/1fJ2Q38ClI",
+        "topic": []
+      },
+      {
+        "length": 44,
+        "sentiment": "NONE",
+        "tID": 1582072511608463361,
+        "tText": "Met you in the dark\u2026 https://t.co/iXS3czf4bo",
+        "topic": []
+      },
+      {
+        "length": 34,
+        "sentiment": "P",
+        "tID": 1581498326083862528,
+        "tText": "HOSTING\ud83d\ude2e\u200d\ud83d\udca8 https://t.co/7IyN2ipy3D",
+        "topic": []
+      },
+      {
+        "length": 16,
+        "sentiment": "N",
+        "tID": 1579181173171195905,
+        "tText": "Miss y\u2019all man \ud83e\udd2a",
+        "topic": [
+          {
+            "abs_relevance": "0.5769975",
+            "code": "01",
+            "label": "art and culture",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 58,
+        "sentiment": "N+",
+        "tID": 1570927237704323072,
+        "tText": "Might have to name my first child Alcatraz. Shits too hard",
+        "topic": []
+      },
+      {
+        "length": 44,
+        "sentiment": "NONE",
+        "tID": 1570901348299964417,
+        "tText": "San Francisco tonight \ud83c\udf01 see u at Bill Graham",
+        "topic": []
+      },
+      {
+        "length": 25,
+        "sentiment": "NONE",
+        "tID": 1570834714688376832,
+        "tText": "\ud83c\udf9f https://t.co/FYns55v66c",
+        "topic": []
+      },
+      {
+        "length": 16,
+        "sentiment": "NONE",
+        "tID": 1570654056808607746,
+        "tText": "I never felt nun",
+        "topic": [
+          {
+            "abs_relevance": "0.13532314",
+            "code": "13",
+            "label": "religion and belief",
+            "relevance": "100"
+          }
+        ]
+      },
+      {
+        "length": 53,
+        "sentiment": "NONE",
+        "tID": 1568993261070553089,
+        "tText": "Austin TX tonight \ud83d\ude2e\u200d\ud83d\udca8\ud83d\ude2e\u200d\ud83d\udca8\ud83d\ude2e\u200d\ud83d\udca8 see u at the Moody Center",
+        "topic": []
+      },
+      {
+        "length": 47,
+        "sentiment": "NONE",
+        "tID": 1568702208627073024,
+        "tText": "https://t.co/FTXzwS6m4J https://t.co/I03NYSuUTR",
+        "topic": []
+      }
+    ],
+    "username": "jackharlow"
   }
 }
