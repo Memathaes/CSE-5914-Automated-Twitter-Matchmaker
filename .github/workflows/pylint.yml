@@ -23,16 +23,3 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py') --rcfile .pylintrc
-    - name: Test with pytest
-      run: |
-        pip install pytest
-        pip install pytest-cov
-        pytest tests.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
-    - name: Upload pytest test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: pytest-results-${{ matrix.python-version }}
-        path: junit/test-results-${{ matrix.python-version }}.xml
-      # Use always() to always run this step to publish test results when there are test failures
-      if: ${{ always() }}
-
