@@ -14,7 +14,6 @@ class Profile:
         self.positivity = positivity
 
 def main():
-
     client = tweepy.Client(bearer_token=config.bearer_token)
 
     Profiles = []
@@ -41,7 +40,6 @@ def main():
 
     label1 = tk.Label(text="Enter Your Username:")
     e = tk.Entry()
-
 
     label2 = tk.Label(text="Enter how many matches you want:")
     output = tk.Entry()
@@ -79,7 +77,6 @@ def main():
             count +=1
             if count == numberofmatches:
                 break
-        return 
 
     enter = tk.Button(
         text="Enter",
@@ -102,4 +99,3 @@ def main():
     window.mainloop()
 
 if __name__ == "__main__": main()
-

@@ -40,3 +40,4 @@ class TwitterDataGetter(DataGetter):
         for date in dates:
             results[date] = TwitterDataGetter.get_users_tweets(date,10,client)
         return results
+        
