@@ -59,6 +59,7 @@ def main():
             yourTopics = yourProfile['topics']
 
             sharedTopics = {}
+            posDict = {}
             for potentialMatch in Profiles:
                 if potentialMatch != usr:
                     theirProfile = Profiles[potentialMatch]
@@ -66,12 +67,14 @@ def main():
                     theirTopics = theirProfile['topics']
 
                     sharedTopics[potentialMatch] = []
+                    posDict[potentialMatch] = theirPositivity
                     for topic in theirTopics:
                         if topic in yourTopics.keys():
                             sharedTopics[potentialMatch].append(topic)
-            matchesmade = dict(sorted(sharedTopics.items(), key=lambda item: abs(len(item[1])),reverse=True))
+            matchesmade = dict(sorted(sharedTopics.items(), key=lambda item: (abs(len(item[1])),3 - abs(yourPositivity - posDict[item[0]])),reverse=True))
             count = 0
             tweetList.insert(tk.END,"Your Topics: " + str(list(yourTopics.keys())))
+            tweetList.insert(tk.END,"Your Positivity: " + str(round(yourPositivity,3)))
             tweetList.insert(tk.END,"")
             for match in matchesmade:
                 if count == numberofmatches:
@@ -79,6 +82,8 @@ def main():
                 tweetList.insert(tk.END,"Twitter handle: " + str(match))
                 tweetList.insert(tk.END,"Your Shared Topics: " + str(matchesmade[match]))
                 tweetList.insert(tk.END,"Shared Topic Count: " + str(len(matchesmade[match])))
+                tweetList.insert(tk.END,"Their Positivity: " + str(round(posDict[match],3)))
+                tweetList.insert(tk.END,"Proximity to your Positivity: " + str(round(posDict[match] - yourPositivity,3)))
                 tweetList.insert(tk.END,"")
                 count +=1
         else:
