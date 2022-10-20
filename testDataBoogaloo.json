@@ -10253,9 +10253,13 @@
     "username": "barackobama"
   },
   "potus": {
-    "avglen": 199.92,
-    "positivity": 0.3181818181818182,
+    "avglen": 197.7450980392157,
+    "positivity": 0.3333333333333333,
     "sntmntTweets": [
+      [
+        1583188013651136512,
+        1
+      ],
       [
         1583107020860772352,
         1
@@ -10435,19 +10439,19 @@
     ],
     "topics": {
       "Joe Biden": [
-        50,
-        44,
-        14
+        51,
+        45,
+        15
       ],
       "Politics": [
-        50,
-        44,
-        14
+        51,
+        45,
+        15
       ],
       "Political figures": [
-        50,
-        44,
-        14
+        51,
+        45,
+        15
       ],
       "United States Healthcare System": [
         8,
@@ -10563,9 +10567,26 @@
         1,
         0,
         0
+      ],
+      "Kamala Harris": [
+        1,
+        1,
+        1
       ]
     },
     "tweets": [
+      {
+        "length": 89,
+        "sentiment": "P",
+        "tID": 1583188013651136512,
+        "tText": "Happy Birthday, @VP \u2013 I\u2019m proud to call you a partner and friend. https://t.co/z7ASWq2gRJ",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Kamala Harris",
+          "Political figures"
+        ]
+      },
       {
         "length": 95,
         "sentiment": "NONE",
@@ -35264,5 +35285,2002 @@
       }
     ],
     "username": "guppisound"
+  },
+  "dprk_news": {
+    "avglen": 110.0,
+    "positivity": 0.08108108108108109,
+    "sntmntTweets": [
+      [
+        1583137744859299840,
+        1
+      ],
+      [
+        1582833040652308482,
+        -1
+      ],
+      [
+        1582800412285239297,
+        -1
+      ],
+      [
+        1582773374933434369,
+        -1
+      ],
+      [
+        1581662675263950850,
+        1
+      ],
+      [
+        1581414790617964544,
+        -1
+      ],
+      [
+        1581405203890601984,
+        1
+      ],
+      [
+        1581357668467634176,
+        -1
+      ],
+      [
+        1581103660528185345,
+        1
+      ],
+      [
+        1580994197683081219,
+        -1
+      ],
+      [
+        1580918712580067328,
+        1
+      ],
+      [
+        1580912219197681666,
+        1
+      ],
+      [
+        1570504475642859523,
+        -1
+      ],
+      [
+        1570184442785992704,
+        -2
+      ],
+      [
+        1569435839217926144,
+        1
+      ],
+      [
+        1569019016865275906,
+        1
+      ],
+      [
+        1568586783398498304,
+        0
+      ],
+      [
+        1568585956378443776,
+        -1
+      ],
+      [
+        1568379241963601921,
+        -1
+      ],
+      [
+        1567949441239326721,
+        -2
+      ],
+      [
+        1567888833647202304,
+        -1
+      ],
+      [
+        1567558333451698177,
+        2
+      ],
+      [
+        1566907381812002816,
+        1
+      ],
+      [
+        1566483960124817408,
+        2
+      ],
+      [
+        1565746982148345856,
+        2
+      ],
+      [
+        1565746642715910145,
+        1
+      ],
+      [
+        1565701474046418944,
+        -1
+      ],
+      [
+        1565427798751252482,
+        1
+      ],
+      [
+        1565391082665508866,
+        1
+      ],
+      [
+        1565390353745707008,
+        -1
+      ],
+      [
+        1565100041974550529,
+        1
+      ],
+      [
+        1565092452469510144,
+        1
+      ],
+      [
+        1565030614969028611,
+        1
+      ],
+      [
+        1564934710895251457,
+        1
+      ],
+      [
+        1564761007851032576,
+        -1
+      ],
+      [
+        1564433615634710528,
+        -2
+      ],
+      [
+        1564429355740270592,
+        0
+      ]
+    ],
+    "topics": {
+      "Politics": [
+        14,
+        9,
+        1
+      ],
+      "Kim Jong-un": [
+        8,
+        6,
+        2
+      ],
+      "Political figures": [
+        14,
+        9,
+        1
+      ],
+      "Entertainment": [
+        1,
+        0,
+        0
+      ],
+      "Romance films": [
+        1,
+        0,
+        0
+      ],
+      "Movies": [
+        1,
+        0,
+        0
+      ],
+      "Movies & TV": [
+        1,
+        0,
+        0
+      ],
+      "Restaurant industry": [
+        1,
+        1,
+        1
+      ],
+      "Buffets": [
+        1,
+        1,
+        1
+      ],
+      "Drinks": [
+        1,
+        1,
+        1
+      ],
+      "Liquor and spirits": [
+        1,
+        1,
+        1
+      ],
+      "Vladimir Putin": [
+        1,
+        1,
+        -1
+      ],
+      "Russian political figures": [
+        1,
+        1,
+        -1
+      ],
+      "Donald Trump": [
+        3,
+        2,
+        0
+      ],
+      "United Kingdom politics": [
+        1,
+        0,
+        0
+      ],
+      "United Kingdom political events": [
+        1,
+        0,
+        0
+      ],
+      "2022 Conservative Party leadership election": [
+        1,
+        0,
+        0
+      ],
+      "Liz Truss": [
+        2,
+        0,
+        0
+      ],
+      "US national news": [
+        1,
+        1,
+        -2
+      ],
+      "News": [
+        2,
+        2,
+        -3
+      ],
+      "News outlets": [
+        1,
+        1,
+        -2
+      ],
+      "Food": [
+        1,
+        0,
+        0
+      ],
+      "Lunch": [
+        1,
+        0,
+        0
+      ],
+      "Cuisines": [
+        1,
+        0,
+        0
+      ],
+      "Caribbean Cuisine": [
+        1,
+        0,
+        0
+      ],
+      "Stephen Miller": [
+        1,
+        1,
+        -1
+      ],
+      "Stephen L. Miller": [
+        1,
+        1,
+        -1
+      ],
+      "Journalists": [
+        1,
+        1,
+        -1
+      ],
+      "Nightlife": [
+        1,
+        1,
+        1
+      ],
+      "Political News": [
+        1,
+        1,
+        -1
+      ],
+      "Journalism": [
+        1,
+        1,
+        -1
+      ],
+      "Writing": [
+        1,
+        1,
+        -1
+      ],
+      "Zoos": [
+        1,
+        1,
+        1
+      ],
+      "United States Congress": [
+        1,
+        1,
+        1
+      ],
+      "Government institutions": [
+        1,
+        1,
+        1
+      ],
+      "United States politics": [
+        1,
+        1,
+        1
+      ],
+      "United States political events": [
+        1,
+        1,
+        1
+      ],
+      "2022 United States midterm elections": [
+        1,
+        1,
+        1
+      ],
+      "Florida's U.S. Senate election, 2022": [
+        1,
+        1,
+        1
+      ],
+      "Marco Rubio": [
+        1,
+        1,
+        1
+      ],
+      "Ivanka Trump": [
+        1,
+        1,
+        1
+      ],
+      "United States Senate": [
+        1,
+        1,
+        1
+      ],
+      "Animals": [
+        1,
+        1,
+        -1
+      ],
+      "Stocks & indices": [
+        1,
+        1,
+        -1
+      ],
+      "Orangutans": [
+        1,
+        1,
+        -1
+      ],
+      "Basketball": [
+        1,
+        1,
+        -1
+      ],
+      "Sports": [
+        1,
+        1,
+        -1
+      ]
+    },
+    "tweets": [
+      {
+        "length": 187,
+        "sentiment": "P",
+        "tID": 1583137744859299840,
+        "tText": "\u201cSpeed-running\u201d is Western phenomenon in which people try to complete a task from beginning to end as quickly as possible, often with little regard to end quality. https://t.co/XU86yMY4p3",
+        "topic": []
+      },
+      {
+        "length": 92,
+        "sentiment": "N",
+        "tID": 1582833040652308482,
+        "tText": "Indicted scoundrel funds hopeless legal defense by auctioning teeth. https://t.co/eUAn3A7dJJ",
+        "topic": []
+      },
+      {
+        "length": 91,
+        "sentiment": "N",
+        "tID": 1582800412285239297,
+        "tText": "Pakistani Tourist removed from Pyongyang Basketball court for coming too weak in the paint.",
+        "topic": [
+          "Basketball",
+          "Sports"
+        ]
+      },
+      {
+        "length": 121,
+        "sentiment": "N",
+        "tID": 1582773374933434369,
+        "tText": "\u201cOrangutans Playing with Each Other\u201d show at Pyongyang Zoo canceled until staff figures out if it is pornographic or not.",
+        "topic": [
+          "Animals",
+          "Stocks & indices",
+          "Orangutans"
+        ]
+      },
+      {
+        "length": 138,
+        "sentiment": "NONE",
+        "tID": 1582517281338560512,
+        "tText": "Supreme Leader Kim Jong-Un named Best Dressed Man in Democratic Peoples Republic of Korea for 8th consecutive year https://t.co/6FsA8qNZoj",
+        "topic": [
+          "Politics",
+          "Kim Jong-un",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 91,
+        "sentiment": "P",
+        "tID": 1581662675263950850,
+        "tText": "Marshal Kim Jong-un endorses use of tapioca pudding with currants as natural digestion aid.",
+        "topic": [
+          "Politics",
+          "Kim Jong-un",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 68,
+        "sentiment": "NONE",
+        "tID": 1581554320537190402,
+        "tText": "Color of Fall 2022 Menswear season is Black. https://t.co/W0c5HBkmVW",
+        "topic": []
+      },
+      {
+        "length": 115,
+        "sentiment": "N",
+        "tID": 1581414790617964544,
+        "tText": "Texas flyspeck weeps backstage after delivering spittle-flecked speech to empty auditorium. https://t.co/V2dDyUwEAY",
+        "topic": []
+      },
+      {
+        "length": 108,
+        "sentiment": "P",
+        "tID": 1581405203890601984,
+        "tText": "Florida Senator Marco Rubio stands on box to greet Ivanka Trump with kiss on throat. https://t.co/freSascJv1",
+        "topic": [
+          "Donald Trump",
+          "Politics",
+          "United States Congress",
+          "Government institutions",
+          "Political figures",
+          "United States politics",
+          "United States political events",
+          "2022 United States midterm elections",
+          "Florida's U.S. Senate election, 2022",
+          "Marco Rubio",
+          "Ivanka Trump",
+          "United States Senate"
+        ]
+      },
+      {
+        "length": 157,
+        "sentiment": "N",
+        "tID": 1581357668467634176,
+        "tText": "Reports of \u201cSlenderman\u201d lurking about the hallways of Nampo Primary Schools found to be confused amorous Italian Tourist, and has been dealt with accordingly",
+        "topic": []
+      },
+      {
+        "length": 84,
+        "sentiment": "NONE",
+        "tID": 1581175442522124289,
+        "tText": "Liz Truss is United Kingdom\u2019s Prime Minister for some reason https://t.co/BBGzn9mWHR",
+        "topic": [
+          "Politics",
+          "Liz Truss",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 90,
+        "sentiment": "P",
+        "tID": 1581103660528185345,
+        "tText": "\u201cDelicious Animals Running About\u201d exhibit at Pyongyang Zoo closed for undisclosed reasons.",
+        "topic": [
+          "Zoos"
+        ]
+      },
+      {
+        "length": 134,
+        "sentiment": "NONE",
+        "tID": 1581018190020153344,
+        "tText": "Musk cologne analyzed by chemists at Pyongyang Technical University, found to closely resemble porcine sludge. https://t.co/vMKKF43yPQ",
+        "topic": []
+      },
+      {
+        "length": 78,
+        "sentiment": "NONE",
+        "tID": 1581016716255326208,
+        "tText": "Supreme Leader Kim Jong Un currently subject to zero depositions, sources say.",
+        "topic": []
+      },
+      {
+        "length": 82,
+        "sentiment": "N",
+        "tID": 1580994197683081219,
+        "tText": ".@DPRK_News shutting down political news desk to focus on hard hitting journalism.",
+        "topic": [
+          "Political News",
+          "Journalism",
+          "Writing"
+        ]
+      },
+      {
+        "length": 114,
+        "sentiment": "P",
+        "tID": 1580918712580067328,
+        "tText": "Minister of Finance Ko Jo-Bom has full confidence of DPRK Leadership, because he generally knows what he is doing.",
+        "topic": []
+      },
+      {
+        "length": 93,
+        "sentiment": "P",
+        "tID": 1580912219197681666,
+        "tText": "Supreme Leader Kim Jong Un looks  to new age of peace and prosperity. https://t.co/h74BgiBZkZ",
+        "topic": []
+      },
+      {
+        "length": 63,
+        "sentiment": "N",
+        "tID": 1570504475642859523,
+        "tText": "Marshal Kim Jong-un slays banded krait, saving helpless infant.",
+        "topic": [
+          "Politics",
+          "Kim Jong-un",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 190,
+        "sentiment": "N+",
+        "tID": 1570184442785992704,
+        "tText": "Kingdom of England sets up Deputy King in the case that Real King is absent when there are teenagers unmolested, continuing tradition of coddling celebrity molesters. https://t.co/aOIPNyVVN0",
+        "topic": []
+      },
+      {
+        "length": 75,
+        "sentiment": "P",
+        "tID": 1569435839217926144,
+        "tText": "Supreme Leader Kim Jong Un has reasonable and proportionately-sized fingers",
+        "topic": []
+      },
+      {
+        "length": 120,
+        "sentiment": "P",
+        "tID": 1569019016865275906,
+        "tText": "Militant Chechen imp enjoys tawdry Crimean nightlife during furlough from collapsing front line. https://t.co/n2KUMlsiin",
+        "topic": [
+          "Nightlife"
+        ]
+      },
+      {
+        "length": 142,
+        "sentiment": "NEU",
+        "tID": 1568586783398498304,
+        "tText": "Miller believed to be responsible for creation of the monstrous artifact known as \u201cThe Orb,\u201d as well as child abductions across United States.",
+        "topic": []
+      },
+      {
+        "length": 111,
+        "sentiment": "N",
+        "tID": 1568585956378443776,
+        "tText": "Donald Trump occult advisor Stephen Miller summoned to answer for his blasphemous ways. https://t.co/zNlpUVGArR",
+        "topic": [
+          "Donald Trump",
+          "Politics",
+          "Stephen Miller",
+          "News",
+          "Stephen L. Miller",
+          "Political figures",
+          "Journalists"
+        ]
+      },
+      {
+        "length": 70,
+        "sentiment": "N",
+        "tID": 1568379241963601921,
+        "tText": "Babbling idiot finds employment as road pylon. https://t.co/43WUK4Asu1",
+        "topic": []
+      },
+      {
+        "length": 213,
+        "sentiment": "NONE",
+        "tID": 1568288795748978690,
+        "tText": "MARSHAL KIM JONG-UN'S LUNCH MENU - SEPTEMBER 9th 2022\n\nSoup\nCream of beetroot\n\nEntree\nCuban sandwich on gluten-free bun\n\nDessert\n1.5 oz Remy Martin cognac \n2 Yves St-Laurent cigarettes (as prescribed by physician)",
+        "topic": [
+          "Food",
+          "Lunch",
+          "Cuisines",
+          "Caribbean Cuisine",
+          "Politics",
+          "Kim Jong-un",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 132,
+        "sentiment": "N+",
+        "tID": 1567949441239326721,
+        "tText": "World cries in anguish as former US cable news network reporter Bernard Shaw dies of pneumonia.\n\nMultiple days of mourning declared.",
+        "topic": [
+          "US national news",
+          "News",
+          "News outlets"
+        ]
+      },
+      {
+        "length": 91,
+        "sentiment": "NONE",
+        "tID": 1567902487725703168,
+        "tText": "English prince Andrew poised to move one step closer to his throne. https://t.co/8kgNodPZno",
+        "topic": []
+      },
+      {
+        "length": 84,
+        "sentiment": "N",
+        "tID": 1567888833647202304,
+        "tText": "Unprepared English Prince rehearses for imperial coronation. https://t.co/VM3nyfUtjv",
+        "topic": []
+      },
+      {
+        "length": 72,
+        "sentiment": "P+",
+        "tID": 1567558333451698177,
+        "tText": "Marshal Kim Jong-Un successfully built his wall. https://t.co/aWcUZdO12B",
+        "topic": [
+          "Politics",
+          "Kim Jong-un",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 100,
+        "sentiment": "NONE",
+        "tID": 1567231394937544707,
+        "tText": "Who is Liz Truss, pawn of English-Germanic alien royal family and exploiter of workers and peasants?",
+        "topic": [
+          "Politics",
+          "United Kingdom politics",
+          "United Kingdom political events",
+          "2022 Conservative Party leadership election",
+          "Liz Truss",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 116,
+        "sentiment": "P",
+        "tID": 1566907381812002816,
+        "tText": "Inevitable breakup of failed state \"Australia\" accelerated by decades of drunken governance. https://t.co/Aoc2sidlhW",
+        "topic": []
+      },
+      {
+        "length": 75,
+        "sentiment": "NONE",
+        "tID": 1566879326225702912,
+        "tText": "Combustibility of Russian concrete leads the world. https://t.co/KQOYJW44Ww",
+        "topic": []
+      },
+      {
+        "length": 100,
+        "sentiment": "P+",
+        "tID": 1566483960124817408,
+        "tText": "Subsidies to wealthy a cornerstone policy of any UK Conservative government. https://t.co/9HwRjZ009n",
+        "topic": []
+      },
+      {
+        "length": 134,
+        "sentiment": "NONE",
+        "tID": 1566424081670471680,
+        "tText": "Missing document boxes seized from Donald Trump contained nothing but autographed copies of \"Art of the Deal.\" https://t.co/MjaJHVgFh7",
+        "topic": [
+          "Donald Trump",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 27,
+        "sentiment": "NONE",
+        "tID": 1565747237266853892,
+        "tText": "This \u201cTweet\u201d is classified.",
+        "topic": []
+      },
+      {
+        "length": 62,
+        "sentiment": "P+",
+        "tID": 1565746982148345856,
+        "tText": "Selected documents may be released to public, at a later time.",
+        "topic": []
+      },
+      {
+        "length": 90,
+        "sentiment": "P",
+        "tID": 1565746642715910145,
+        "tText": "Effective immediately, all documents are classified: FOR EYES OF MARSHAL KIM JONG-UN ONLY.",
+        "topic": [
+          "Politics",
+          "Kim Jong-un",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 114,
+        "sentiment": "N",
+        "tID": 1565701474046418944,
+        "tText": "Quality of Russian windows said to have fallen greatly under Vladimir Vladimirovich Putin. https://t.co/OhwC1HbFwN",
+        "topic": [
+          "Politics",
+          "Vladimir Putin",
+          "Political figures",
+          "Russian political figures"
+        ]
+      },
+      {
+        "length": 119,
+        "sentiment": "P",
+        "tID": 1565427798751252482,
+        "tText": "WORLD FOOD\n\nWet market in lower Manhattan purveys fresh Alaskan flounder from back of cube van. https://t.co/oGzgjr7M5W",
+        "topic": []
+      },
+      {
+        "length": 121,
+        "sentiment": "P",
+        "tID": 1565391082665508866,
+        "tText": "Threats of violence against police and government officials cannot be tolerated, republicans say. https://t.co/u3d8Kdbfww",
+        "topic": []
+      },
+      {
+        "length": 146,
+        "sentiment": "N",
+        "tID": 1565390353745707008,
+        "tText": "United States republicans urge criminal suspects simply to obey lawful commands of police, quickly and without hesitation. https://t.co/VFt1D0RPFC",
+        "topic": []
+      },
+      {
+        "length": 59,
+        "sentiment": "P",
+        "tID": 1565100041974550529,
+        "tText": "Friend Donald,\n\nI only wish I knew. https://t.co/CwjgrXmwyv",
+        "topic": []
+      },
+      {
+        "length": 232,
+        "sentiment": "P",
+        "tID": 1565092452469510144,
+        "tText": "Global restaurant chain Pyongyang opening Scotland location, incorporating offal, oatmeal and whisky into delicate Korean sauces and rich buffet desserts to attract famished local louts and drunken hooligans. https://t.co/K11wfGFbiv",
+        "topic": [
+          "Restaurant industry",
+          "Buffets",
+          "Drinks",
+          "Liquor and spirits"
+        ]
+      },
+      {
+        "length": 73,
+        "sentiment": "NONE",
+        "tID": 1565064001305862148,
+        "tText": "Passengers may not detrain at Kwangmy\u014fng station. https://t.co/QgJcY0J9HE",
+        "topic": []
+      },
+      {
+        "length": 118,
+        "sentiment": "P",
+        "tID": 1565030614969028611,
+        "tText": "Pyongyang Metro token costs \u20a95 per trip between breathtakingly beautiful and orderly stations. https://t.co/znHqzIM2dn",
+        "topic": []
+      },
+      {
+        "length": 109,
+        "sentiment": "P",
+        "tID": 1564934710895251457,
+        "tText": "He calls up his friends\nThey already know\nAnd they've all got tickets to see his show https://t.co/dCuoD1zWct",
+        "topic": []
+      },
+      {
+        "length": 156,
+        "sentiment": "N",
+        "tID": 1564761007851032576,
+        "tText": "Marshal Kim Jong-un commutes death sentences of war criminals Harry S Truman and Douglas MacArthur to life imprisonment plus 400 years, as goodwill gesture.",
+        "topic": [
+          "Politics",
+          "Kim Jong-un",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 124,
+        "sentiment": "NONE",
+        "tID": 1564738333116448779,
+        "tText": "East Bloc Top Film Award of 1964 given to DPRK cinema-noir romance \"Are These Your Apples, Comrade?\" https://t.co/IZ53u0aiOD",
+        "topic": [
+          "Entertainment",
+          "Romance films",
+          "Movies",
+          "Movies & TV"
+        ]
+      },
+      {
+        "length": 115,
+        "sentiment": "N+",
+        "tID": 1564433615634710528,
+        "tText": "Bolivian guerilla leader detained at Cancun nightclub, offers wife as hostage in his place. https://t.co/0MsoNQmuEl",
+        "topic": []
+      },
+      {
+        "length": 104,
+        "sentiment": "NEU",
+        "tID": 1564429355740270592,
+        "tText": "Supreme Leader Kim Jong-un is pleased with lightweight yet elegant summer smock. https://t.co/VXeJi5LoTn",
+        "topic": [
+          "Politics",
+          "Kim Jong-un",
+          "Political figures"
+        ]
+      }
+    ],
+    "username": "dprk_news"
+  },
+  "aoc": {
+    "avglen": 198.3,
+    "positivity": 0.3333333333333333,
+    "sntmntTweets": [
+      [
+        1581420314050719744,
+        1
+      ],
+      [
+        1581413249186004993,
+        1
+      ],
+      [
+        1581098103473463296,
+        1
+      ],
+      [
+        1580781913475715073,
+        1
+      ],
+      [
+        1580776034143588352,
+        1
+      ],
+      [
+        1580693459895099393,
+        1
+      ],
+      [
+        1580587921182031872,
+        2
+      ],
+      [
+        1580393315027292160,
+        -2
+      ],
+      [
+        1580032371482537985,
+        -1
+      ],
+      [
+        1579295827574788096,
+        -2
+      ],
+      [
+        1578181720523755521,
+        1
+      ],
+      [
+        1578176831726882816,
+        1
+      ],
+      [
+        1577785070638796801,
+        1
+      ],
+      [
+        1575549816780001280,
+        -1
+      ],
+      [
+        1573818441408159750,
+        1
+      ],
+      [
+        1573321144320622592,
+        1
+      ],
+      [
+        1573033233457254400,
+        -2
+      ],
+      [
+        1572018011258916865,
+        -1
+      ],
+      [
+        1571182015692607489,
+        -1
+      ],
+      [
+        1570896218917834752,
+        0
+      ],
+      [
+        1570887793559347200,
+        -1
+      ],
+      [
+        1570837412766699521,
+        -1
+      ],
+      [
+        1570835665448992769,
+        1
+      ],
+      [
+        1570834565513768960,
+        1
+      ],
+      [
+        1570829426350493696,
+        1
+      ],
+      [
+        1570828755932946433,
+        0
+      ],
+      [
+        1570826113286541312,
+        2
+      ],
+      [
+        1570635058498924546,
+        1
+      ],
+      [
+        1570236555125723136,
+        1
+      ],
+      [
+        1570225257121710085,
+        1
+      ],
+      [
+        1569077869669662721,
+        1
+      ],
+      [
+        1567506602718121984,
+        1
+      ],
+      [
+        1559549523860619269,
+        2
+      ],
+      [
+        1552776330273513474,
+        -1
+      ],
+      [
+        1552708098414055428,
+        1
+      ],
+      [
+        1550520487746408452,
+        1
+      ],
+      [
+        1550298540177498112,
+        -1
+      ],
+      [
+        1550255852745113600,
+        0
+      ],
+      [
+        1549809724513722374,
+        0
+      ]
+    ],
+    "topics": {
+      "Politics": [
+        50,
+        39,
+        13
+      ],
+      "Alexandria Ocasio-Cortez": [
+        50,
+        39,
+        13
+      ],
+      "Political figures": [
+        50,
+        39,
+        13
+      ],
+      "Political issues": [
+        6,
+        5,
+        -5
+      ],
+      "Josh Hawley": [
+        1,
+        1,
+        -1
+      ],
+      "Supreme Court of the United States": [
+        1,
+        1,
+        -1
+      ],
+      "Prince Harry": [
+        1,
+        1,
+        -1
+      ],
+      "Reproductive Rights in the United States": [
+        1,
+        1,
+        -1
+      ],
+      "Emmanuel Macron": [
+        1,
+        1,
+        -1
+      ],
+      "Boris Johnson": [
+        1,
+        1,
+        -1
+      ],
+      "John Roberts": [
+        1,
+        1,
+        -1
+      ],
+      "Samuel Alito": [
+        1,
+        1,
+        -1
+      ],
+      "Government institutions": [
+        5,
+        5,
+        1
+      ],
+      "France politics": [
+        1,
+        1,
+        -1
+      ],
+      "United States government institutions": [
+        1,
+        1,
+        -1
+      ],
+      "Climate change": [
+        1,
+        1,
+        2
+      ],
+      "Global Economy": [
+        1,
+        1,
+        1
+      ],
+      "Warren Buffet": [
+        1,
+        1,
+        1
+      ],
+      "Business personalities": [
+        1,
+        1,
+        1
+      ],
+      "Tim Ryan": [
+        1,
+        1,
+        1
+      ],
+      "Sheila Jackson Lee": [
+        1,
+        1,
+        1
+      ],
+      "Joe Biden": [
+        4,
+        3,
+        0
+      ],
+      "Gaming": [
+        1,
+        1,
+        2
+      ],
+      "Tabletop gaming": [
+        1,
+        1,
+        2
+      ],
+      "Traditional games": [
+        1,
+        1,
+        2
+      ],
+      "Dominoes": [
+        1,
+        1,
+        2
+      ],
+      "Clay Higgins": [
+        1,
+        0,
+        0
+      ],
+      "Ron DeSantis": [
+        2,
+        2,
+        1
+      ],
+      "Elizabeth Warren": [
+        1,
+        1,
+        1
+      ],
+      "Katherine Clark": [
+        1,
+        1,
+        1
+      ],
+      "United States Congress": [
+        3,
+        3,
+        1
+      ],
+      "James McGovern": [
+        1,
+        1,
+        1
+      ],
+      "Ayanna Pressley": [
+        1,
+        1,
+        1
+      ],
+      "Ed Markey": [
+        1,
+        1,
+        1
+      ],
+      "News": [
+        3,
+        2,
+        -3
+      ],
+      "Financial services": [
+        1,
+        1,
+        -2
+      ],
+      "US Environmental Protection Agency": [
+        1,
+        1,
+        1
+      ],
+      "United States Healthcare System": [
+        1,
+        1,
+        -1
+      ],
+      "Donald Trump": [
+        1,
+        0,
+        0
+      ],
+      "Television": [
+        1,
+        0,
+        0
+      ],
+      "The Office": [
+        1,
+        0,
+        0
+      ],
+      "Comedy TV": [
+        1,
+        0,
+        0
+      ],
+      "Workplace comedy": [
+        1,
+        0,
+        0
+      ],
+      "Kanye West": [
+        1,
+        1,
+        -2
+      ],
+      "Rap": [
+        1,
+        1,
+        -2
+      ],
+      "Music": [
+        1,
+        1,
+        -2
+      ],
+      "Hip hop": [
+        1,
+        1,
+        -2
+      ],
+      "Taco Bell": [
+        1,
+        1,
+        -2
+      ],
+      "Food": [
+        1,
+        1,
+        -2
+      ],
+      "Lunch": [
+        1,
+        1,
+        -2
+      ],
+      "United States politics": [
+        4,
+        2,
+        -1
+      ],
+      "United States political issues": [
+        1,
+        1,
+        -2
+      ],
+      "Inflation in the United States": [
+        1,
+        1,
+        -2
+      ],
+      "Nursing & nurses": [
+        1,
+        1,
+        2
+      ],
+      "Business & finance": [
+        1,
+        1,
+        1
+      ],
+      "Raphael Warnock": [
+        2,
+        1,
+        1
+      ],
+      "Political events": [
+        3,
+        1,
+        1
+      ],
+      "United States political figures": [
+        1,
+        0,
+        0
+      ],
+      "United States political events": [
+        3,
+        1,
+        1
+      ],
+      "2022 United States midterm elections": [
+        3,
+        1,
+        1
+      ],
+      "Herschel Walker": [
+        1,
+        0,
+        0
+      ],
+      "Georgia's U.S. Senate election, 2022": [
+        2,
+        1,
+        1
+      ],
+      "Cultural events": [
+        2,
+        1,
+        1
+      ],
+      "Halloween": [
+        2,
+        1,
+        1
+      ],
+      "Events": [
+        2,
+        1,
+        1
+      ],
+      "COVID-19": [
+        1,
+        1,
+        1
+      ],
+      "US national news": [
+        1,
+        0,
+        0
+      ]
+    },
+    "tweets": [
+      {
+        "length": 118,
+        "sentiment": "NONE",
+        "tID": 1582904970000883714,
+        "tText": "And I\u2019ve got news for you: Absolutely no one wants to hear what your plan is for their uterus. https://t.co/1zSOeZEdTx",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "US national news",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "United States politics",
+          "Political events",
+          "United States political events",
+          "2022 United States midterm elections",
+          "Political issues"
+        ]
+      },
+      {
+        "length": 63,
+        "sentiment": "NONE",
+        "tID": 1582549433707024385,
+        "tText": "Rule #1: Never underestimate the Bronx. https://t.co/ajHW7YlaoQ",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Cultural events",
+          "Halloween",
+          "Events"
+        ]
+      },
+      {
+        "length": 323,
+        "sentiment": "P",
+        "tID": 1581420314050719744,
+        "tText": "All in a day\u2019s work:\n\n\u2705 Reopening @nysci after we supported $12 million in FEMA recovery \ud83c\udf0e\n\n\u2705 Announcing our project for the 1st STEM &amp; space-science preschool in the US, right in working-class Corona! \ud83d\ude80\n\n\u2705 Block party after our $225k community investment in @QCHnyc \ud83e\udd5f \ud83d\udc83\ud83c\udffd https://t.co/lZ7x6lFx9X https://t.co/3QNKDKeEmH",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "COVID-19"
+        ]
+      },
+      {
+        "length": 40,
+        "sentiment": "P",
+        "tID": 1581413249186004993,
+        "tText": "Happy Saturday \ud83c\udf1e https://t.co/y6Jyf1l8qo",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 229,
+        "sentiment": "P",
+        "tID": 1581098103473463296,
+        "tText": "Halloween is in 2 weeks my guy. \ud83d\udc7b \n\nWhile this dude\u2019s out trick or treating, let\u2019s make sure to rally for @ReverendWarnock and win the Senate. Sign up for a phonebank shift, donate, &amp; volunteer today:\n\nhttps://t.co/Za4BOqNsyx",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Cultural events",
+          "United States politics",
+          "Halloween",
+          "Raphael Warnock",
+          "Events",
+          "Political events",
+          "United States political events",
+          "2022 United States midterm elections",
+          "Georgia's U.S. Senate election, 2022"
+        ]
+      },
+      {
+        "length": 54,
+        "sentiment": "NONE",
+        "tID": 1581096373138903040,
+        "tText": "What in the Party City is that https://t.co/Sivdr9cSEP",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "United States politics",
+          "Raphael Warnock",
+          "Political events",
+          "United States political figures",
+          "United States political events",
+          "2022 United States midterm elections",
+          "Herschel Walker",
+          "Georgia's U.S. Senate election, 2022"
+        ]
+      },
+      {
+        "length": 284,
+        "sentiment": "P",
+        "tID": 1580781913475715073,
+        "tText": "I don\u2019t own nor trade individual stocks, accept no corporate money to my campaign, &amp; live solely off my congressional salary (which requires us to pay for 2 rents out of pocket).\n\nAll of this is publicly disclosed info. I save in a Thrift Savings Plan just like other fed workers.",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Business & finance"
+        ]
+      },
+      {
+        "length": 273,
+        "sentiment": "P",
+        "tID": 1580776034143588352,
+        "tText": "Another interaction from last night:\n\n\u201cAOC, How did you become worth $29 million dollars??\u201d\n\n\u201cSir, I wish. My financial disclosures are public. I still owe ~$18k in student loans.\u201d\n\n\u201cI saw it on GOOGLE\u201d\n\n\u201cNot everything on the internet is true\u201d\n\nThen he stormed out?? \ud83e\udd37\ud83c\udffd\u200d\u2640\ufe0f",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 304,
+        "sentiment": "P",
+        "tID": 1580693459895099393,
+        "tText": "Hey Boebert, you seem to have us confused.\nI:\n\u2705 have attended &amp; hosted 100s of  community events\n\u2705 hold regular town halls\n\u2705 don\u2019t take a dime in corporate cash\n\nYou:\n\ud83d\udeae are bankrolled by corporate PACs, Big Ag, &amp; Oil\n\ud83d\udeae are too scared to hold regular town halls open to all https://t.co/A0jrRbyFDO",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 117,
+        "sentiment": "P+",
+        "tID": 1580587921182031872,
+        "tText": "When nurses got your back, you feel like you can do anything!\n\nThank you @NationalNurses \u26d1\ufe0f\u2665\ufe0f https://t.co/hDR4muqzMv",
+        "topic": [
+          "Politics",
+          "United States Congress",
+          "Alexandria Ocasio-Cortez",
+          "Government institutions",
+          "Political figures",
+          "Nursing & nurses"
+        ]
+      },
+      {
+        "length": 213,
+        "sentiment": "N+",
+        "tID": 1580393315027292160,
+        "tText": "If someone is talking politics and eating $28 of Taco Bell in one sitting then my immediate follow up question is what their thoughts are on Biden\u2019s executive order on cannabis rescheduling https://t.co/S3JpW3jbhG",
+        "topic": [
+          "Taco Bell",
+          "Joe Biden",
+          "Food",
+          "Politics",
+          "Political issues",
+          "Lunch",
+          "Alexandria Ocasio-Cortez",
+          "News",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "Inflation in the United States"
+        ]
+      },
+      {
+        "length": 88,
+        "sentiment": "NONE",
+        "tID": 1580040232212103170,
+        "tText": "4 days. There were just 4 days left in Hispanic Heritage Month \ud83e\udee0 https://t.co/ddNpUqAnO9",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 306,
+        "sentiment": "N",
+        "tID": 1580032371482537985,
+        "tText": "Student loan hack: not only are standard Fed loans eligible, but so are parent PLUS loans.\n\nThat means a family could 2x or 3x their loan cancellation \ud83d\udcb8\n\nEx: if a parent making &lt;$125k took out a PLUS loan for their kid and got a Pell grant themselves,they EACH get $20k cancelled https://t.co/gHLyGYKj5X",
+        "topic": [
+          "Politics",
+          "Political issues",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 283,
+        "sentiment": "N+",
+        "tID": 1579295827574788096,
+        "tText": "There is absolutely no room in this country or world for antisemitism. It is important to see how harmful + dangerous Kanye\u2019s words are - not only to our Jewish brothers, sisters, &amp; siblings, but also to our collective society at large.\n\nWe must reject this \ud83d\udeae wherever we see it.",
+        "topic": [
+          "Kanye West",
+          "Rap",
+          "Music",
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Hip hop"
+        ]
+      },
+      {
+        "length": 59,
+        "sentiment": "NONE",
+        "tID": 1578449307740823553,
+        "tText": "Bears. Beets. Battlestar Galactica. https://t.co/HaV47Ycfvj",
+        "topic": [
+          "Donald Trump",
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Television",
+          "The Office",
+          "Comedy TV",
+          "Workplace comedy"
+        ]
+      },
+      {
+        "length": 276,
+        "sentiment": "P",
+        "tID": 1578181720523755521,
+        "tText": "Additionally, @POTUS should treat all people equally and pardon ALL unjust simple \ud83c\udf43 possession convictions, not some. \n\nIf the US is admitting these laws were unjust, then we shouldn\u2019t discriminate pardons based on citizen status.\n\nLet\u2019s get that liberty and justice for ALL \ud83d\uddfd",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 297,
+        "sentiment": "P",
+        "tID": 1578176831726882816,
+        "tText": "This is truly great news.\n\nAnd for people to truly be freed from having their lives haunted by unjust marijuana convictions, we must work to *expunge* records beyond pardoning.\n\nBetween that and descheduling cannabis, we can make huge steps forward for so many communities. https://t.co/cJVAvyOM0n",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 212,
+        "sentiment": "P",
+        "tID": 1577785070638796801,
+        "tText": "Watch for our latest move to protect communities from getting priced out of Queens &amp; the Bronx,\n\nbut stay to watch my attempts at Bangla and Nepali at the end \ud83d\ude48\n\n(I\u2019m trying y\u2019all!) \u2b07\ufe0f https://t.co/AHyxkyszMD",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 304,
+        "sentiment": "N",
+        "tID": 1575549816780001280,
+        "tText": "Abortion rights are a class struggle too.\n\nWhen the powerful force people to give birth against their will, they trap millions into cycles of economic setback and desperation. Especially in a country without guaranteed healthcare.\n\nAnd desperate workers are far easier to exploit. https://t.co/IjFoLrGyFz",
+        "topic": [
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 30,
+        "sentiment": "P",
+        "tID": 1573818441408159750,
+        "tText": "\ud83d\udc4f\ud83c\udffd\ud83d\udc4f\ud83c\udffd\ud83d\udc4f\ud83c\udffd https://t.co/IXkrc1RfEz",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "US Environmental Protection Agency",
+          "Government institutions"
+        ]
+      },
+      {
+        "length": 276,
+        "sentiment": "P",
+        "tID": 1573321144320622592,
+        "tText": "Solidarity with the courageous women and allies in Iran protesting for their freedom.\n\nMahsa Amini was senselessly murdered by the same patriarchal and autocratic forces repressing women the world over.\n\nThe right to choose belongs to us all, from hijabs to reproductive care.",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 298,
+        "sentiment": "N+",
+        "tID": 1573033233457254400,
+        "tText": "I was in the room when this happened and it was just as gross and wild in person as it is here.\n\nPeople rightly discuss conflicts of interest of members of Congress, but lobbying of senior staff (who move on behalf of members + committees) is a huge part of the problem too. https://t.co/0NlIRrlqS5",
+        "topic": [
+          "Financial services",
+          "Politics",
+          "United States Congress",
+          "Alexandria Ocasio-Cortez",
+          "Government institutions",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 108,
+        "sentiment": "NONE",
+        "tID": 1572381607247618054,
+        "tText": "Of all people, since when does this guy take issue with \u201csiding with Republicans\u201d \u2620\ufe0f https://t.co/mYyt2ZT8IX",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "News",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 56,
+        "sentiment": "N",
+        "tID": 1572018011258916865,
+        "tText": "Also forgot to say Fuera LUMA \ud83c\uddf5\ud83c\uddf7 https://t.co/e9BKMmiUGp",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 28,
+        "sentiment": "NONE",
+        "tID": 1571183399007670273,
+        "tText": "\ud83c\uddf5\ud83c\uddf7 \ud83d\udd25 https://t.co/BmuvWcsjzz",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 304,
+        "sentiment": "N",
+        "tID": 1571182015692607489,
+        "tText": "They were not deported. They were brought to shelter in the US. With no help from you.\n\nWhy lie to and traffic Venezuelan refugees? For votes? This is nuestra familia Latina. You should be standing up for them.\n\nIf it\u2019s one thing we can count on you for, it\u2019s being una verg\u00fcenza. https://t.co/3MrPyUDXnu",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 274,
+        "sentiment": "NONE",
+        "tID": 1570897149050916865,
+        "tText": "By today\u2019s standards, most US families would have be deemed undocumented or trafficked at some point in their family history.\n\nFor the most part, people didn\u2019t need lawyers and years of processing to come to this US until immigration became a racialized issue. Remember that",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 194,
+        "sentiment": "NEU",
+        "tID": 1570896218917834752,
+        "tText": "Not people calling others \u201cillegal\u201d as they fondly recall their last name is spelled the way it is because their great-grandpa came to the US with the equivalent of a misspelled post-it note \ud83e\udd74\ud83e\udd74\ud83e\udd74",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 284,
+        "sentiment": "N",
+        "tID": 1570887793559347200,
+        "tText": "It\u2019s appalling that far-right politicians seem to have decided that fall before an election is their regularly scheduled time to commit crimes against humanity on refugees.\n\nDon\u2019t normalize this. Lying to &amp; trafficking people for TV and clicks isn\u2019t politics as usual. It\u2019s abuse.",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "News",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 136,
+        "sentiment": "N",
+        "tID": 1570837412766699521,
+        "tText": "We also have better food than you will probably ever have in your life.\n\nPeople who don\u2019t love immigrants don\u2019t deserve momos!! Period!!",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 283,
+        "sentiment": "P",
+        "tID": 1570835665448992769,
+        "tText": "Try again. \ud83d\udc81\ud83c\udffd\u200d\u2640\ufe0f believe it or not the United States is the wealthiest nation in the world and we have more than enough to care for everyone. Instead of worshipping billionaires, if you try valuing your neighbors enough to fight for them then we can all have a better life, together.",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 303,
+        "sentiment": "P",
+        "tID": 1570834565513768960,
+        "tText": "They already have!\n\nMy district is nearly 50% immigrant. We speak 100+ languages, have 2 public hospitals that treat all regardless of status/income, and still have enough left over to help states like Florida.\n\nWe know how to care for each other, and are pretty damn good at it. https://t.co/NmagaqUa31",
+        "topic": [
+          "Politics",
+          "Ron DeSantis",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 279,
+        "sentiment": "P",
+        "tID": 1570829426350493696,
+        "tText": "Shout out to Massachusetts and the people of Martha\u2019s Vineyard for showing the world what the best of America looks like \ud83c\uddfa\ud83c\uddf8 \n\nIt\u2019s unsurprising that they also send some of the best to Congress, like @ewarren, @EdMarkey, @AyannaPressley, @RepMcGovern, @RepKClark and so many more!",
+        "topic": [
+          "Elizabeth Warren",
+          "Politics",
+          "Katherine Clark",
+          "United States Congress",
+          "James McGovern",
+          "Alexandria Ocasio-Cortez",
+          "Ayanna Pressley",
+          "Government institutions",
+          "Political figures",
+          "Ed Markey"
+        ]
+      },
+      {
+        "length": 307,
+        "sentiment": "NEU",
+        "tID": 1570828755932946433,
+        "tText": "What a lot of Republican politicians fail to understand is that not everyone shares their zero-sum, scarcity mindset.\n\nMany of us understand that immigrants and refugees are a blessing. They have so much to offer our country, &amp; much of our growth as a nation is because of them.\ud83e\udec2 https://t.co/AEVdPQCMAi",
+        "topic": [
+          "Politics",
+          "Ron DeSantis",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 54,
+        "sentiment": "NONE",
+        "tID": 1570826395940687875,
+        "tText": "Talk about it, @RayaSalter \ud83d\udde3\u2935\ufe0f https://t.co/UvDUxQnrfL",
+        "topic": [
+          "Politics",
+          "Clay Higgins",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 174,
+        "sentiment": "P+",
+        "tID": 1570826113286541312,
+        "tText": "This was a great watch \ud83d\ude02\n\nI have a question for Miami players: do Cubanos play with capic\u00fas and chuchazos? Or is that just a Boricua/Dominicano thing? https://t.co/AWL9CyDXt1",
+        "topic": [
+          "Gaming",
+          "Politics",
+          "Tabletop gaming",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Traditional games",
+          "Dominoes"
+        ]
+      },
+      {
+        "length": 303,
+        "sentiment": "P",
+        "tID": 1570635058498924546,
+        "tText": "I remember how folks stepped up to help Texans when you left them cold and hungry during the freeze.  \n\nWe will welcome these families too. They have so much to offer.\n\nYou do seem to be struggling at your job, though. Maybe you should consider if this is the right work for you. https://t.co/DEwHdWwzi6",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 101,
+        "sentiment": "P",
+        "tID": 1570236555125723136,
+        "tText": "Thank you for the welcome, @Teamsters. The sash is going up in my office! \ud83d\udc34\u270a\ud83c\udffd https://t.co/V5pJoeZZG1",
+        "topic": [
+          "Politics",
+          "Tim Ryan",
+          "Sheila Jackson Lee",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 301,
+        "sentiment": "P",
+        "tID": 1570225257121710085,
+        "tText": "How about BNSF not disrupt the US economy over rail workers getting a sick day?\n\nThe greed here is unreal. When was the last time you saw a corporate exec get written up for needing a doctor? If they\u2019re so against sick days, they can give up theirs.\n\nStand with rail workers \u270a\ud83c\udffd https://t.co/IbxHWhdbCa",
+        "topic": [
+          "Global Economy",
+          "Politics",
+          "Warren Buffet",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Business personalities"
+        ]
+      },
+      {
+        "length": 39,
+        "sentiment": "P",
+        "tID": 1569077869669662721,
+        "tText": "Happy Sunday \u26c5\ufe0f https://t.co/t4gdXpgQk7",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 291,
+        "sentiment": "P",
+        "tID": 1567506602718121984,
+        "tText": "The fight to restore abortion rights needs more than a few good men.\n\nThank you to @WesleyLowery &amp; @GQMagazine for going there to discuss good men, how to step up and grow, and healthy masculinity.\n\nTrans icons Cruz Valdez &amp; Dara Allen behind the images \ud83c\udff3\ufe0f\u200d\u26a7\ufe0f\nhttps://t.co/ylxskwQ4yO",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 23,
+        "sentiment": "NONE",
+        "tID": 1563514040919289858,
+        "tText": "https://t.co/37jZxp7Tir",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 255,
+        "sentiment": "P+",
+        "tID": 1559549523860619269,
+        "tText": "There is power in a union!\n\nThank you @APWUnational and our postal workers for having me to discuss the fight for democracy, postal banking, Medicare for All, combating the climate crisis, and more.\n\nTogether we can win it all \ud83d\udcec\ud83d\udc95\ud83d\udcaa\ud83c\udffd https://t.co/WEscN95CUs",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Climate change"
+        ]
+      },
+      {
+        "length": 308,
+        "sentiment": "N",
+        "tID": 1552776330273513474,
+        "tText": "Remember: it was Alito\u2019s opinion that leaked.\n\nThat fact paired with his politicized remarks below should be alarming to anyone.\n\nThe Supreme Court is in a legitimacy crisis. Chief Justice Roberts has a responsibility to share the progress &amp; results of SCOTUS\u2019 leak investigation. https://t.co/5AlOb1ihJw",
+        "topic": [
+          "Politics",
+          "Supreme Court of the United States",
+          "Political issues",
+          "Prince Harry",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Reproductive Rights in the United States",
+          "Emmanuel Macron",
+          "Boris Johnson",
+          "John Roberts",
+          "Samuel Alito",
+          "Government institutions",
+          "France politics",
+          "United States government institutions"
+        ]
+      },
+      {
+        "length": 91,
+        "sentiment": "P",
+        "tID": 1552708098414055428,
+        "tText": "We are so close and making progress! Keep up the pressure everyone! https://t.co/JTEF3OCbPC",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 39,
+        "sentiment": "P",
+        "tID": 1550520487746408452,
+        "tText": "Thank you t\u00edo \ud83d\udc9c https://t.co/5LURrPOG6U",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 23,
+        "sentiment": "NONE",
+        "tID": 1550298564034699266,
+        "tText": "https://t.co/dxQPsQNu59",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 304,
+        "sentiment": "N",
+        "tID": 1550298540177498112,
+        "tText": "Remember: Even after running for his life, Sen. Hawley chose to fundraise off his encouraging and fist-pumping the violent mob, and even sold merchandise of himself doing so from then through *this year* - even after Politico, who later acquired the image, sent a cease and desist https://t.co/eNU8iIqbxl",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Josh Hawley",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 303,
+        "sentiment": "NEU",
+        "tID": 1550255852745113600,
+        "tText": "OK, so not only do Republicans want to institute a federal ban on abortion, but today 195 of them voted against codifying the right to contraception.\n\nOnly 8 voted yes. (Every Dem was a yes).\n\nThis was not a \u201cgotcha\u201d bill with a bunch of stuff btw. It was pretty straightforward. https://t.co/Ve0AWaKemU",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures",
+          "Political issues"
+        ]
+      },
+      {
+        "length": 303,
+        "sentiment": "NEU",
+        "tID": 1549809724513722374,
+        "tText": "No faking here. Putting your hands behind your back is a best practice while detained, handcuffed or not, to avoid escalating charges like resisting arrest.\n\nBut given how you lied about a fellow rape survivor for \u201cpoints,\u201d as you put it to me, I don\u2019t expect much else from you. https://t.co/lUc1TPS21D",
+        "topic": [
+          "Politics",
+          "Alexandria Ocasio-Cortez",
+          "Political figures"
+        ]
+      }
+    ],
+    "username": "aoc"
   }
 }
