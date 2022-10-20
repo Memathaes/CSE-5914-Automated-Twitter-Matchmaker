@@ -16,45 +16,42 @@ class DataGetter(ABC):
 
 class TwitterDataGetter(DataGetter):
     def get_users_tweets(usrname, numberoftweets, client, previousRetrieval = "2010-11-06T00:00:00Z"):
-        if numberoftweets > 20:
-            numberoftweets = 20
+        if numberoftweets > 100:
+            numberoftweets = 100
         elif numberoftweets < 10:
             numberoftweets = 10
-        Id = client.get_user(username = usrname).data.id
-        results = client.get_users_tweets(id=Id,max_results = numberoftweets, exclude = "retweets,replies",start_time = previousRetrieval) 
+        apireq = client.get_user(username = usrname)
+        tweets = []
+
+        if apireq.data is None:
+            return tweets
+
+        Id = apireq.data.id
+        results = client.get_users_tweets(id=Id,max_results = numberoftweets, exclude = "retweets,replies",start_time = previousRetrieval,tweet_fields = "context_annotations")
         
         tweets = []
         if results.meta["result_count"] != 0:
             for tweet in results.data:
-                tweets.insert(0,[tweet.id, tweet.text])
+                tweets.insert(0,[tweet.id, tweet.text, tweet.context_annotations])
         return tweets
     
     def updateProfile(prevProfile, newTweets):
-        avglen = prevProfile['avglen'] * len(prevProfile['tweets'])
-        numtweet = len(prevProfile['tweets'])
-        sentimentScore = prevProfile['positivity']
-        sentimentedTweets = prevProfile['sntmntTweets']
-        topics = prevProfile['topics']
         tweetsWithData = prevProfile['tweets']
+        sentimentedTweets = prevProfile['sntmntTweets']
+        avglen = prevProfile['avglen'] * len(tweetsWithData)
+        sentimentScore = prevProfile['positivity'] * len(sentimentedTweets)
+        topics = prevProfile['topics']
 
         for tweet in newTweets:
             if tweet[0] > tweetsWithData[0]['tID']:
                 avglen = avglen + len(tweet[1])
-                numtweet = numtweet + 1
-
-                top = mc.ClassResponse(mc.ClassRequest(config.mc_token, txt = tweet[1], model='SocialMedia_en').sendReq())
-                time.sleep(1)
-                topic = top.getCategories()
 
                 sent = mc.SentimentResponse(mc.SentimentRequest(config.mc_token, txt = tweet[1], lang='en').sendReq())
-                time.sleep(1)
+                time.sleep(0.5)
                 score = sent.getGlobalScoreTag()
 
-                tweetsWithData.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),topic,score))
-
-                sentimentIncrement = 0
-                if (score != "NONE"):
-                    sentimentedTweets += 1
+                if score != "NONE":
+                    sentimentIncrement = 0
                     if (score == "P+"):
                         sentimentIncrement = 2
                     elif (score == "P"):
@@ -64,41 +61,45 @@ class TwitterDataGetter(DataGetter):
                     elif (score == "N+"):
                         sentimentIncrement = -2
                     sentimentScore += sentimentIncrement
+                    sentimentedTweets.insert(0,[tweet[0],sentimentIncrement])
                 
-                for elem in topic:
-                    if elem['label'] in topics:
-                        topics[elem['label']][0] += 1
-                        topics[elem['label']][1] += sentimentIncrement
-                    else:
-                        topics[elem['label']] = [1, sentimentIncrement]
-        if numtweet != 0:
-            avglen = avglen / numtweet
-        return profile.Profile(prevProfile['username'],tweetsWithData,avglen,topics,sentimentScore,sentimentedTweets)
+                theseTopics = []
+                for topic in tweet[2]:
+                    if topic['domain']['id'] == '131':
+                        theseTopics.append(topic['entity']['name'])
+                        if not topic['entity']['name'] in topics.keys():
+                            topics[topic['entity']['name']] = [0,0,0]
+                
+                tweetsWithData.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),score,theseTopics))
+                
+                for elem in theseTopics:
+                    topics[elem][0] += 1
+                    if score != "NONE":
+                        topics[elem][1] += 1
+                        topics[elem][2] += sentimentIncrement
+        if len(tweetsWithData) != 0:
+            avglen = avglen / len(tweetsWithData)
+        if len(sentimentedTweets) != 0:
+            sentimentScore = sentimentScore / len(sentimentedTweets)
+
+        return profile.Profile(prevProfile['username'],tweetsWithData,sentimentedTweets,avglen,sentimentScore,topics)
     
     def generateProfile(username, tweets):
-        avglen = 0
-        numtweet = 0
-        sentimentScore = 0.0
-        sentimentedTweets = 0
-        topics = {}
         tweetsWithData = []
+        sentimentedTweets = []
+        avglen = 0
+        sentimentScore = 0.0
+        topics = {}
+
         for tweet in tweets:
             avglen = avglen + len(tweet[1])
-            numtweet = numtweet + 1
-
-            top = mc.ClassResponse(mc.ClassRequest(config.mc_token, txt = tweet[1], model='SocialMedia_en').sendReq())
-            time.sleep(1)
-            topic = top.getCategories()
 
             sent = mc.SentimentResponse(mc.SentimentRequest(config.mc_token, txt = tweet[1], lang='en').sendReq())
-            time.sleep(1)
+            time.sleep(0.5)
             score = sent.getGlobalScoreTag()
 
-            tweetsWithData.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),topic,score))
-
-            sentimentIncrement = 0
-            if (score != "NONE"):
-                sentimentedTweets += 1
+            if score != "NONE":
+                sentimentIncrement = 0
                 if (score == "P+"):
                     sentimentIncrement = 2
                 elif (score == "P"):
@@ -108,28 +109,42 @@ class TwitterDataGetter(DataGetter):
                 elif (score == "N+"):
                     sentimentIncrement = -2
                 sentimentScore += sentimentIncrement
+                sentimentedTweets.insert(0,[tweet[0],sentimentIncrement])
+            
+            theseTopics = []
+            for topic in tweet[2]:
+                if topic['domain']['id'] == '131' and not topic['entity']['name'] in theseTopics:
+                    theseTopics.append(topic['entity']['name'])
+                    if not topic['entity']['name'] in topics.keys():
+                        topics[topic['entity']['name']] = [0,0,0]
+            
+            tweetsWithData.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),score,theseTopics))
 
-            for elem in topic:
-                if elem['label'] in topics:
-                    topics[elem['label']][0] += 1
-                    topics[elem['label']][1] += sentimentIncrement
-                else:
-                    topics[elem['label']] = [1, sentimentIncrement]
-        if numtweet != 0:
-            avglen = avglen / numtweet
+            for elem in theseTopics:
+                topics[elem][0] += 1
+                if score != "NONE":
+                    topics[elem][1] += 1
+                    topics[elem][2] += sentimentIncrement
+        if len(tweetsWithData) != 0:
+            avglen = avglen / len(tweetsWithData)
+        if len(sentimentedTweets) != 0:
+            sentimentScore = sentimentScore / len(sentimentedTweets)
 
-        return profile.Profile(username,tweetsWithData,avglen,topics,sentimentScore,sentimentedTweets)
+        return profile.Profile(username,tweetsWithData,sentimentedTweets,avglen,sentimentScore,topics)
     
     def get_data(numberoftweets,client):
-        handles = []
-        with open('Top-1000-Celebrity-Twitter-Accounts.csv',encoding="utf_8") as csv_file:
-            csv_reader = csv.reader(csv_file, delimiter=',')
-            for row in csv_reader:
-                handles.append(row[0])
+        #handles = []
+        #with open('Top-1000-Celebrity-Twitter-Accounts.csv',encoding="utf_8") as csv_file:
+            #csv_reader = csv.reader(csv_file, delimiter=',')
+            #for row in csv_reader:
+                #handles.append(row[0])
         #dates = [21-1,767-1,47-1,294-1,16-1,5-1,27-1,34-1,35-1,44-1,51-1,83-1,102-1]
-        dates = ["KimKardashian","ElonMusk","NICKIMINAJ","POTUS","Halsey"]
+        #dates = ["nyjets","ElonMusk","NICKIMINAJ","POTUS","Halsey"]
         #for i in range(len(dates)):
             #dates[i] = handles[dates[i]]
+
+        #Put any accounts you want to generate profiles for
+        dates = ["Elonmusk","KimKardashian","TheEllenShow","KylieJenner","JimmyFallon"]
 
         fileName = "testDataBoogaloo.json"
         if os.path.getsize(fileName) != 0:
@@ -146,12 +161,13 @@ class TwitterDataGetter(DataGetter):
             #else:
             results = TwitterDataGetter.get_users_tweets(date,numberoftweets,client)
 
-            if date.lower() in data.keys():
-                print("updating")
-                data[date.lower()] = TwitterDataGetter.updateProfile(data[date.lower()], results)
-            else:
-                print("creating")
-                data[date.lower()] = TwitterDataGetter.generateProfile(date.lower(), results)
+            if len(results) > 0:
+                if date.lower() in data.keys():
+                    print("updating " + date)
+                    data[date.lower()] = TwitterDataGetter.updateProfile(data[date.lower()], results)
+                else:
+                    print("creating " + date)
+                    data[date.lower()] = TwitterDataGetter.generateProfile(date.lower(), results)
 
             #data[date] = list(dict.fromkeys(data[date])) 
             #data[date].append(str(datetime.datetime.now().isoformat())[:-7]+"Z")

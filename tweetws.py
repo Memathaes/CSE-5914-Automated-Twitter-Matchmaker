@@ -1,7 +1,7 @@
 class Tweetws:
-    def __init__(self, tID, tweetText, length, topic, sent):
+    def __init__(self, tID, tweetText, length, sent, topic):
         self.tID = tID
         self.tText = tweetText
         self.length = length
-        self.topic = topic
         self.sentiment = sent
+        self.topic = topic

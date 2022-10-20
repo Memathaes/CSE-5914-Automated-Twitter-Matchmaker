@@ -1,8 +1,8 @@
 class Profile:
-    def __init__(self, username, tweets, avglen, topics, positivity, sntmntTweets):
+    def __init__(self, username, tweets, sntmntTweets, avglen, positivity, topics):
         self.username = username
         self.tweets = tweets
-        self.avglen = avglen
-        self.topics = topics
-        self.positivity = positivity
         self.sntmntTweets = sntmntTweets
+        self.avglen = avglen
+        self.positivity = positivity
+        self.topics = topics
