@@ -157,7 +157,7 @@ class TwitterDataGetter(DataGetter):
         for date in dates:
             print("Getting " + date)
             if date.lower() in data.keys():
-                results = TwitterDataGetter.get_users_tweets(date,10,client)
+                results = TwitterDataGetter.get_users_tweets(date,25,client)
             else:
                 results = TwitterDataGetter.get_users_tweets(date,numberoftweets,client)
 
