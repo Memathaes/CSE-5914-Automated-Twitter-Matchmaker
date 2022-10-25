@@ -156,10 +156,10 @@ class TwitterDataGetter(DataGetter):
 
         for date in dates:
             print("Getting " + date)
-            #if date in data:
-                #results = TwitterDataGetter.get_users_tweets(date,numberoftweets,client,data[date].pop())
-            #else:
-            results = TwitterDataGetter.get_users_tweets(date,numberoftweets,client)
+            if date.lower() in data.keys():
+                results = TwitterDataGetter.get_users_tweets(date,10,client)
+            else:
+                results = TwitterDataGetter.get_users_tweets(date,numberoftweets,client)
 
             if len(results) > 0:
                 if date.lower() in data.keys():
