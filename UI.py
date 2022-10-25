@@ -12,7 +12,7 @@ def main():
     client = tweepy.Client(bearer_token=config.bearer_token)
 
     getdata = input("yes to add/update profiles: ")
-    if (getdata == "yes"):
+    if getdata == "yes":
         DataGetter.TwitterDataGetter.get_data(50,client)
 
     window = tk.Tk()
@@ -155,4 +155,3 @@ def main():
     window.mainloop()
 
 if __name__ == "__main__": main()
-
