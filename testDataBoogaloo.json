@@ -1,8 +1,12 @@
 {
   "halsey": {
-    "avglen": 133.5,
-    "positivity": 0.9142857142857143,
+    "avglen": 132.2156862745098,
+    "positivity": 0.8888888888888888,
     "sntmntTweets": [
+      [
+        1584967048949829632,
+        0
+      ],
       [
         1577731519115763713,
         1
@@ -146,18 +150,18 @@
     ],
     "topics": {
       "Halsey": [
-        50,
-        35,
+        51,
+        36,
         32
       ],
       "Pop": [
-        50,
-        35,
+        51,
+        36,
         32
       ],
       "Music": [
-        50,
-        35,
+        51,
+        36,
         32
       ],
       "Entertainment": [
@@ -302,6 +306,17 @@
       ]
     },
     "tweets": [
+      {
+        "length": 68,
+        "sentiment": "NEU",
+        "tID": 1584967048949829632,
+        "tText": "sharing my vibes as of late. love u miss u \ud83e\udd0d https://t.co/HVEJk0Iefm",
+        "topic": [
+          "Halsey",
+          "Pop",
+          "Music"
+        ]
+      },
       {
         "length": 66,
         "sentiment": "NONE",
@@ -10253,9 +10268,105 @@
     "username": "barackobama"
   },
   "potus": {
-    "avglen": 197.7450980392157,
+    "avglen": 198.80263157894737,
     "positivity": 0.3333333333333333,
     "sntmntTweets": [
+      [
+        1585010816218177550,
+        1
+      ],
+      [
+        1584978565233348613,
+        -1
+      ],
+      [
+        1584970829929992194,
+        1
+      ],
+      [
+        1584945382013927426,
+        -1
+      ],
+      [
+        1584931500700667906,
+        -1
+      ],
+      [
+        1584898827269672962,
+        1
+      ],
+      [
+        1584893974975750146,
+        1
+      ],
+      [
+        1584723924830617603,
+        -1
+      ],
+      [
+        1584717729113710597,
+        1
+      ],
+      [
+        1584663118130683904,
+        1
+      ],
+      [
+        1584657735718604800,
+        2
+      ],
+      [
+        1584645909345976326,
+        1
+      ],
+      [
+        1584635840818515974,
+        -1
+      ],
+      [
+        1584620744624979969,
+        1
+      ],
+      [
+        1584613701176463382,
+        1
+      ],
+      [
+        1584602542239105025,
+        1
+      ],
+      [
+        1584333868878135296,
+        -1
+      ],
+      [
+        1584318855153070080,
+        1
+      ],
+      [
+        1584273616270929920,
+        0
+      ],
+      [
+        1584258566755491840,
+        -1
+      ],
+      [
+        1584243282338410497,
+        1
+      ],
+      [
+        1584213089549189120,
+        1
+      ],
+      [
+        1584182890589396993,
+        -1
+      ],
+      [
+        1583941266479280128,
+        1
+      ],
       [
         1583188013651136512,
         1
@@ -10439,59 +10550,59 @@
     ],
     "topics": {
       "Joe Biden": [
-        51,
-        45,
-        15
+        74,
+        67,
+        22
       ],
       "Politics": [
-        51,
-        45,
-        15
+        77,
+        70,
+        23
       ],
       "Political figures": [
-        51,
-        45,
-        15
+        74,
+        67,
+        22
       ],
       "United States Healthcare System": [
-        8,
-        7,
-        4
-      ],
-      "Political issues": [
-        25,
-        24,
+        13,
+        12,
         7
       ],
+      "Political issues": [
+        39,
+        37,
+        10
+      ],
       "United States politics": [
-        12,
-        12,
-        3
+        18,
+        17,
+        6
       ],
       "United States political issues": [
-        12,
-        12,
-        3
+        18,
+        17,
+        6
       ],
       "Inflation in the United States": [
-        12,
-        12,
-        3
+        14,
+        13,
+        4
       ],
       "United States Congress": [
-        6,
-        6,
-        -2
+        10,
+        10,
+        0
       ],
       "Government institutions": [
-        6,
-        6,
-        -2
+        11,
+        11,
+        1
       ],
       "COVID-19": [
-        1,
-        1,
-        0
+        7,
+        7,
+        2
       ],
       "Reproductive Rights in the United States": [
         1,
@@ -10549,32 +10660,445 @@
         1
       ],
       "United Kingdom politics": [
-        1,
-        1,
-        1
+        2,
+        2,
+        2
       ],
       "United Kingdom political figures": [
+        2,
+        2,
+        2
+      ],
+      "Global Economy": [
+        4,
+        3,
+        -1
+      ],
+      "Economic Issues in the United States": [
+        4,
+        3,
+        -1
+      ],
+      "Kamala Harris": [
         1,
         1,
         1
       ],
-      "Global Economy": [
-        1,
-        0,
+      "National debt of the United States": [
+        4,
+        4,
+        2
+      ],
+      "United States Tax Reform": [
+        2,
+        2,
         0
       ],
-      "Economic Issues in the United States": [
-        1,
-        0,
-        0
+      "Business & finance": [
+        3,
+        3,
+        -3
       ],
-      "Kamala Harris": [
+      "Student loans": [
+        2,
+        2,
+        -2
+      ],
+      "Loans": [
+        2,
+        2,
+        -2
+      ],
+      "Holidays": [
+        3,
+        3,
+        4
+      ],
+      "Events": [
+        3,
+        3,
+        4
+      ],
+      "Diwali": [
+        3,
+        3,
+        4
+      ],
+      "The White House": [
+        1,
+        1,
+        1
+      ],
+      "Rishi Sunak": [
+        1,
+        1,
+        1
+      ],
+      "United Kingdom political events": [
+        1,
+        1,
+        1
+      ],
+      "2022 Conservative Party leadership election": [
         1,
         1,
         1
       ]
     },
     "tweets": [
+      {
+        "length": 197,
+        "sentiment": "P",
+        "tID": 1585010816218177550,
+        "tText": "Gas prices have decreased for 2 weeks, and are down by more than $1.20 since their June peak.\n\nThat\u2019s saving American families with two cars about $130 per month on average. https://t.co/TfCx7AoeFS",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political issues",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "Inflation in the United States"
+        ]
+      },
+      {
+        "length": 277,
+        "sentiment": "N",
+        "tID": 1584978565233348613,
+        "tText": "Jill and I are thinking of everyone impacted by the senseless shooting in St. Louis \u2013 especially those killed and injured, their families, and the first responders.\n\nAs we mourn with Central Visual and Performing Arts, we must take action \u2013 starting by banning assault weapons.",
+        "topic": []
+      },
+      {
+        "length": 132,
+        "sentiment": "P",
+        "tID": 1584970829929992194,
+        "tText": "Tune in as I receive my updated COVID-19 vaccine and deliver remarks on the ongoing fight against the virus. https://t.co/DL0uVCuUBt",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures",
+          "COVID-19"
+        ]
+      },
+      {
+        "length": 178,
+        "sentiment": "NONE",
+        "tID": 1584952931882831872,
+        "tText": "I'm doing everything I can to keep lowering gas prices for families.\n\nBut energy companies, it's your turn. You're paying less for the oil \u2013 it's time to charge less at the pump.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political issues",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "Inflation in the United States"
+        ]
+      },
+      {
+        "length": 229,
+        "sentiment": "N",
+        "tID": 1584945382013927426,
+        "tText": "The same Republicans in Congress who received hundreds of thousands \u2013 even millions \u2013 of dollars in pandemic relief are doing everything they can to oppose student loan debt relief for working Americans.\n\nI don't want to hear it.",
+        "topic": [
+          "Joe Biden",
+          "Business & finance",
+          "Politics",
+          "Political issues",
+          "United States Congress",
+          "Government institutions",
+          "Political figures",
+          "COVID-19",
+          "Student loans",
+          "Loans"
+        ]
+      },
+      {
+        "length": 123,
+        "sentiment": "N",
+        "tID": 1584931500700667906,
+        "tText": "Republican officials are willing to threaten the foundations of the American economy in order to cut taxes for the wealthy.",
+        "topic": [
+          "Joe Biden",
+          "Global Economy",
+          "Politics",
+          "Political figures",
+          "Economic Issues in the United States",
+          "Politics",
+          "Political issues",
+          "United States Tax Reform"
+        ]
+      },
+      {
+        "length": 242,
+        "sentiment": "P",
+        "tID": 1584898827269672962,
+        "tText": "Congratulations to Rishi Sunak on becoming Prime Minister of the United Kingdom.\n\nTogether, I look forward to enhancing our cooperation on issues critical to global security and prosperity, including continuing our strong support for Ukraine.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures",
+          "Rishi Sunak",
+          "United Kingdom politics",
+          "United Kingdom political figures",
+          "United Kingdom political events",
+          "2022 Conservative Party leadership election"
+        ]
+      },
+      {
+        "length": 206,
+        "sentiment": "P",
+        "tID": 1584893974975750146,
+        "tText": "Our nation\u2019s experts say that most folks will only need one updated COVID vaccine to stay protected all year long. One shot, once a year. Just like flu.\n\nMake a plan to get yours at https://t.co/jlrmakxHWm.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures",
+          "COVID-19"
+        ]
+      },
+      {
+        "length": 172,
+        "sentiment": "N",
+        "tID": 1584723924830617603,
+        "tText": "Prices at the pump are down for the second week in a row. And the most common price in the U.S. is back down to $3.49 a gallon.\n\nFolks, we\u2019re moving in the right direction.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 203,
+        "sentiment": "P",
+        "tID": 1584717729113710597,
+        "tText": "Diwali is a reminder that each of us has the power to dispel darkness and bring light to the world.\n\nIt was my pleasure to celebrate this joyous occasion at the White House today. https://t.co/ikgEhe9Uh4",
+        "topic": [
+          "Joe Biden",
+          "Holidays",
+          "Politics",
+          "Political figures",
+          "Events",
+          "Diwali",
+          "Politics",
+          "The White House",
+          "Government institutions"
+        ]
+      },
+      {
+        "length": 285,
+        "sentiment": "P",
+        "tID": 1584663118130683904,
+        "tText": "This Diwali, may we remember that from darkness there is power in the gathering of light. That the American story depends not on any one of us, but on all of us.\n\nTo those celebrating and connecting with one another during this festival of lights: Happy Diwali. https://t.co/yrByVDXAvr",
+        "topic": [
+          "Joe Biden",
+          "Holidays",
+          "Politics",
+          "Political figures",
+          "Events",
+          "Diwali"
+        ]
+      },
+      {
+        "length": 84,
+        "sentiment": "P+",
+        "tID": 1584657735718604800,
+        "tText": "Join Jill and me as we host a reception to celebrate Diwali. https://t.co/hkvq2XPMOu",
+        "topic": [
+          "Holidays",
+          "Events",
+          "Diwali"
+        ]
+      },
+      {
+        "length": 178,
+        "sentiment": "P",
+        "tID": 1584645909345976326,
+        "tText": "Put Congressional Republicans\u2019 entire plan together, and it would add about $3 trillion to the deficit.\n\nAnd they love to call Democratic leaders \u201cbig spenders.\u201d Give me a break.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political issues",
+          "United States Congress",
+          "Government institutions",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "National debt of the United States"
+        ]
+      },
+      {
+        "length": 280,
+        "sentiment": "N",
+        "tID": 1584635840818515974,
+        "tText": "Exactly one week ago, we launched our application where folks could apply for student loan debt relief. Over 22 million people provided the information we need to consider them for relief.\n\nThe response from Republican officials?\n\nSue the federal government and block that relief.",
+        "topic": [
+          "Joe Biden",
+          "Business & finance",
+          "Politics",
+          "Political issues",
+          "Political figures",
+          "Student loans",
+          "Loans",
+          "Business & finance"
+        ]
+      },
+      {
+        "length": 191,
+        "sentiment": "P",
+        "tID": 1584620744624979969,
+        "tText": "We know what Republicans in Congress will do if they get their way. They\u2019re telling us.\n \nThey\u2019re going to cut Social Security and Medicare. And they\u2019ll pass massive tax cuts for the wealthy.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "United States Congress",
+          "Government institutions",
+          "Political figures",
+          "Politics",
+          "Political issues",
+          "United States Tax Reform"
+        ]
+      },
+      {
+        "length": 244,
+        "sentiment": "P",
+        "tID": 1584613701176463382,
+        "tText": "Republican officials want to put America in default unless we yield to their demands to cut Social Security and Medicare.\n\nLet me be really clear: I will not yield. I will not cut Social Security or Medicare, no matter how hard they work at it.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 238,
+        "sentiment": "P",
+        "tID": 1584602542239105025,
+        "tText": "For two years the COVID virus has been evolving \u2013 but the good news is that we\u2019re evolving with it.\n\nWe\u2019ve updated our COVID vaccines to target the versions of the virus we\u2019re facing now. And they are free and available to every American.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures",
+          "COVID-19"
+        ]
+      },
+      {
+        "length": 99,
+        "sentiment": "N",
+        "tID": 1584333868878135296,
+        "tText": "The deficit fell by $1.4 trillion this year.\n\nThat's the largest one-year drop in American history.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political issues",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "National debt of the United States"
+        ]
+      },
+      {
+        "length": 178,
+        "sentiment": "P",
+        "tID": 1584318855153070080,
+        "tText": "Republican officials want to repeal our efforts to lower prescription drug costs, lower health care premiums, and lower energy costs.\n\nIt\u2019s simple: they want to raise your costs.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 181,
+        "sentiment": "NEU",
+        "tID": 1584273616270929920,
+        "tText": "For most of the last century, America led the world by a significant margin because we invested in our people and we invested in ourselves.\n\nAlong the way we stopped. \n\nNot anymore.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 222,
+        "sentiment": "N",
+        "tID": 1584258566755491840,
+        "tText": "Republican leaders have made it clear they will crash the economy by putting the United States in default unless we yield to their demand to cut Social Security and Medicare.\n\nAnd that\u2019s more than a promise. It\u2019s a threat.",
+        "topic": [
+          "Joe Biden",
+          "Global Economy",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures",
+          "Economic Issues in the United States"
+        ]
+      },
+      {
+        "length": 204,
+        "sentiment": "P",
+        "tID": 1584243282338410497,
+        "tText": "This Administration has delivered the largest climate investment in history, lower health care and drug costs, and the revitalization of American manufacturing. \n\nAnd we did it while reducing the deficit.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "National debt of the United States"
+        ]
+      },
+      {
+        "length": 264,
+        "sentiment": "P",
+        "tID": 1584213089549189120,
+        "tText": "Congressional Republicans claim to be for less federal spending \u2013 but the federal deficit went up every single year that my predecessor was in office.\n\nIt went up before the pandemic hit. \nIt went up during the pandemic. \nIt went up every single year on his watch.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Congress",
+          "Government institutions",
+          "Political figures",
+          "COVID-19"
+        ]
+      },
+      {
+        "length": 145,
+        "sentiment": "N",
+        "tID": 1584182890589396993,
+        "tText": "Vaccination is our best tool for extra protection against the worst of COVID.\n\nGet your updated shot if haven\u2019t already. https://t.co/jlrmakPiNU.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures",
+          "COVID-19"
+        ]
+      },
+      {
+        "length": 272,
+        "sentiment": "P",
+        "tID": 1583941266479280128,
+        "tText": "We're going from historic economic recovery to more steady and stable growth while reducing the deficit.\n\nWe're building an economy where the poor have a way up, the middle class do well, and the wealthy still do very well.\n\nThat\u2019s the economic vision I offer for America.",
+        "topic": [
+          "Joe Biden",
+          "Global Economy",
+          "Politics",
+          "Political issues",
+          "Political figures",
+          "Economic Issues in the United States",
+          "United States politics",
+          "United States political issues",
+          "National debt of the United States"
+        ]
+      },
       {
         "length": 89,
         "sentiment": "P",
@@ -11246,9 +11770,25 @@
     "username": "potus"
   },
   "michelleobama": {
-    "avglen": 240.56,
-    "positivity": 0.9565217391304348,
+    "avglen": 241.03703703703704,
+    "positivity": 0.96,
     "sntmntTweets": [
+      [
+        1584243654280941568,
+        1
+      ],
+      [
+        1583913477747326976,
+        0
+      ],
+      [
+        1583858927930081281,
+        2
+      ],
+      [
+        1583201679205224449,
+        1
+      ],
       [
         1583129254555811844,
         1
@@ -11436,19 +11976,19 @@
     ],
     "topics": {
       "Michelle Obama": [
+        54,
         50,
-        46,
-        44
+        48
       ],
       "Politics": [
-        50,
-        46,
-        44
+        55,
+        51,
+        49
       ],
       "Political figures": [
-        50,
-        46,
-        44
+        55,
+        51,
+        49
       ],
       "Spotify": [
         1,
@@ -11456,8 +11996,8 @@
         1
       ],
       "Entertainment": [
-        1,
-        1,
+        2,
+        2,
         1
       ],
       "Music": [
@@ -11501,9 +12041,9 @@
         3
       ],
       "Barack Obama": [
-        2,
-        2,
-        2
+        3,
+        3,
+        4
       ],
       "Toni Morrison": [
         1,
@@ -11576,8 +12116,8 @@
         1
       ],
       "Netflix": [
-        2,
-        2,
+        3,
+        3,
         2
       ],
       "Television": [
@@ -11586,18 +12126,18 @@
         1
       ],
       "Entertainment industry": [
-        2,
-        2,
+        3,
+        3,
         2
       ],
       "Movies & TV": [
-        1,
-        1,
+        2,
+        2,
         1
       ],
       "TV streaming services": [
-        2,
-        2,
+        3,
+        3,
         2
       ],
       "Filmmaking": [
@@ -11609,9 +12149,80 @@
         1,
         1,
         1
+      ],
+      "Kamala Harris": [
+        1,
+        1,
+        1
+      ],
+      "Documentary films": [
+        2,
+        2,
+        0
+      ],
+      "Movies": [
+        1,
+        1,
+        0
       ]
     },
     "tweets": [
+      {
+        "length": 304,
+        "sentiment": "P",
+        "tID": 1584243654280941568,
+        "tText": "I can\u2019t believe we\u2019re less than a month away from the release of #TheLightWeCarry! I hope this book helps readers start conversations with one another and provides them with the tools they need to navigate life during moments of uncertainty.\n\nPre-order at https://t.co/IZWLMRYueD. https://t.co/nUfL9eNi2o",
+        "topic": [
+          "Michelle Obama",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 304,
+        "sentiment": "NEU",
+        "tID": 1583913477747326976,
+        "tText": "Barack and I believe that everyone has a story worth telling\u2014and Descendant is a story that demands to be told. This film chronicles when the last known ship from Africa, the Clotilda, arrived with enslaved Africans to the United States. I hope you'll watch Descendant on Netflix. https://t.co/LNmM3Y3PXx",
+        "topic": [
+          "Netflix",
+          "Documentary films",
+          "Entertainment industry",
+          "TV streaming services",
+          "Michelle Obama",
+          "Entertainment",
+          "Politics",
+          "Documentary films",
+          "Political figures",
+          "Movies",
+          "Movies & TV"
+        ]
+      },
+      {
+        "length": 233,
+        "sentiment": "P+",
+        "tID": 1583858927930081281,
+        "tText": "I want the young people growing up on the South Side of Chicago to know they are special, and I want them to own and love their story, too.\n\n@BarackObama\u00a0and I believe in you and will always be in your corner. https://t.co/kokoypc7c8",
+        "topic": [
+          "Barack Obama",
+          "Michelle Obama",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 147,
+        "sentiment": "P",
+        "tID": 1583201679205224449,
+        "tText": "Wishing @VP Harris a wonderful birthday! Thank you for working hard to deliver for the American people today and\u00a0every day. https://t.co/YxxSiQRGpg",
+        "topic": [
+          "Politics",
+          "Kamala Harris",
+          "Political figures",
+          "Michelle Obama",
+          "Politics",
+          "Political figures"
+        ]
+      },
       {
         "length": 271,
         "sentiment": "P",
@@ -29437,9 +30048,17 @@
     "username": "aaronrodgers12"
   },
   "elonmusk": {
-    "avglen": 59.22,
-    "positivity": 0.7142857142857143,
+    "avglen": 58.813559322033896,
+    "positivity": 0.7391304347826086,
     "sntmntTweets": [
+      [
+        1584174386998697985,
+        1
+      ],
+      [
+        1583345981906571264,
+        1
+      ],
       [
         1583133885696987136,
         2
@@ -29527,19 +30146,19 @@
     ],
     "topics": {
       "Elon Musk": [
-        50,
-        21,
-        15
+        59,
+        23,
+        17
       ],
       "Tech personalities": [
-        50,
-        21,
-        15
+        59,
+        23,
+        17
       ],
       "Business personalities": [
-        50,
-        21,
-        15
+        59,
+        23,
+        17
       ],
       "Pepsi": [
         1,
@@ -29613,6 +30232,105 @@
       ]
     },
     "tweets": [
+      {
+        "length": 44,
+        "sentiment": "NONE",
+        "tID": 1584764977457397760,
+        "tText": "What lesson took you the longest to unlearn?",
+        "topic": [
+          "Elon Musk",
+          "Tech personalities",
+          "Business personalities"
+        ]
+      },
+      {
+        "length": 10,
+        "sentiment": "NONE",
+        "tID": 1584717774261489665,
+        "tText": "\u03b4\u03b9\u03b1\u03bb\u03b5\u03ba\u03c4\u03b9\u03ba\u03ae",
+        "topic": [
+          "Elon Musk",
+          "Tech personalities",
+          "Business personalities"
+        ]
+      },
+      {
+        "length": 54,
+        "sentiment": "NONE",
+        "tID": 1584175255425540096,
+        "tText": "Maybe it was a social media algorithm, not even people",
+        "topic": [
+          "Elon Musk",
+          "Tech personalities",
+          "Business personalities"
+        ]
+      },
+      {
+        "length": 74,
+        "sentiment": "P",
+        "tID": 1584174386998697985,
+        "tText": "Think about who might have decided \u201cThe Current Thing\u201d before accepting it",
+        "topic": [
+          "Elon Musk",
+          "Tech personalities",
+          "Business personalities"
+        ]
+      },
+      {
+        "length": 61,
+        "sentiment": "NONE",
+        "tID": 1584173256415723521,
+        "tText": "Who decides \u201cThe Current Thing?\u201d\nReal question. I don\u2019t know.",
+        "topic": [
+          "Elon Musk",
+          "Tech personalities",
+          "Business personalities"
+        ]
+      },
+      {
+        "length": 39,
+        "sentiment": "NONE",
+        "tID": 1584157532209090560,
+        "tText": "Neuralink show &amp; tell now on Nov 30",
+        "topic": [
+          "Elon Musk",
+          "Tech personalities",
+          "Business personalities"
+        ]
+      },
+      {
+        "length": 27,
+        "sentiment": "NONE",
+        "tID": 1583978878305173505,
+        "tText": "i know\n|nothing|\nis forever",
+        "topic": [
+          "Elon Musk",
+          "Tech personalities",
+          "Business personalities"
+        ]
+      },
+      {
+        "length": 177,
+        "sentiment": "P",
+        "tID": 1583345981906571264,
+        "tText": "Only Giga Berlin can make these colors, as paint shop was specially built to apply many fine layers of paint, giving it complexity not otherwise possible https://t.co/Htis0LfRzV",
+        "topic": [
+          "Elon Musk",
+          "Tech personalities",
+          "Business personalities"
+        ]
+      },
+      {
+        "length": 23,
+        "sentiment": "NONE",
+        "tID": 1583299870370467840,
+        "tText": "https://t.co/WqGm6InNTp",
+        "topic": [
+          "Elon Musk",
+          "Tech personalities",
+          "Business personalities"
+        ]
+      },
       {
         "length": 130,
         "sentiment": "P+",
@@ -37282,5 +38000,1040 @@
       }
     ],
     "username": "aoc"
+  },
+  "zachwilson": {
+    "avglen": 75.6,
+    "positivity": 1.03125,
+    "sntmntTweets": [
+      [
+        1525821246654537728,
+        2
+      ],
+      [
+        1520436662345551874,
+        1
+      ],
+      [
+        1519848277570633729,
+        1
+      ],
+      [
+        1519837554710913024,
+        1
+      ],
+      [
+        1509882523307823105,
+        1
+      ],
+      [
+        1507735494494466051,
+        1
+      ],
+      [
+        1507001988596260864,
+        1
+      ],
+      [
+        1506767641754624009,
+        1
+      ],
+      [
+        1506402298553061385,
+        1
+      ],
+      [
+        1504565072147927044,
+        1
+      ],
+      [
+        1504564656110723079,
+        1
+      ],
+      [
+        1504564545720881154,
+        1
+      ],
+      [
+        1504564495435419652,
+        1
+      ],
+      [
+        1504564395829088267,
+        1
+      ],
+      [
+        1504564201246887940,
+        1
+      ],
+      [
+        1504564118908551180,
+        -1
+      ],
+      [
+        1504459458528919553,
+        2
+      ],
+      [
+        1503442343814381569,
+        1
+      ],
+      [
+        1499824709990498308,
+        1
+      ],
+      [
+        1499811841886887940,
+        2
+      ],
+      [
+        1496157039613157381,
+        1
+      ],
+      [
+        1493674677482496011,
+        1
+      ],
+      [
+        1489037459434487809,
+        2
+      ],
+      [
+        1488565377286217728,
+        1
+      ],
+      [
+        1487830639726497792,
+        2
+      ],
+      [
+        1484610227215478793,
+        -1
+      ],
+      [
+        1482021075600949251,
+        1
+      ],
+      [
+        1480956628522438664,
+        1
+      ],
+      [
+        1480631300050595847,
+        0
+      ],
+      [
+        1479230645247352833,
+        1
+      ],
+      [
+        1478762594630524929,
+        2
+      ],
+      [
+        1478057068854714371,
+        1
+      ]
+    ],
+    "topics": {
+      "American football": [
+        50,
+        32,
+        33
+      ],
+      "NFL": [
+        50,
+        32,
+        33
+      ],
+      "Sports": [
+        50,
+        32,
+        33
+      ],
+      "Braxton Berrios": [
+        3,
+        3,
+        3
+      ],
+      "NFL players": [
+        50,
+        32,
+        33
+      ],
+      "Zach Wilson": [
+        50,
+        32,
+        33
+      ],
+      "C.J. Mosley": [
+        1,
+        1,
+        2
+      ],
+      "Sports events": [
+        2,
+        1,
+        1
+      ],
+      "Super Bowl": [
+        2,
+        1,
+        1
+      ],
+      "Events": [
+        4,
+        2,
+        3
+      ],
+      "Joe Flacco": [
+        2,
+        2,
+        2
+      ],
+      "New York Jets": [
+        12,
+        8,
+        9
+      ],
+      "JetBlue Airways": [
+        1,
+        1,
+        1
+      ],
+      "Air travel": [
+        1,
+        1,
+        1
+      ],
+      "Corey Davis": [
+        2,
+        1,
+        1
+      ],
+      "Tom Brady": [
+        1,
+        1,
+        1
+      ],
+      "NCAA Football": [
+        5,
+        2,
+        3
+      ],
+      "BYU Cougars": [
+        5,
+        2,
+        3
+      ],
+      "College sports": [
+        1,
+        1,
+        2
+      ],
+      "National Signing Day": [
+        1,
+        1,
+        2
+      ],
+      "La'Mical Perine": [
+        1,
+        1,
+        1
+      ],
+      "Quinnen Williams": [
+        1,
+        1,
+        1
+      ],
+      "Holidays": [
+        2,
+        1,
+        2
+      ],
+      "Cultural events": [
+        1,
+        0,
+        0
+      ],
+      "Halloween": [
+        1,
+        0,
+        0
+      ],
+      "Animals": [
+        1,
+        0,
+        0
+      ],
+      "Pets": [
+        1,
+        0,
+        0
+      ],
+      "Dogs": [
+        1,
+        0,
+        0
+      ],
+      "Chad Johnson": [
+        1,
+        0,
+        0
+      ],
+      "Sports figures": [
+        1,
+        0,
+        0
+      ],
+      "Denzel Mims": [
+        1,
+        1,
+        1
+      ],
+      "Nike": [
+        1,
+        0,
+        0
+      ],
+      "Athletic apparel": [
+        1,
+        0,
+        0
+      ],
+      "MLB": [
+        1,
+        0,
+        0
+      ],
+      "Baseball": [
+        1,
+        0,
+        0
+      ],
+      "MLB players": [
+        1,
+        0,
+        0
+      ],
+      "Aaron Judge": [
+        1,
+        0,
+        0
+      ]
+    },
+    "tweets": [
+      {
+        "length": 100,
+        "sentiment": "NONE",
+        "tID": 1570161538639732737,
+        "tText": "Court is in session - @TheJudge44 presiding over his most historic case\ud83d\udc68\ud83c\udffb\u200d\u2696\ufe0f https://t.co/Ku1kEouJ39",
+        "topic": [
+          "American football",
+          "NFL",
+          "MLB",
+          "Baseball",
+          "Sports",
+          "NFL players",
+          "MLB players",
+          "Zach Wilson",
+          "Aaron Judge"
+        ]
+      },
+      {
+        "length": 33,
+        "sentiment": "P+",
+        "tID": 1525821246654537728,
+        "tText": "Love it!! https://t.co/GWLEA7XnIe",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 172,
+        "sentiment": "P",
+        "tID": 1520436662345551874,
+        "tText": "Dashing was the best gig I ever had until I got this one. Excited to see another QB in the club! \nWho\u2019s next? https://t.co/AA1ZmoM9kS #DasherPartner https://t.co/Sa3tKC2Vwy",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 45,
+        "sentiment": "NONE",
+        "tID": 1520183421733068807,
+        "tText": "\ud83d\ude33 this dudes a baller https://t.co/vipN32mFeK",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 87,
+        "sentiment": "P",
+        "tID": 1519848277570633729,
+        "tText": "What\u2019s better than 1 Wilson? 2 Wilsons. Let\u2019s gooooooooo!!!!!!! https://t.co/KAjJbDJp5u",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 137,
+        "sentiment": "P",
+        "tID": 1519837554710913024,
+        "tText": "Looking forward to welcoming a few more Dashers to the Dasher Hall of Fame this weekend! #DashToIt #DasherPartner https://t.co/YfNnNJFJip",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 33,
+        "sentiment": "NONE",
+        "tID": 1519797885482811393,
+        "tText": "LESSS GOO https://t.co/9h6X5tY0ok",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 32,
+        "sentiment": "NONE",
+        "tID": 1517949068605116418,
+        "tText": "Big time https://t.co/QLfIsQQFGj",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 56,
+        "sentiment": "NONE",
+        "tID": 1511444900503502864,
+        "tText": "\ud83d\udd0a\ud83d\udd0a\ud83d\udd0a @usnikefootball @byufootball https://t.co/7yI5n1VvQ4",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NCAA Football",
+          "BYU Cougars",
+          "NFL players",
+          "Zach Wilson",
+          "Nike",
+          "Athletic apparel"
+        ]
+      },
+      {
+        "length": 72,
+        "sentiment": "P",
+        "tID": 1509882523307823105,
+        "tText": "Who else do you think is in the \u201csmall group\u201d \ud83d\ude02\ud83d\udc4f https://t.co/2m8ibhIki3",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "Denzel Mims",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 47,
+        "sentiment": "NONE",
+        "tID": 1508155491574235143,
+        "tText": "Come through @ochocinco https://t.co/BsRM76TUdO",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "Chad Johnson",
+          "NFL players",
+          "Sports figures",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 86,
+        "sentiment": "P",
+        "tID": 1507735494494466051,
+        "tText": "Did we just become best friends @HNYNUT_BERRIOS @ZWilsonisgood https://t.co/ITJI7PzUb6",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "Braxton Berrios",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 107,
+        "sentiment": "P",
+        "tID": 1507001988596260864,
+        "tText": "Always helps to have an Elite QB in the locker room. \n\nWelcome back, dad @JoeFlacco https://t.co/agdUaL6O90",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson",
+          "Joe Flacco"
+        ]
+      },
+      {
+        "length": 70,
+        "sentiment": "P",
+        "tID": 1506767641754624009,
+        "tText": "Let\u2019s gooooo @ursua05! Hawaii got a good one \ud83e\udd19 https://t.co/TnYtLDcOtZ",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 66,
+        "sentiment": "P",
+        "tID": 1506402298553061385,
+        "tText": "Path to success starts well before week 1! https://t.co/i8sYyiz6eC",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "Corey Davis",
+          "NCAA Football",
+          "BYU Cougars",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 83,
+        "sentiment": "NONE",
+        "tID": 1505960566782898177,
+        "tText": "Maybe I should add @DaveandBusters to the training regimen\u2026 https://t.co/t6vnXoccmE",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 53,
+        "sentiment": "P",
+        "tID": 1504565072147927044,
+        "tText": "Thank you for all that you do https://t.co/kEMKPGKYqD",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 27,
+        "sentiment": "NONE",
+        "tID": 1504565009585741834,
+        "tText": "\ud83c\udf40\ud83c\udf40\ud83c\udf40 https://t.co/2t2k06tp5n",
+        "topic": [
+          "American football",
+          "NFL",
+          "Animals",
+          "Sports",
+          "Pets",
+          "Dogs",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 27,
+        "sentiment": "NONE",
+        "tID": 1504564956573929474,
+        "tText": "\ud83d\udc4a\ud83d\udc4a\ud83d\udc4a https://t.co/BMNNuFrj1Q",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 52,
+        "sentiment": "NONE",
+        "tID": 1504564860566360073,
+        "tText": "It\u2019s important to recycle \u267b\ufe0f https://t.co/Cecj4qHWtD",
+        "topic": [
+          "American football",
+          "NFL",
+          "Holidays",
+          "Sports",
+          "NFL players",
+          "Cultural events",
+          "Halloween",
+          "Zach Wilson",
+          "Events"
+        ]
+      },
+      {
+        "length": 35,
+        "sentiment": "NONE",
+        "tID": 1504564726386278405,
+        "tText": "#Takeflight https://t.co/NJWUETqz7c",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 55,
+        "sentiment": "P",
+        "tID": 1504564656110723079,
+        "tText": "The pup needs some @nyjets gear https://t.co/bSG49gTmH6",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 27,
+        "sentiment": "P",
+        "tID": 1504564545720881154,
+        "tText": "\ud83d\udc9a\ud83d\udc9a\ud83d\udc9a https://t.co/4knI9dXxwa",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 27,
+        "sentiment": "P",
+        "tID": 1504564495435419652,
+        "tText": "\ud83e\udd19\ud83e\udd19\ud83e\udd19 https://t.co/YBX7qctbeK",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 48,
+        "sentiment": "P",
+        "tID": 1504564395829088267,
+        "tText": "That\u2019s how it\u2019s done \ud83d\udc4f\ud83d\udc4f\ud83d\udc4f https://t.co/nQxeuEGktc",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 41,
+        "sentiment": "NONE",
+        "tID": 1504564267449786370,
+        "tText": "Future @nyjets QB https://t.co/XqAOf7Hmj1",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 37,
+        "sentiment": "P",
+        "tID": 1504564201246887940,
+        "tText": "Let\u2019s goooooo https://t.co/rnM1OUYgUM",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 41,
+        "sentiment": "N",
+        "tID": 1504564118908551180,
+        "tText": "Need one of these https://t.co/uBEkX2jGsV",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 104,
+        "sentiment": "P+",
+        "tID": 1504459458528919553,
+        "tText": "Great day to wear green. \n\nAnyone wearing Jets gear for St. Patrick\u2019s Day today? https://t.co/aTWnvFFwln",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Holidays",
+          "Sports",
+          "NFL players",
+          "Zach Wilson",
+          "Events"
+        ]
+      },
+      {
+        "length": 47,
+        "sentiment": "NONE",
+        "tID": 1504113874114646018,
+        "tText": "https://t.co/oUFYcGV0y0 https://t.co/1qyaMUjuSj",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "NCAA Football",
+          "BYU Cougars",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 83,
+        "sentiment": "P",
+        "tID": 1503442343814381569,
+        "tText": "Let\u2019s run it back @HNYNUT_BERRIOS \ud83d\udca5 https://t.co/3ISyv6JEPR https://t.co/g571GdzDre",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "Braxton Berrios",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 27,
+        "sentiment": "NONE",
+        "tID": 1501616536263565319,
+        "tText": "\ud83d\udd25\ud83d\udd25\ud83d\udd25 https://t.co/qXwNUNCNuy",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NCAA Football",
+          "BYU Cougars",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 73,
+        "sentiment": "P",
+        "tID": 1499824709990498308,
+        "tText": "Thank ya @QuinnenWilliams https://t.co/4D99i1KMbM https://t.co/1WUs3I0WhQ",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "Quinnen Williams",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 130,
+        "sentiment": "P+",
+        "tID": 1499811841886887940,
+        "tText": "Thank you to all of the employees who make this place so special. We appreciate each and every one of you. https://t.co/xQgnzCsq9G",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 61,
+        "sentiment": "P",
+        "tID": 1496157039613157381,
+        "tText": "2.22.22. Happy Twosday @LP_deucedeuce https://t.co/8PxSJkzADt",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "La'Mical Perine",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 63,
+        "sentiment": "NONE",
+        "tID": 1494356756876701697,
+        "tText": "Taking this energy into the 2022 season https://t.co/65F8Bwzwk9",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Sports events",
+          "Super Bowl",
+          "Zach Wilson",
+          "Events"
+        ]
+      },
+      {
+        "length": 117,
+        "sentiment": "P",
+        "tID": 1493674677482496011,
+        "tText": "We\u2019re all with you @JohnLawrence329. Keep fighting, keep going. Your positivity is inspiring! https://t.co/DtKAxzaUls",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 36,
+        "sentiment": "NONE",
+        "tID": 1491676939920150531,
+        "tText": "What a game! https://t.co/3mGOlyVHX5",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 86,
+        "sentiment": "P+",
+        "tID": 1489037459434487809,
+        "tText": "Great day to become a cougar. @BYUfootball #NationalSigningDay https://t.co/05l5VFuV0O",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NCAA Football",
+          "BYU Cougars",
+          "NFL players",
+          "College sports",
+          "Zach Wilson",
+          "National Signing Day"
+        ]
+      },
+      {
+        "length": 185,
+        "sentiment": "P",
+        "tID": 1488565377286217728,
+        "tText": "Congratulations to the best to ever do it, it\u2019s been a pleasure to watch and learn from you my entire life. It was an honor to share the field with you @TomBrady https://t.co/iti62EkG1U",
+        "topic": [
+          "American football",
+          "NFL",
+          "Tom Brady",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 60,
+        "sentiment": "NONE",
+        "tID": 1487860595340808193,
+        "tText": "Just like we drew it up @TheCDavis84 https://t.co/zk9yoMNxOn",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "Corey Davis",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 56,
+        "sentiment": "P+",
+        "tID": 1487830639726497792,
+        "tText": "Congrats bro @Isaac_kawika #TheU https://t.co/tivImUjLVi",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 70,
+        "sentiment": "NONE",
+        "tID": 1486433968740306946,
+        "tText": "Definition of hard work. Keep going! @ALIJAHVT https://t.co/gWG0URE8lS",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 40,
+        "sentiment": "N",
+        "tID": 1484610227215478793,
+        "tText": "Man I miss ball. https://t.co/G0obCh6jrc",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 159,
+        "sentiment": "P",
+        "tID": 1482021075600949251,
+        "tText": "Love and appreciate my guys. Thanks for protecting me all season long. Can\u2019t wait to run it back next season. @nyjets @jetblue #partner https://t.co/uWRT0gV1RS",
+        "topic": [
+          "JetBlue Airways",
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "Air travel",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 89,
+        "sentiment": "P",
+        "tID": 1480956628522438664,
+        "tText": "Onward and Upward. Team effort. Locked in for next year | @nyjets https://t.co/OROQPVx0wi",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 294,
+        "sentiment": "NEU",
+        "tID": 1480631300050595847,
+        "tText": "Not satisfied with where we ended up in the standings, but I\u2019m proud of this group of guys for continuing to fight every single snap week in and week out. That\u2019s something we can build on, and that\u2019s what we plan to do. Couple days off and then back in the lab. #GoJets. https://t.co/uxe58CkkRw",
+        "topic": [
+          "New York Jets",
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      },
+      {
+        "length": 138,
+        "sentiment": "P",
+        "tID": 1479230645247352833,
+        "tText": "\u201cNo seriously the superdome had a power outage and then we won the Super Bowl. Look it up\u201d @JoeFlacco @MikeWhiteQB https://t.co/MXlaiHmsW8",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Sports events",
+          "Super Bowl",
+          "Zach Wilson",
+          "Events",
+          "Joe Flacco"
+        ]
+      },
+      {
+        "length": 106,
+        "sentiment": "P+",
+        "tID": 1478762594630524929,
+        "tText": "Lucky to have come into the league with this guy in my locker room. Well deserved. https://t.co/X0CJp60VHW",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "NFL players",
+          "Zach Wilson",
+          "C.J. Mosley"
+        ]
+      },
+      {
+        "length": 60,
+        "sentiment": "P",
+        "tID": 1478057068854714371,
+        "tText": ".@HNYNUT_BERRIOS appreciation tweet. https://t.co/MVvpKagriw",
+        "topic": [
+          "American football",
+          "NFL",
+          "Sports",
+          "Braxton Berrios",
+          "NFL players",
+          "Zach Wilson"
+        ]
+      }
+    ],
+    "username": "zachwilson"
   }
 }

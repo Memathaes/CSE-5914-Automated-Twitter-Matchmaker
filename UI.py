@@ -61,7 +61,7 @@ def main():
             sharedTopics = {}
             posDict = {}
             for potentialMatch in Profiles:
-                if potentialMatch != usr:
+                if potentialMatch.lower() != usr.lower():
                     theirProfile = Profiles[potentialMatch]
                     theirPositivity = theirProfile['positivity']
                     theirTopics = theirProfile['topics']

@@ -42,8 +42,10 @@ class TwitterDataGetter(DataGetter):
         sentimentScore = prevProfile['positivity'] * len(sentimentedTweets)
         topics = prevProfile['topics']
 
+        latestID = tweetsWithData[0]['tID']
+
         for tweet in newTweets:
-            if tweet[0] > tweetsWithData[0]['tID']:
+            if tweet[0] > latestID:
                 avglen = avglen + len(tweet[1])
 
                 sent = mc.SentimentResponse(mc.SentimentRequest(config.mc_token, txt = tweet[1], lang='en').sendReq())
