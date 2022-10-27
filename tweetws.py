@@ -1,3 +1,6 @@
+from os import stat
+
+
 class Tweetws:
     def __init__(self, tID, tweetText, length, sent, topic):
         self.tID = tID
@@ -6,5 +9,6 @@ class Tweetws:
         self.sentiment = sent
         self.topic = topic
     
+    @staticmethod
     def from_json(t):
         return Tweetws(t['tID'], t['tText'], t['length'], t['sentiment'], t['topic'])

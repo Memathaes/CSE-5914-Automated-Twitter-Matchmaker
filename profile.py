@@ -9,6 +9,7 @@ class Profile:
         self.positivity = positivity
         self.topics = topics
     
+    @staticmethod
     def from_json(d):
         tempProf = Profile(d['username'], d['tweets'], d['sntmntTweets'], d['avglen'], d['positivity'], d['topics'])
         i = 0
