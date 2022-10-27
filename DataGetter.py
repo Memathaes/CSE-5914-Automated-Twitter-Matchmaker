@@ -54,13 +54,13 @@ class TwitterDataGetter(DataGetter):
 
                 if score != "NONE":
                     sentimentIncrement = 0
-                    if (score == "P+"):
+                    if score == "P+":
                         sentimentIncrement = 2
-                    elif (score == "P"):
+                    elif score == "P":
                         sentimentIncrement = 1
-                    elif (score == "N"):
+                    elif score == "N":
                         sentimentIncrement = -1
-                    elif (score == "N+"):
+                    elif score == "N+":
                         sentimentIncrement = -2
                     sentimentScore += sentimentIncrement
                     sentimentedTweets.insert(0,[tweet[0],sentimentIncrement])
@@ -102,13 +102,13 @@ class TwitterDataGetter(DataGetter):
 
             if score != "NONE":
                 sentimentIncrement = 0
-                if (score == "P+"):
+                if score == "P+":
                     sentimentIncrement = 2
-                elif (score == "P"):
+                elif score == "P":
                     sentimentIncrement = 1
-                elif (score == "N"):
+                elif score == "N":
                     sentimentIncrement = -1
-                elif (score == "N+"):
+                elif score == "N+":
                     sentimentIncrement = -2
                 sentimentScore += sentimentIncrement
                 sentimentedTweets.insert(0,[tweet[0],sentimentIncrement])
