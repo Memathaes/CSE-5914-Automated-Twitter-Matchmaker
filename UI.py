@@ -11,7 +11,7 @@ def main():
     client = tweepy.Client(bearer_token=config.bearer_token)
 
     getdata = input("yes to add/update profiles: ")
-    if (getdata == "yes"):
+    if getdata == "yes":
         DataGetter.TwitterDataGetter.get_data(50,client)
 
     window = tk.Tk()
@@ -37,9 +37,8 @@ def main():
 
         fileName = "testDataBoogaloo.json"
         if os.path.getsize(fileName) != 0:
-            file = open(fileName)
-            Profiles = json.load(file)
-            file.close()
+            with open(fileName) as infile:
+                Profiles = json.load(infile)
         else:
             Profiles = {}
 
@@ -87,16 +86,14 @@ def main():
                 count +=1
         else:
             tweetList.insert(tk.END,"Your twitter handle isn't in our database yet! Press \"Create/Update Profile\" to add yourself to it!")
-        return
     
     def u_click():
         tweetList.delete(0,tk.END)
 
         fileName = "testDataBoogaloo.json"
         if os.path.getsize(fileName) != 0:
-            file = open(fileName)
-            Profiles = json.load(file)
-            file.close()
+            with open(fileName) as infile:
+                Profiles = json.load(infile)
         else:
             Profiles = {}
 
@@ -121,7 +118,6 @@ def main():
                 json.dump(jsons.dump(Profiles),outfile,indent=2)
         else:
             tweetList.insert(tk.END,"No tweets were found! Are you sure you entered the right username?")
-        return
 
     enter = tk.Button(
         text="Find Matches",
@@ -154,4 +150,3 @@ def main():
     window.mainloop()
 
 if __name__ == "__main__": main()
-
