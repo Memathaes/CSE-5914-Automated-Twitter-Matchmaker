@@ -144,9 +144,8 @@ class TwitterDataGetter:
 
         fileName = "testDataBoogaloo.json"
         if os.path.getsize(fileName) != 0:
-            file = open(fileName)
-            data = json.load(file)
-            file.close()
+            with open(fileName) as infile:
+                data = json.load(infile)
         else:
             data = {}
 
