@@ -15,6 +15,7 @@ class DataGetter(ABC):
 
 
 class TwitterDataGetter(DataGetter):
+    @staticmethod
     def get_users_tweets(usrname, numberoftweets, client, previousRetrieval = "2010-11-06T00:00:00Z"):
         if numberoftweets > 100:
             numberoftweets = 100
@@ -35,6 +36,7 @@ class TwitterDataGetter(DataGetter):
                 tweets.insert(0,[tweet.id, tweet.text, tweet.context_annotations])
         return tweets
     
+    @staticmethod
     def updateProfile(prevProfile, newTweets):
         tweetsWithData = prevProfile['tweets']
         sentimentedTweets = prevProfile['sntmntTweets']
@@ -86,6 +88,7 @@ class TwitterDataGetter(DataGetter):
 
         return profile.Profile(prevProfile['username'],tweetsWithData,sentimentedTweets,avglen,sentimentScore,topics)
     
+    @staticmethod
     def generateProfile(username, tweets):
         tweetsWithData = []
         sentimentedTweets = []
@@ -134,6 +137,7 @@ class TwitterDataGetter(DataGetter):
 
         return profile.Profile(username,tweetsWithData,sentimentedTweets,avglen,sentimentScore,topics)
     
+    @staticmethod
     def get_data(numberoftweets,client):
         #handles = []
         #with open('Top-1000-Celebrity-Twitter-Accounts.csv',encoding="utf_8") as csv_file:
