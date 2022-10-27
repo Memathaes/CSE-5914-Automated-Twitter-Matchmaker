@@ -4,17 +4,7 @@ import tweepy, csv, json, jsons, datetime, time, config, os
 import profile, tweetws
 import meaningcloud as mc
 
-class DataGetter(ABC):
-    @abstractmethod
-    def get_data(usrname):
-        pass
-    
-    @abstractmethod
-    def get_users_tweets(usrname):
-        pass
-
-
-class TwitterDataGetter(DataGetter):
+class TwitterDataGetter:
     @staticmethod
     def get_users_tweets(usrname, numberoftweets, client, previousRetrieval = "2010-11-06T00:00:00Z"):
         if numberoftweets > 100:
