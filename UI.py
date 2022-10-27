@@ -1,6 +1,5 @@
 import time, tweepy, config
 import tkinter as tk
-from Archive.simplemagic import sm
 import DataGetter
 import meaningcloud
 import profile
