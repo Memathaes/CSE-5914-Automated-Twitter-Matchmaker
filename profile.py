@@ -6,3 +6,4 @@ class Profile:
         self.avglen = avglen
         self.positivity = positivity
         self.topics = topics
+        

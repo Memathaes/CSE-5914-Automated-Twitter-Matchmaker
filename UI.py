@@ -10,14 +10,13 @@ import os
 
 def ui(usr):
 
-    client = tweepy.Client(bearer_token=config.bearer_token)
+    #client = tweepy.Client(bearer_token=config.bearer_token)
     tweetList = []
 
     fileName = "testDataBoogaloo.json"
     if os.path.getsize(fileName) != 0:
-        file = open(fileName)
-        Profiles = json.load(file)
-        file.close()
+        with open(fileName) as infile:
+            Profiles = json.load(infile)
     else:
         Profiles = {}
 
@@ -107,4 +106,3 @@ def u_click(usr):
     else:
         tweetList.append(
             "No tweets were found! Are you sure you entered the right username?")
-    return
