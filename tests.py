@@ -2,7 +2,7 @@ import profile
 import os
 import json
 
-def serialization(x):
+def serialization():
     fileName = "testDataBoogaloo.json"
     Profiles = {}
     if os.path.getsize(fileName) != 0:
@@ -915,4 +915,5 @@ def test_serialization():
       }
     ]
     halseyprof = profile.Profile("halsey",halsey_twts,halsey_stwts,132.2156862745098,0.8888888888888888,halsey_topics)
-    assert halseyprof.username == serialization.username
+    serializedProf = serialization
+    assert halseyprof.username == serializedProf.username
