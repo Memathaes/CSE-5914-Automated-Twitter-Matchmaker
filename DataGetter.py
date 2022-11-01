@@ -4,17 +4,8 @@ import tweepy, csv, json, jsons, datetime, time, config, os
 import profile, tweetws
 import meaningcloud as mc
 
-class DataGetter(ABC):
-    @abstractmethod
-    def get_data(usrname):
-        pass
-    
-    @abstractmethod
-    def get_users_tweets(usrname):
-        pass
-
-
-class TwitterDataGetter(DataGetter):
+class TwitterDataGetter:
+    @staticmethod
     def get_users_tweets(usrname, numberoftweets, client, previousRetrieval = "2010-11-06T00:00:00Z"):
         if numberoftweets > 100:
             numberoftweets = 100
@@ -35,12 +26,15 @@ class TwitterDataGetter(DataGetter):
                 tweets.insert(0,[tweet.id, tweet.text, tweet.context_annotations])
         return tweets
     
+    @staticmethod
     def updateProfile(prevProfile, newTweets):
         tweetsWithData = prevProfile['tweets']
         sentimentedTweets = prevProfile['sntmntTweets']
         avglen = prevProfile['avglen'] * len(tweetsWithData)
         sentimentScore = prevProfile['positivity'] * len(sentimentedTweets)
         topics = prevProfile['topics']
+
+        latestID = tweetsWithData[0]['tID']
 
         for tweet in newTweets:
             if tweet[0] > tweetsWithData[0]['tID']:
@@ -52,13 +46,13 @@ class TwitterDataGetter(DataGetter):
 
                 if score != "NONE":
                     sentimentIncrement = 0
-                    if (score == "P+"):
+                    if score == "P+":
                         sentimentIncrement = 2
-                    elif (score == "P"):
+                    elif score == "P":
                         sentimentIncrement = 1
-                    elif (score == "N"):
+                    elif score == "N":
                         sentimentIncrement = -1
-                    elif (score == "N+"):
+                    elif score == "N+":
                         sentimentIncrement = -2
                     sentimentScore += sentimentIncrement
                     sentimentedTweets.insert(0,[tweet[0],sentimentIncrement])
@@ -84,6 +78,7 @@ class TwitterDataGetter(DataGetter):
 
         return profile.Profile(prevProfile['username'],tweetsWithData,sentimentedTweets,avglen,sentimentScore,topics)
     
+    @staticmethod
     def generateProfile(username, tweets):
         tweetsWithData = []
         sentimentedTweets = []
@@ -100,13 +95,13 @@ class TwitterDataGetter(DataGetter):
 
             if score != "NONE":
                 sentimentIncrement = 0
-                if (score == "P+"):
+                if score == "P+":
                     sentimentIncrement = 2
-                elif (score == "P"):
+                elif score == "P":
                     sentimentIncrement = 1
-                elif (score == "N"):
+                elif score == "N":
                     sentimentIncrement = -1
-                elif (score == "N+"):
+                elif score == "N+":
                     sentimentIncrement = -2
                 sentimentScore += sentimentIncrement
                 sentimentedTweets.insert(0,[tweet[0],sentimentIncrement])
@@ -132,6 +127,7 @@ class TwitterDataGetter(DataGetter):
 
         return profile.Profile(username,tweetsWithData,sentimentedTweets,avglen,sentimentScore,topics)
     
+    @staticmethod
     def get_data(numberoftweets,client):
         #handles = []
         #with open('Top-1000-Celebrity-Twitter-Accounts.csv',encoding="utf_8") as csv_file:
@@ -148,9 +144,8 @@ class TwitterDataGetter(DataGetter):
 
         fileName = "testDataBoogaloo.json"
         if os.path.getsize(fileName) != 0:
-            file = open(fileName)
-            data = json.load(file)
-            file.close()
+            with open(fileName) as infile:
+                data = json.load(infile)
         else:
             data = {}
 
