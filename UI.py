@@ -74,9 +74,8 @@ def u_click(usr):
 
     fileName = "testDataBoogaloo.json"
     if os.path.getsize(fileName) != 0:
-        file = open(fileName)
-        Profiles = json.load(file)
-        file.close()
+        with open(fileName) as infile:
+            Profiles = json.load(infile)
     else:
         Profiles = {}
 
