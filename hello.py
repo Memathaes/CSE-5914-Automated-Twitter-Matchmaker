@@ -16,5 +16,6 @@ def index():
         for text in tweetList:
             longstring += text + "<br/>"
         return "<p>" + longstring + "</p>"
+    elif request.method == ''
     else:
         return render_template('index.html')

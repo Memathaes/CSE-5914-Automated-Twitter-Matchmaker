@@ -6,11 +6,13 @@
 {% block body %}
 <div class = "content">
     <h1>MVP UI 2.0</h1>
-
+    <p>Please enter your twitter handle: </p>
     <form action="/", method="POST">
         <input type="text" name="content" id="content">
         <input type="submit" value="Find matches">
     </form>
-
+    <form action="/", method="UPDATE">
+        <input type="submit" value="Update database">
+    </form>
 </div>
 {% endblock %}
