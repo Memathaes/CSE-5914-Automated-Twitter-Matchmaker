@@ -915,5 +915,6 @@ def test_serialization():
       }
     ]
     halseyprof = profile.Profile("halsey",halsey_twts,halsey_stwts,132.2156862745098,0.8888888888888888,halsey_topics)
-    serializedProf = serialization
+    serializedProf = serialization()
     assert halseyprof.username == serializedProf.username
+    
