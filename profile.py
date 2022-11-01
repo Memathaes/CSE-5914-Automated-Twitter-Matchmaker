@@ -9,11 +9,10 @@ class Profile:
         self.positivity = positivity
         self.topics = topics
     
-    @staticmethod
-    def from_json(d):
-        tempProf = Profile(d['username'], d['tweets'], d['sntmntTweets'], d['avglen'], d['positivity'], d['topics'])
-        i = 0
-        for tweet in tempProf.tweets:
-            tempProf.tweets[i] = tweetws.Tweetws.from_json(tweet)
-            i += 1
-        return tempProf
+def from_json(d):
+    tempProf = Profile(d['username'], d['tweets'], d['sntmntTweets'], d['avglen'], d['positivity'], d['topics'])
+    i = 0
+    for tweet in tempProf.tweets:
+        tempProf.tweets[i] = tweetws.from_json(tweet)
+        i += 1
+    return tempProf
