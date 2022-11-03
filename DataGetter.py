@@ -128,7 +128,7 @@ class TwitterDataGetter:
         return profile.Profile(username,tweetsWithData,sentimentedTweets,avglen,sentimentScore,topics)
     
     @staticmethod
-    def get_data(numberoftweets,client):
+    def get_data(numberoftweets,client,es):
         #handles = []
         #with open('Top-1000-Celebrity-Twitter-Accounts.csv',encoding="utf_8") as csv_file:
             #csv_reader = csv.reader(csv_file, delimiter=',')

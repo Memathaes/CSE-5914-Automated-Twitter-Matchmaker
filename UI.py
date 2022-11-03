@@ -4,15 +4,19 @@ import DataGetter
 import meaningcloud
 import profile
 import json, jsons, os
+from elasticsearch import Elasticsearch
 
 
 def main():
 
+    ELASTIC_PASSWORD = config.elastic_pass
+
     client = tweepy.Client(bearer_token=config.bearer_token)
+    es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELASTIC_PASSWORD], verify_certs=False)
 
     getdata = input("yes to add/update profiles: ")
     if getdata == "yes":
-        DataGetter.TwitterDataGetter.get_data(50,client)
+        DataGetter.TwitterDataGetter.get_data(50,client,es)
 
     window = tk.Tk()
 
