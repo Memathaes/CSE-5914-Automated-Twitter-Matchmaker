@@ -36,7 +36,7 @@ def main():
 
     tweetList = tk.Listbox(width=150, height=30)
 
-    def e_click():
+    def e_click(es):
         tweetList.delete(0,tk.END)
 
         fileName = "testDataBoogaloo.json"
@@ -91,7 +91,7 @@ def main():
         else:
             tweetList.insert(tk.END,"Your twitter handle isn't in our database yet! Press \"Create/Update Profile\" to add yourself to it!")
     
-    def u_click():
+    def u_click(es):
         tweetList.delete(0,tk.END)
 
         fileName = "testDataBoogaloo.json"
@@ -125,7 +125,7 @@ def main():
 
     enter = tk.Button(
         text="Find Matches",
-        command = e_click,
+        command = e_click(es),
         width=25,
         height=2,
         bg="white",
@@ -134,7 +134,7 @@ def main():
 
     update = tk.Button(
         text="Create/Update Profile",
-        command = u_click,
+        command = u_click(es),
         width=25,
         height=2,
         bg="white",
