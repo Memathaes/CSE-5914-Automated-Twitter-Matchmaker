@@ -4,7 +4,9 @@ import UI
 app = Flask(__name__)
 
 # runs using:
-# py -m flask --app hello run
+# py -m flask --app app run
+# or
+# python -m flask run
 
 
 @app.route('/', methods=['POST', 'GET', 'UPDATE'])
@@ -18,5 +20,4 @@ def index():
 
         return render_template('update.html', words=tweetList)
 
-    else:
-        return render_template('index.html')
+    return render_template('index.html')

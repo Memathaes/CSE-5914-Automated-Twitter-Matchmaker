@@ -105,4 +105,4 @@ def u_click(usr):
     else:
         tweetList.append(
             "No tweets were found! Are you sure you entered the right username?")
-    return(tweetList)
+    return tweetList
