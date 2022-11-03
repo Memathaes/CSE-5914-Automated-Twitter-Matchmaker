@@ -7,15 +7,16 @@ app = Flask(__name__)
 # py -m flask --app hello run
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET', 'UPDATE'])
 def index():
     if request.method == 'POST':
         usr = request.form['content']
-        tweetList = UI.ui(usr)
-        longstring = ""
-        for text in tweetList:
-            longstring += text + "<br/>"
-        return "<p>" + longstring + "</p>"
-    elif request.method == ''
+        if request.form['submit_button'] == "Find matches":
+            tweetList = UI.ui(usr)
+        elif request.form['submit_button'] == "Update database":
+            tweetList = UI.u_click(usr)
+
+        return render_template('update.html', words=tweetList)
+
     else:
         return render_template('index.html')

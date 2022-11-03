@@ -10253,9 +10253,101 @@
     "username": "barackobama"
   },
   "potus": {
-    "avglen": 197.7450980392157,
-    "positivity": 0.3333333333333333,
+    "avglen": 205.03947368421052,
+    "positivity": 0.35294117647058826,
     "sntmntTweets": [
+      [
+        1588218688968462337,
+        1
+      ],
+      [
+        1588214362124087296,
+        2
+      ],
+      [
+        1588199321568157697,
+        1
+      ],
+      [
+        1588191781925134338,
+        2
+      ],
+      [
+        1588179746134937607,
+        1
+      ],
+      [
+        1588138846465802240,
+        1
+      ],
+      [
+        1588138845127819267,
+        -1
+      ],
+      [
+        1588138843827478528,
+        1
+      ],
+      [
+        1588003133766213632,
+        -1
+      ],
+      [
+        1587987931389640706,
+        1
+      ],
+      [
+        1587980405558345729,
+        1
+      ],
+      [
+        1587942665357778944,
+        1
+      ],
+      [
+        1587928863979761664,
+        -2
+      ],
+      [
+        1587912431933661185,
+        0
+      ],
+      [
+        1587897333848870913,
+        1
+      ],
+      [
+        1587884285117157376,
+        1
+      ],
+      [
+        1587859591437631490,
+        1
+      ],
+      [
+        1587849339367555072,
+        -1
+      ],
+      [
+        1587809676787417088,
+        1
+      ],
+      [
+        1587623147217588225,
+        -1
+      ],
+      [
+        1587594509344509954,
+        1
+      ],
+      [
+        1587561369469173766,
+        -1
+      ],
+      [
+        1587542496816545797,
+        -1
+      ],
       [
         1583188013651136512,
         1
@@ -10439,58 +10531,58 @@
     ],
     "topics": {
       "Joe Biden": [
-        51,
-        45,
-        15
+        76,
+        68,
+        24
       ],
       "Politics": [
-        51,
-        45,
-        15
+        78,
+        70,
+        24
       ],
       "Political figures": [
-        51,
-        45,
-        15
+        76,
+        68,
+        24
       ],
       "United States Healthcare System": [
-        8,
-        7,
-        4
+        17,
+        16,
+        5
       ],
       "Political issues": [
-        25,
-        24,
-        7
+        41,
+        40,
+        9
       ],
       "United States politics": [
-        12,
-        12,
+        20,
+        20,
         3
       ],
       "United States political issues": [
-        12,
-        12,
+        20,
+        20,
         3
       ],
       "Inflation in the United States": [
-        12,
-        12,
+        18,
+        18,
         3
       ],
       "United States Congress": [
-        6,
-        6,
-        -2
+        11,
+        11,
+        -4
       ],
       "Government institutions": [
-        6,
-        6,
-        -2
+        11,
+        11,
+        -4
       ],
       "COVID-19": [
-        1,
-        1,
+        3,
+        3,
         0
       ],
       "Reproductive Rights in the United States": [
@@ -10559,9 +10651,9 @@
         1
       ],
       "Global Economy": [
-        1,
-        0,
-        0
+        3,
+        2,
+        -1
       ],
       "Economic Issues in the United States": [
         1,
@@ -10572,9 +10664,371 @@
         1,
         1,
         1
+      ],
+      "National debt of the United States": [
+        1,
+        1,
+        -1
+      ],
+      "United States Tax Reform": [
+        1,
+        1,
+        -1
+      ],
+      "Education System in the United States": [
+        1,
+        1,
+        1
+      ],
+      "Mohamed Bin Zayed": [
+        1,
+        1,
+        1
       ]
     },
     "tweets": [
+      {
+        "length": 51,
+        "sentiment": "NONE",
+        "tID": 1588246837437218817,
+        "tText": "Two very different agendas. https://t.co/yFubRVup3P",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 236,
+        "sentiment": "P",
+        "tID": 1588218688968462337,
+        "tText": "Let\u2019s be clear about what \u201cchanges\u201d Republicans in Congress want to make to Medicare and Social Security.\n\nThey want to raise the retirement age, move towards privatization, and put these programs on the chopping block every five years.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "United States Congress",
+          "Government institutions",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 265,
+        "sentiment": "P+",
+        "tID": 1588214362124087296,
+        "tText": "Gas prices are back to levels they were at in early March.\n \nWe've responsibly released barrels from the Strategic Petroleum Reserve, announced plans to repurchase oil to get producers moving, and engaged with key oil companies and states to lower prices even more.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political issues",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "Inflation in the United States"
+        ]
+      },
+      {
+        "length": 241,
+        "sentiment": "P",
+        "tID": 1588199321568157697,
+        "tText": "I know hidden junk fees \u2013 like processing fees on concert tickets \u2013 are a pain.\n\nThey\u2019re unfair, deceptive, and add up.\n\nThat\u2019s why, last week, I called on my Administration to crack down on these fees and put that money back in your pocket.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 255,
+        "sentiment": "P+",
+        "tID": 1588191781925134338,
+        "tText": "My top priority is lowering costs for American families.\n\nThat\u2019s why I signed the Inflation Reduction Act \u2013 to lower prescription drug costs, lower health care costs, and lower energy costs.\n\nWe\u2019re giving folks more breathing room. https://t.co/LSRoC9N3Zs",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "Inflation in the United States"
+        ]
+      },
+      {
+        "length": 278,
+        "sentiment": "P",
+        "tID": 1588179746134937607,
+        "tText": "I spoke with UAE President @MohamedBinZayed about our new U.S.-UAE clean energy framework and how we will help spur $100 billion in financing to accelerate the clean energy transition.\n \nThis is one example of what our two countries can achieve together. https://t.co/L8KQOltDfT",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures",
+          "Mohamed Bin Zayed"
+        ]
+      },
+      {
+        "length": 184,
+        "sentiment": "P",
+        "tID": 1588138846465802240,
+        "tText": "We\u2019re fighting these attacks from Republican elected officials in the courts.\n\nI will never apologize for helping working- and middle-class Americans as they recover from the pandemic.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures",
+          "COVID-19"
+        ]
+      },
+      {
+        "length": 238,
+        "sentiment": "N",
+        "tID": 1588138845127819267,
+        "tText": "That\u2019s 16 million Americans, so far, who should be seeing student debt relief in the coming days.\n\nBut that relief is on hold \u2013 because Republican elected officials are doing everything they can to deny it, even to their own constituents.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political issues",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 277,
+        "sentiment": "P",
+        "tID": 1588138843827478528,
+        "tText": "Last month, I launched the application for our Administration\u2019s student debt relief.\n\nClose to 26 million Americans have already given us the information to be considered for this life-changing relief.\n\nAnd, as of this week, @usedgov will have approved 16 million applications.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political issues",
+          "Political figures",
+          "Politics",
+          "Political issues",
+          "Education System in the United States",
+          "United States politics",
+          "United States political issues"
+        ]
+      },
+      {
+        "length": 86,
+        "sentiment": "N",
+        "tID": 1588003133766213632,
+        "tText": "Head to https://t.co/jlrmakxHWm to make a plan to get your annual, updated COVID shot.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures",
+          "COVID-19"
+        ]
+      },
+      {
+        "length": 91,
+        "sentiment": "NONE",
+        "tID": 1588002936684150786,
+        "tText": "The Set Up \u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0The Shot https://t.co/o1E9TXMzMJ https://t.co/iNwjCGDbLc",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 280,
+        "sentiment": "P",
+        "tID": 1587987931389640706,
+        "tText": "If oil companies were investing their profits in their operations at historic rates, America would be producing more oil today and prices would be down even further.\n \nRather than giving Americans a break, they are sending their excess profits back to shareholders and executives.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 304,
+        "sentiment": "P",
+        "tID": 1587980405558345729,
+        "tText": "For most of the 20th century, America led the world because we invested in ourselves.\n\nOver time we stopped. Our adversaries have been closing the gap.\n\nWith our investments in infrastructure and good-paying jobs, we\u2019re regaining the momentum and taking back our competitive edge. https://t.co/So8MQBvvyO",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 236,
+        "sentiment": "P",
+        "tID": 1587942665357778944,
+        "tText": "Social Security and Medicare are more than government programs.\n\nThey\u2019re a promise we make. A promise that generations of Americans have counted on.\n\nI\u2019ll do everything in my power to protect and strengthen them. https://t.co/PLhxfSZQSU",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 201,
+        "sentiment": "N+",
+        "tID": 1587928863979761664,
+        "tText": "My Inflation Reduction Act lowers the costs of prescription drugs, health care, and energy for working- and middle-class families.\n\nRepublicans in Congress have said their top priority is to repeal it.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "United States Congress",
+          "Government institutions",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "Inflation in the United States"
+        ]
+      },
+      {
+        "length": 249,
+        "sentiment": "NEU",
+        "tID": 1587912431933661185,
+        "tText": "Altogether, my Bipartisan Infrastructure Law, Inflation Reduction Act, and CHIPS and Science Act are rebuilding our economy from the bottom up and the middle out.\n\nAn economy that creates good-paying, union jobs.\n\nAn economy that works for everyone.",
+        "topic": [
+          "Joe Biden",
+          "Global Economy",
+          "Politics",
+          "Political issues",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "Inflation in the United States"
+        ]
+      },
+      {
+        "length": 253,
+        "sentiment": "P",
+        "tID": 1587897333848870913,
+        "tText": "Back in June, we launched a nationwide Talent Pipeline Challenge to connect American workers to good-paying jobs rebuilding our infrastructure.\n\nI\u2019m proud to announce more than 350 organizations across almost every state have committed to the Challenge.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 98,
+        "sentiment": "P",
+        "tID": 1587884285117157376,
+        "tText": "Tune in as I deliver remarks on creating good-paying infrastructure jobs.  https://t.co/aLsk6fJ99u",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 151,
+        "sentiment": "P",
+        "tID": 1587859591437631490,
+        "tText": "I believe in Social Security and Medicare.\n\nI\u2019ve fought to protect them throughout my career.\n\nAnd I\u2019ll keep fighting for them. https://t.co/ppTu3m4IiZ",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 274,
+        "sentiment": "N",
+        "tID": 1587849339367555072,
+        "tText": "Congressional Republicans want to add about $3 trillion to the deficit by cutting taxes for the wealthy and large corporations.\n\nMy Administration has delivered the largest one-year drop in the deficit in American history. And, we did it while investing in working families.",
+        "topic": [
+          "Joe Biden",
+          "Global Economy",
+          "Politics",
+          "Political issues",
+          "United States Congress",
+          "Government institutions",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "National debt of the United States",
+          "Politics",
+          "Political issues",
+          "United States Tax Reform"
+        ]
+      },
+      {
+        "length": 236,
+        "sentiment": "P",
+        "tID": 1587809676787417088,
+        "tText": "Starting in January, we\u2019re capping the cost of insulin for seniors on Medicare at $35 a month.\n\nThat\u2019s more money at the end of the month to pay for groceries, to get your car repaired, to put toward holiday shopping for your grandkids.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 248,
+        "sentiment": "N",
+        "tID": 1587623147217588225,
+        "tText": "Congressional Republicans want to cut Social Security and Medicare.\n\u00a0\nThey\u2019re even saying they\u2019ll shut down the government and let America default on its debts if we won\u2019t cooperate with the cuts.\n\u00a0\nTalk about irresponsible. https://t.co/w9F4FbjLoQ",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "United States Congress",
+          "Government institutions",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 216,
+        "sentiment": "P",
+        "tID": 1587594509344509954,
+        "tText": "Some of you are on Social Security. Or your parents or grandparents are. \n\nThey earned it with every single paycheck \u2013 from the day they started working.\n\nRepublicans in Congress want to put it on the chopping block.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Congress",
+          "Government institutions",
+          "Political figures"
+        ]
+      },
+      {
+        "length": 272,
+        "sentiment": "N",
+        "tID": 1587561369469173766,
+        "tText": "Let\u2019s be crystal clear on what repealing the Inflation Reduction Act means.\n\nThe power we gave Medicare to negotiate lower prescription drug prices? Gone.\n\nThe $2,000 cap on prescription drugs for seniors? Gone.\n\nThe $35-a-month cap on insulin for folks on Medicare? Gone.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "Inflation in the United States"
+        ]
+      },
+      {
+        "length": 278,
+        "sentiment": "N",
+        "tID": 1587542496816545797,
+        "tText": "Thanks to the Inflation Reduction Act, if Big Pharma tries to raise drug prices faster than inflation, they\u2019ll have to write a check to Medicare to cover the difference.\n\nInstead of that money going to drug companies, it\u2019ll go into your pockets in the form of lower drug prices.",
+        "topic": [
+          "Joe Biden",
+          "Politics",
+          "United States Healthcare System",
+          "Political issues",
+          "Political figures",
+          "United States politics",
+          "United States political issues",
+          "Inflation in the United States"
+        ]
+      },
       {
         "length": 89,
         "sentiment": "P",
