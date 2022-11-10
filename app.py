@@ -15,6 +15,8 @@ def index():
         usr = request.form['content']
         if request.form['submit_button'] == "Find matches":
             tweetList = UI.ui(usr)
+        elif request.form['submit_button'] == "Please wait...":
+            tweetList = UI.u_click(usr)
         elif request.form['submit_button'] == "Update database":
             tweetList = UI.u_click(usr)
 

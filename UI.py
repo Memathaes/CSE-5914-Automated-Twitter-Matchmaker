@@ -9,14 +9,11 @@ import os
 from elasticsearch import Elasticsearch
 import matching
 import re
-
+ELASTIC_PASSWORD = config.elastic_pass
 
 def ui(usr):
-
-    ELASTIC_PASSWORD = config.elastic_pass
     tweetList = []
 
-    client = tweepy.Client(bearer_token=config.bearer_token)
     es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELASTIC_PASSWORD], verify_certs=False)
 
     pattern = re.compile("^[a-zA-Z0-9_]{1,15}$")
@@ -48,40 +45,37 @@ def ui(usr):
 
 
 def u_click(usr):
-    client = tweepy.Client(bearer_token=config.bearer_token)
     tweetList = []
+    es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELASTIC_PASSWORD], verify_certs=False)
+    client = tweepy.Client(bearer_token=config.bearer_token)
 
-    fileName = "testDataBoogaloo.json"
-    if os.path.getsize(fileName) != 0:
-        with open(fileName) as infile:
-            Profiles = json.load(infile)
-    else:
-        Profiles = {}
+    pattern = re.compile("^[a-zA-Z0-9_]{1,15}$")
+    regex = pattern.match(usr)
 
-    if usr.lower() in Profiles.keys():
-        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(
-            usr, 25, client)
-    else:
-        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(
-            usr, 50, client)
+    if regex is None:
+        print("aaaaaaaaaaa")
+        tweetList.append("Your username doesn't match twitter username format!")
+        return tweetList
 
-    if len(yourTweets) > 0:
-        if usr.lower() in Profiles.keys():
+    usr = usr.lower()
+    if es.exists(index="profiles", id=usr):
+        user = es.get(index="profiles", id=usr)
+        Profile = jsons.load(user['_source'], profile.Profile)
+        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,25,client)
+        if len(yourTweets) > 0:
             tweetList.append("Updating your profile! This may take awhile...")
-
-            Profiles[usr.lower()] = DataGetter.TwitterDataGetter.updateProfile(
-                Profiles[usr.lower()], yourTweets)
-            tweetList.append(
-                "Your profile has been updated! You may now press \"Find Matches\"!")
+            Profile = DataGetter.TwitterDataGetter.updateProfile(Profile, yourTweets)
+            tweetList.append("Your profile has been updated! You may now press \"Find Matches\"!")
         else:
-            tweetList.append("Creating your profile! This may take awhile...")
-            Profiles[usr.lower()] = DataGetter.TwitterDataGetter.generateProfile(
-                usr.lower(), yourTweets)
-            tweetList.append(
-                "Your profile has been created! You may now press \"Find Matches\"!")
-        with open(fileName, "w") as outfile:
-            json.dump(jsons.dump(Profiles), outfile, indent=2)
+            tweetList.append("No tweets were found! Are you sure you entered the right username?")
     else:
-        tweetList.append(
-            "No tweets were found! Are you sure you entered the right username?")
+        yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,50,client)
+        if len(yourTweets) > 0:
+            tweetList.append("Creating your profile! This may take awhile...")
+            Profile = DataGetter.TwitterDataGetter.generateProfile(usr, yourTweets)
+            tweetList.append("Your profile has been created! You may now press \"Find Matches\"!")
+        else:
+            tweetList.append("No tweets were found! Are you sure you entered the right username?")
+    
+    es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
     return tweetList
