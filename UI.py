@@ -61,27 +61,16 @@ def main():
         if es.exists(index="profiles", id=usr):
             user = es.get(index="profiles", id=usr)
             yourProfile = jsons.load(user['_source'], profile.Profile)
-            yourPositivity = yourProfile.positivity
-            yourTopics = yourProfile.topics
-
-            Profiles = {}
-            resp = es.search(index="profiles", query={"match_all": {}}, size=10000)
-            for person in resp['hits']['hits']:
-                Profiles[person['_source']['username']] = person['_source']
             
-            matchesmade = matching.simple(yourPositivity, yourTopics, Profiles, usr)
+            matchesmade = matching.magic(yourProfile, es)
             count = 0
-            tweetList.insert(tk.END,"Your Topics: " + str(list(yourTopics.keys())))
-            tweetList.insert(tk.END,"Your Positivity: " + str(round(yourPositivity,3)))
+            tweetList.insert(tk.END,"Your Handle: " + yourProfile.username)
             tweetList.insert(tk.END,"")
-            for match in matchesmade[0]:
+            for match in matchesmade:
                 if count == numberofmatches:
                     break
                 tweetList.insert(tk.END,"Twitter handle: " + str(match))
-                tweetList.insert(tk.END,"Your Shared Topics: " + str(matchesmade[0][match]))
-                tweetList.insert(tk.END,"Shared Topic Count: " + str(len(matchesmade[0][match])))
-                tweetList.insert(tk.END,"Their Positivity: " + str(round(matchesmade[1][match],3)))
-                tweetList.insert(tk.END,"Proximity to your Positivity: " + str(round(matchesmade[1][match] - yourPositivity,3)))
+                tweetList.insert(tk.END,"Your Compatibility Score: " + str(matchesmade[match][1]))
                 tweetList.insert(tk.END,"")
                 count +=1
         else:
