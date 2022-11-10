@@ -57,7 +57,8 @@ def main():
         else:
             tweetList.insert(tk.END,"Your input for number of matches is not a number!")
             return
-            
+        
+        usr = usr.lower()
         if es.exists(index="profiles", id=usr):
             user = es.get(index="profiles", id=usr)
             yourProfile = jsons.load(user['_source'], profile.Profile)
