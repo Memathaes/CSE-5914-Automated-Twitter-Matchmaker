@@ -107,7 +107,7 @@ def main():
             else:
                 tweetList.insert(tk.END,"No tweets were found! Are you sure you entered the right username?")
         
-        resp = es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
+        es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
 
     enter = tk.Button(
         text="Find Matches",
