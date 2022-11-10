@@ -58,6 +58,7 @@ def main():
 
             sharedTopics = {}
             posDict = {}
+            resp = es.search(index="profiles", query={"match_all": {}}, size=10000)
             for potentialMatch in Profiles:
                 if potentialMatch.lower() != usr.lower():
                     theirProfile = Profiles[potentialMatch]

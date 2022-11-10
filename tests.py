@@ -1,6 +1,6 @@
 import profile
 import os
-import json
+import json, jsons
 
 def serialization():
     fileName = "testDataBoogaloo.json"
@@ -9,7 +9,7 @@ def serialization():
         with open(fileName) as infile:
             Profiles = json.load(infile)
     for prof in Profiles:
-        Profiles[prof] = profile.from_json(Profiles[prof])
+        Profiles[prof] = jsons.load(Profiles[prof], profile.Profile)
     
     return Profiles['halsey']
 
