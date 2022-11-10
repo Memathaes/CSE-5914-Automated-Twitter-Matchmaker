@@ -47,7 +47,7 @@ def main():
         pattern = re.compile("^[a-zA-Z0-9_]{1,15}$")
         regex = pattern.match(usr)
 
-        if regex == None:
+        if regex is None:
             tweetList.insert(tk.END,"Your username doesn't match twitter username format!")
             return
             
@@ -84,7 +84,7 @@ def main():
         pattern = re.compile("^[a-zA-Z0-9_]{1,15}$")
         regex = pattern.match(usr)
 
-        if regex == None:
+        if regex is None:
             tweetList.insert(tk.END,"Your username doesn't match twitter username format!")
             return
 
