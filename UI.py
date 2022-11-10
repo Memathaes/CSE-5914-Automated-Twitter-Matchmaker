@@ -5,6 +5,7 @@ import meaningcloud
 import profile
 import json, jsons, os
 from elasticsearch import Elasticsearch
+import matching
 
 
 def main():
@@ -56,33 +57,24 @@ def main():
             yourPositivity = yourProfile.positivity
             yourTopics = yourProfile.topics
 
-            sharedTopics = {}
-            posDict = {}
+            Profiles = {}
             resp = es.search(index="profiles", query={"match_all": {}}, size=10000)
-            for potentialMatch in Profiles:
-                if potentialMatch.lower() != usr.lower():
-                    theirProfile = Profiles[potentialMatch]
-                    theirPositivity = theirProfile['positivity']
-                    theirTopics = theirProfile['topics']
-
-                    sharedTopics[potentialMatch] = []
-                    posDict[potentialMatch] = theirPositivity
-                    for topic in theirTopics:
-                        if topic in yourTopics.keys():
-                            sharedTopics[potentialMatch].append(topic)
-            matchesmade = dict(sorted(sharedTopics.items(), key=lambda item: (abs(len(item[1])),3 - abs(yourPositivity - posDict[item[0]])),reverse=True))
+            for person in resp['hits']['hits']:
+                Profiles[person['_source']['username']] = person['_source']
+            
+            matchesmade = matching.simple(yourPositivity, yourTopics, Profiles, usr)
             count = 0
             tweetList.insert(tk.END,"Your Topics: " + str(list(yourTopics.keys())))
             tweetList.insert(tk.END,"Your Positivity: " + str(round(yourPositivity,3)))
             tweetList.insert(tk.END,"")
-            for match in matchesmade:
+            for match in matchesmade[0]:
                 if count == numberofmatches:
                     break
                 tweetList.insert(tk.END,"Twitter handle: " + str(match))
-                tweetList.insert(tk.END,"Your Shared Topics: " + str(matchesmade[match]))
-                tweetList.insert(tk.END,"Shared Topic Count: " + str(len(matchesmade[match])))
-                tweetList.insert(tk.END,"Their Positivity: " + str(round(posDict[match],3)))
-                tweetList.insert(tk.END,"Proximity to your Positivity: " + str(round(posDict[match] - yourPositivity,3)))
+                tweetList.insert(tk.END,"Your Shared Topics: " + str(matchesmade[0][match]))
+                tweetList.insert(tk.END,"Shared Topic Count: " + str(len(matchesmade[0][match])))
+                tweetList.insert(tk.END,"Their Positivity: " + str(round(matchesmade[1][match],3)))
+                tweetList.insert(tk.END,"Proximity to your Positivity: " + str(round(matchesmade[1][match] - yourPositivity,3)))
                 tweetList.insert(tk.END,"")
                 count +=1
         else:

@@ -12,6 +12,6 @@ es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELA
 resp = es.search(index="profiles", query={"match_all": {}}, size=10000)
 print("Got " + str(resp['hits']['total']['value']) + " hits")
 
+print (resp['hits']['hits'][0]['_source'])
 for usr in resp['hits']['hits']:
     print(usr['_source']['username'])
-    
