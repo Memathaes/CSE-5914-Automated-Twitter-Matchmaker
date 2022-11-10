@@ -1,5 +1,3 @@
-from os import stat
-
 class Tweetws:
     def __init__(self, tID, tText, length, sentiment, topic):
         self.tID = tID
