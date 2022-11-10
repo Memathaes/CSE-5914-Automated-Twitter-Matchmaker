@@ -6,65 +6,44 @@ import profile
 import json
 import jsons
 import os
+from elasticsearch import Elasticsearch
+import matching
+import re
 
 
 def ui(usr):
 
-    #client = tweepy.Client(bearer_token=config.bearer_token)
+    ELASTIC_PASSWORD = config.elastic_pass
     tweetList = []
 
-    fileName = "testDataBoogaloo.json"
-    if os.path.getsize(fileName) != 0:
-        with open(fileName) as infile:
-            Profiles = json.load(infile)
-    else:
-        Profiles = {}
+    client = tweepy.Client(bearer_token=config.bearer_token)
+    es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELASTIC_PASSWORD], verify_certs=False)
+
+    pattern = re.compile("^[a-zA-Z0-9_]{1,15}$")
+    regex = pattern.match(usr)
+    if regex is None:
+        tweetList.append("Your username doesn't match twitter username format!")
+        return tweetList
 
     numberofmatches = 10
-
-    if usr.lower() in Profiles.keys():
-        yourProfile = Profiles[usr.lower()]
-        yourPositivity = yourProfile['positivity']
-        yourTopics = yourProfile['topics']
-
-        sharedTopics = {}
-        posDict = {}
-        for potentialMatch in Profiles:
-            if potentialMatch != usr:
-                theirProfile = Profiles[potentialMatch]
-                theirPositivity = theirProfile['positivity']
-                theirTopics = theirProfile['topics']
-
-                sharedTopics[potentialMatch] = []
-                posDict[potentialMatch] = theirPositivity
-                for topic in theirTopics:
-                    if topic in yourTopics.keys():
-                        sharedTopics[potentialMatch].append(topic)
-        matchesmade = dict(sorted(sharedTopics.items(), key=lambda item: (
-            abs(len(item[1])), 3 - abs(yourPositivity - posDict[item[0]])), reverse=True))
+    usr = usr.lower()
+    if es.exists(index="profiles", id=usr):
+        user = es.get(index="profiles", id=usr)
+        yourProfile = jsons.load(user['_source'], profile.Profile)
+        
+        matchesmade = matching.magic(yourProfile, es)
         count = 0
-        tweetList.append("Your Topics: " +
-                         str(list(yourTopics.keys())))
-        tweetList.append("Your Positivity: " +
-                         str(round(yourPositivity, 3)))
+        tweetList.append("Your Handle: " + yourProfile.username)
         tweetList.append("")
         for match in matchesmade:
             if count == numberofmatches:
                 break
             tweetList.append("Twitter handle: " + str(match))
-            tweetList.append("Your Shared Topics: " + str(matchesmade[match]))
-            tweetList.append("Shared Topic Count: " +
-                             str(len(matchesmade[match])))
-            tweetList.append("Their Positivity: " +
-                             str(round(posDict[match], 3)))
-            tweetList.append("Proximity to your Positivity: " +
-                             str(round(posDict[match] - yourPositivity, 3)))
+            tweetList.append("Your Compatibility Score: " + str(matchesmade[match][1]))
             tweetList.append("")
-            count += 1
-
+            count +=1
     else:
-        tweetList.append(
-            "Your twitter handle isn't in our database yet! Press \"Create/Update Profile\" to add yourself to it!")
+        tweetList.append("Your twitter handle isn't in our database yet! Press \"Create/Update Profile\" to add yourself to it!")
     return tweetList
 
 
