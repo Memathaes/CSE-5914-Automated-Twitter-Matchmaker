@@ -9,7 +9,7 @@ def serialization():
         with open(fileName) as infile:
             Profiles = json.load(infile)
     for prof in Profiles:
-        Profiles[prof] = jsons.load(Profiles[prof], profile.Profile)
+        Profiles[prof] = jsons.load(Profiles[prof],profile.Profile)
     
     return Profiles['halsey']
 
