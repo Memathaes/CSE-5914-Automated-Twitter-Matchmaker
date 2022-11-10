@@ -17,4 +17,10 @@ def magic(yourProfile, es):
                     Profiles[otherUser][1] -= reduction
                 else:
                     Profiles[otherUser][1] -= 1
-    return dict(sorted(Profiles.items(), key=lambda item: item[1][1], reverse= True))
+    scoredDict = dict(sorted(Profiles.items(), key=lambda item: item[1][1], reverse= True))
+    maxScore = 0
+    for person in scoredDict:
+        if maxScore == 0:
+            maxScore = scoredDict[person][1]
+        scoredDict[person][1] /= maxScore
+    return scoredDict

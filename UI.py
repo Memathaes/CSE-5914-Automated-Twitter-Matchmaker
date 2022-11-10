@@ -40,7 +40,7 @@ def ui(usr):
             tweetList.append("")
             count +=1
     else:
-        tweetList.append("Your twitter handle isn't in our database yet! Press \"Create/Update Profile\" to add yourself to it!")
+        tweetList.append("Your twitter handle isn't in our database yet!")
     return tweetList
 
 
@@ -63,19 +63,17 @@ def u_click(usr):
         Profile = jsons.load(user['_source'], profile.Profile)
         yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,25,client)
         if len(yourTweets) > 0:
-            tweetList.append("Updating your profile! This may take awhile...")
             Profile = DataGetter.TwitterDataGetter.updateProfile(Profile, yourTweets)
-            tweetList.append("Your profile has been updated! You may now press \"Find Matches\"!")
+            tweetList.append("Your profile has been updated!")
+            es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
         else:
             tweetList.append("No tweets were found! Are you sure you entered the right username?")
     else:
         yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,50,client)
         if len(yourTweets) > 0:
-            tweetList.append("Creating your profile! This may take awhile...")
             Profile = DataGetter.TwitterDataGetter.generateProfile(usr, yourTweets)
-            tweetList.append("Your profile has been created! You may now press \"Find Matches\"!")
+            tweetList.append("Your profile has been created!")
+            es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
         else:
             tweetList.append("No tweets were found! Are you sure you entered the right username?")
-    
-    es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
     return tweetList
