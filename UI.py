@@ -6,6 +6,7 @@ import profile
 import json, jsons, os
 from elasticsearch import Elasticsearch
 import matching
+import re
 
 
 def main():
@@ -43,12 +44,18 @@ def main():
         es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELASTIC_PASSWORD], verify_certs=False)
 
         usr = e.get()
-        numInput = output.get()
+        pattern = re.compile("^[a-zA-Z0-9_]{1,15}$")
+        regex = pattern.match(usr)
 
+        if regex == None:
+            tweetList.insert(tk.END,"Your username doesn't match twitter username format!")
+            return
+            
+        numInput = output.get()
         if numInput.isnumeric():
             numberofmatches = int(numInput)
         else:
-            tweetList.insert(tk.END,"Invalid number of matches inputted!")
+            tweetList.insert(tk.END,"Your input for number of matches is not a number!")
             return
             
         if es.exists(index="profiles", id=usr):
@@ -85,6 +92,13 @@ def main():
         es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELASTIC_PASSWORD], verify_certs=False)
 
         usr = e.get()
+        pattern = re.compile("^[a-zA-Z0-9_]{1,15}$")
+        regex = pattern.match(usr)
+
+        if regex == None:
+            tweetList.insert(tk.END,"Your username doesn't match twitter username format!")
+            return
+
         usr = usr.lower()
         if es.exists(index="profiles", id=usr):
             user = es.get(index="profiles", id=usr)
