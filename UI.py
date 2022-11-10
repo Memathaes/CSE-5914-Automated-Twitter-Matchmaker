@@ -16,7 +16,7 @@ def main():
 
     getdata = input("yes to add/update profiles: ")
     if getdata == "yes":
-        DataGetter.TwitterDataGetter.get_data(50,client,es)
+        DataGetter.TwitterDataGetter.get_data(client,es)
 
     window = tk.Tk()
 
@@ -36,15 +36,10 @@ def main():
 
     tweetList = tk.Listbox(width=150, height=30)
 
-    def e_click(es):
+    def e_click():
         tweetList.delete(0,tk.END)
 
-        fileName = "testDataBoogaloo.json"
-        if os.path.getsize(fileName) != 0:
-            with open(fileName) as infile:
-                Profiles = json.load(infile)
-        else:
-            Profiles = {}
+        es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELASTIC_PASSWORD], verify_certs=False)
 
         usr = e.get()
         numInput = output.get()
@@ -55,10 +50,11 @@ def main():
             tweetList.insert(tk.END,"Invalid number of matches inputted!")
             return
             
-        if usr.lower() in Profiles.keys():
-            yourProfile = Profiles[usr.lower()]
-            yourPositivity = yourProfile['positivity']
-            yourTopics = yourProfile['topics']
+        if es.exists(index="profiles", id=usr):
+            user = es.get(index="profiles", id=usr)
+            yourProfile = jsons.load(user['_source'], profile.Profile)
+            yourPositivity = yourProfile.positivity
+            yourTopics = yourProfile.topics
 
             sharedTopics = {}
             posDict = {}
@@ -91,41 +87,38 @@ def main():
         else:
             tweetList.insert(tk.END,"Your twitter handle isn't in our database yet! Press \"Create/Update Profile\" to add yourself to it!")
     
-    def u_click(es):
+    def u_click():
         tweetList.delete(0,tk.END)
-
-        fileName = "testDataBoogaloo.json"
-        if os.path.getsize(fileName) != 0:
-            with open(fileName) as infile:
-                Profiles = json.load(infile)
-        else:
-            Profiles = {}
+        es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELASTIC_PASSWORD], verify_certs=False)
 
         usr = e.get()
-        if usr.lower() in Profiles.keys():
+        usr = usr.lower()
+        if es.exists(index="profiles", id=usr):
+            user = es.get(index="profiles", id=usr)
+            Profile = jsons.load(user['_source'], profile.Profile)
             yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,25,client)
-        else:
-            yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,50,client)
-
-        if len(yourTweets) > 0:
-            if usr.lower() in Profiles.keys():
+            if len(yourTweets) > 0:
                 tweetList.insert(tk.END,"Updating your profile! This may take awhile...")
                 window.update()
-                Profiles[usr.lower()] = DataGetter.TwitterDataGetter.updateProfile(Profiles[usr.lower()], yourTweets)
+                Profile = DataGetter.TwitterDataGetter.updateProfile(Profile, yourTweets)
                 tweetList.insert(tk.END,"Your profile has been updated! You may now press \"Find Matches\"!")
             else:
+                tweetList.insert(tk.END,"No tweets were found! Are you sure you entered the right username?")
+        else:
+            yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,50,client)
+            if len(yourTweets) > 0:
                 tweetList.insert(tk.END,"Creating your profile! This may take awhile...")
                 window.update()
-                Profiles[usr.lower()] = DataGetter.TwitterDataGetter.generateProfile(usr.lower(), yourTweets)
+                Profile = DataGetter.TwitterDataGetter.generateProfile(usr, yourTweets)
                 tweetList.insert(tk.END,"Your profile has been created! You may now press \"Find Matches\"!")
-            with open(fileName, "w") as outfile:
-                json.dump(jsons.dump(Profiles),outfile,indent=2)
-        else:
-            tweetList.insert(tk.END,"No tweets were found! Are you sure you entered the right username?")
+            else:
+                tweetList.insert(tk.END,"No tweets were found! Are you sure you entered the right username?")
+        
+        resp = es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
 
     enter = tk.Button(
         text="Find Matches",
-        command = e_click(es),
+        command = lambda: e_click(),
         width=25,
         height=2,
         bg="white",
@@ -134,7 +127,7 @@ def main():
 
     update = tk.Button(
         text="Create/Update Profile",
-        command = u_click(es),
+        command = lambda: u_click(),
         width=25,
         height=2,
         bg="white",

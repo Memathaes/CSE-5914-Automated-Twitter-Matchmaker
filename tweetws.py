@@ -1,9 +1,9 @@
 from os import stat
 
 class Tweetws:
-    def __init__(self, tID, tweetText, length, sentiment, topic):
+    def __init__(self, tID, tText, length, sentiment, topic):
         self.tID = tID
-        self.tweetText = tweetText
+        self.tText = tText
         self.length = length
         self.sentiment = sentiment
         self.topic = topic

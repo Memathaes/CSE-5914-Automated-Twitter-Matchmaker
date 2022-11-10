@@ -8,11 +8,3 @@ class Profile:
         self.avglen = avglen
         self.positivity = positivity
         self.topics = topics
-    
-def from_json(d):
-    tempProf = Profile(d['username'], d['tweets'], d['sntmntTweets'], d['avglen'], d['positivity'], d['topics'])
-    i = 0
-    for tweet in tempProf.tweets:
-        tempProf.tweets[i] = tweetws.from_json(tweet)
-        i += 1
-    return tempProf
