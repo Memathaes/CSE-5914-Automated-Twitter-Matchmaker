@@ -16,10 +16,10 @@ def index():
         if request.form['submit_button'] == "Find matches":
             tweetList = UI.ui(usr)
             return render_template('matches.html', words=tweetList)
-        elif request.form['submit_button'] == "Please wait...":
+        if request.form['submit_button'] == "Please wait...":
             tweetList = UI.u_click(usr)
             return render_template('update.html', words=tweetList)
-        elif request.form['submit_button'] == "Update database":
+        if request.form['submit_button'] == "Update database":
             tweetList = UI.u_click(usr)
             return render_template('update.html', words=tweetList)
 
