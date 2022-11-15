@@ -1,3 +1,5 @@
+import tweetws
+
 class Profile:
     def __init__(self, username, tweets, sntmntTweets, avglen, positivity, topics):
         self.username = username

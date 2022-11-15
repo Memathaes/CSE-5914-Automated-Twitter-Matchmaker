@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class = "content">
+    <h1>Automated Twitter Matchmaker</h1>
+    <h3><s>Automated Twitter Matchmaker Blue available for $8/month</s></h3>
+    <p>Please enter your Twitter handle: </p>
+    <form action="/", method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" name="submit_button" value="Find matches">
+        <input id="updatebutton" type="submit" name="submit_button" value="Update database" onclick="return showloading();">
+    </form>
+    <script>
+    function showloading() {
+        var button= document.getElementById('updatebutton');
+        button.value = 'Please wait...';
+    }
+    </script>
+</div>
+{% endblock %}
