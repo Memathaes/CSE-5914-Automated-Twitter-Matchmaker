@@ -11,6 +11,7 @@ import matching
 import re
 ELASTIC_PASSWORD = config.elastic_pass
 
+#find matches button
 def ui(usr):
     tweetList = []
 
@@ -43,7 +44,7 @@ def ui(usr):
         tweetList.append("Your twitter handle isn't in our database yet!")
     return tweetList
 
-
+#update database button
 def u_click(usr):
     tweetList = []
     es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELASTIC_PASSWORD], verify_certs=False)

@@ -22,5 +22,9 @@ def index():
         if request.form['submit_button'] == "Update database":
             tweetList = UI.u_click(usr)
             return render_template('update.html', words=tweetList)
+        if request.form['submit_button'] == "Find contradictions":
+            #tweetList = UI.ui(usr)
+            return render_template('flipflop.html', words=['hi'])#tweetList)
+        
 
     return render_template('index.html')
