@@ -16,18 +16,18 @@ def serialization():
 def test_serialization():
     halsey_topics = {
       "Halsey": [
-        51,
-        36,
+        50,
+        35,
         32
       ],
       "Pop": [
-        51,
-        36,
+        50,
+        35,
         32
       ],
       "Music": [
-        51,
-        36,
+        50,
+        35,
         32
       ],
       "Entertainment": [
@@ -173,10 +173,6 @@ def test_serialization():
     }
     halsey_stwts = [
       [
-        1584967048949829632,
-        0
-      ],
-      [
         1577731519115763713,
         1
       ],
@@ -318,17 +314,6 @@ def test_serialization():
       ]
     ]
     halsey_twts = [
-      {
-        "length": 68,
-        "sentiment": "NEU",
-        "tID": 1584967048949829632,
-        "tText": "sharing my vibes as of late. love u miss u \ud83e\udd0d https://t.co/HVEJk0Iefm",
-        "topic": [
-          "Halsey",
-          "Pop",
-          "Music"
-        ]
-      },
       {
         "length": 66,
         "sentiment": "NONE",
@@ -914,7 +899,7 @@ def test_serialization():
         ]
       }
     ]
-    halseyprof = userProfile.UserProfile("halsey",halsey_twts,halsey_stwts,132.2156862745098,0.8888888888888888,halsey_topics)
+    halseyprof = userProfile.UserProfile("halsey",halsey_twts,halsey_stwts,133.5,0.9142857142857143,halsey_topics)
     serializedProf = serialization()
     assert halseyprof.username == serializedProf.username
     
