@@ -1,7 +1,7 @@
 import tweetws
 
-class Profile:
-    def __init__(self, username, tweets, sntmntTweets, avglen, positivity, topics):
+class UserProfile:
+    def __init__(self, username, tweets:list[tweetws.Tweetws], sntmntTweets, avglen, positivity, topics):
         self.username = username
         self.tweets = tweets
         self.sntmntTweets = sntmntTweets

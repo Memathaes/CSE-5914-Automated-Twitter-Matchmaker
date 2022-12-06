@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from encodings import utf_8
 import tweepy, csv, json, jsons, datetime, time, config, os
-import profile, tweetws
+import userProfile, tweetws
 import meaningcloud as mc
 
 class TwitterDataGetter:
@@ -18,12 +18,12 @@ class TwitterDataGetter:
             return tweets
 
         Id = apireq.data.id
-        results = client.get_users_tweets(id=Id,max_results = numberoftweets, exclude = "retweets,replies",start_time = previousRetrieval,tweet_fields = "context_annotations")
+        results = client.get_users_tweets(id=Id,max_results = numberoftweets, exclude = "retweets,replies",start_time = previousRetrieval,tweet_fields = ["context_annotations","created_at"])
         
         tweets = []
         if results.meta["result_count"] != 0:
             for tweet in results.data:
-                tweets.insert(0,[tweet.id, tweet.text, tweet.context_annotations])
+                tweets.insert(0,[tweet.id, tweet.text, tweet.context_annotations,tweet.created_at])
         return tweets
     
     @staticmethod
@@ -31,7 +31,7 @@ class TwitterDataGetter:
         Profile.avglen = Profile.avglen * len(Profile.tweets)
         Profile.positivity = Profile.positivity * len(Profile.sntmntTweets)
 
-        latestID = Profile.tweets[0]['tID']
+        latestID = Profile.tweets[0].tID
 
         for tweet in newTweets:
             if tweet[0] > latestID:
@@ -61,7 +61,7 @@ class TwitterDataGetter:
                         if not topic['entity']['name'] in Profile.topics.keys():
                             Profile.topics[topic['entity']['name']] = [0,0,0]
                 
-                Profile.tweets.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),score,theseTopics))
+                Profile.tweets.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),score,theseTopics,tweet[3]))
                 
                 for elem in theseTopics:
                     Profile.topics[elem][0] += 1
@@ -110,7 +110,7 @@ class TwitterDataGetter:
                     if not topic['entity']['name'] in topics.keys():
                         topics[topic['entity']['name']] = [0,0,0]
             
-            tweetsWithData.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),score,theseTopics))
+            tweetsWithData.insert(0,tweetws.Tweetws(tweet[0],tweet[1],len(tweet[1]),score,theseTopics,tweet[3]))
 
             for elem in theseTopics:
                 topics[elem][0] += 1
@@ -122,7 +122,7 @@ class TwitterDataGetter:
         if len(sentimentedTweets) != 0:
             sentimentScore = sentimentScore / len(sentimentedTweets)
 
-        return profile.Profile(username,tweetsWithData,sentimentedTweets,avglen,sentimentScore,topics)
+        return userProfile.UserProfile(username,tweetsWithData,sentimentedTweets,avglen,sentimentScore,topics)
     
     @staticmethod
     def get_data(client,es):
@@ -142,9 +142,9 @@ class TwitterDataGetter:
         for date in dates:
             usr = date.lower()
             print("Getting " + usr)
-            if es.exists(index="profiles", id=usr):
-                user = es.get(index="profiles", id=usr)
-                Profile = jsons.load(user['_source'], profile.Profile)
+            if es.exists(index="profiles4", id=usr):
+                user = es.get(index="profiles4", id=usr)
+                Profile = jsons.load(user['_source'], userProfile.UserProfile)
                 yourTweets = TwitterDataGetter.get_users_tweets(usr,25,client)
                 if len(yourTweets) > 0:
                     print("Creating " + usr)
@@ -154,5 +154,5 @@ class TwitterDataGetter:
                 if len(yourTweets) > 0:
                     print("Creating " + usr)
                     Profile = TwitterDataGetter.generateProfile(usr, yourTweets)
-            resp = es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
+            resp = es.index(index="profiles4", id=usr, document=jsons.dumps(Profile))
             print(resp)

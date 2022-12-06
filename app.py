@@ -23,8 +23,8 @@ def index():
             tweetList = UI.u_click(usr)
             return render_template('update.html', words=tweetList)
         if request.form['submit_button'] == "Find contradictions":
-            #tweetList = UI.ui(usr)
-            return render_template('flipflop.html', words=['hi'])#tweetList)
+            tweetList = UI.flipper(usr)
+            return render_template('flipflop.html', words=tweetList)
         
 
     return render_template('index.html')

@@ -1,10 +1,10 @@
-class Tweetws:
-    def __init__(self, tID, tweetText, length, sent, topic):
-        self.tID = tID
-        self.tText = tweetText
-        self.length = length
-        self.sentiment = sent
-        self.topic = topic
+import datetime
 
-def from_json(t):
-    return Tweetws(t['tID'], t['tText'], t['length'], t['sentiment'], t['topic'])
+class Tweetws:
+    def __init__(self, tID, tText, length, sentiment, topic, time:datetime.datetime):
+        self.tID = tID
+        self.tText = tText
+        self.length = length
+        self.sentiment = sentiment
+        self.topic = topic
+        self.time = time
