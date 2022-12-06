@@ -2,7 +2,7 @@ import tweepy
 import config
 import DataGetter
 import meaningcloud
-import profile
+import userProfile
 import json
 import jsons
 import os
@@ -24,9 +24,9 @@ def ui(usr):
 
     numberofmatches = 10
     usr = usr.lower()
-    if es.exists(index="profiles", id=usr):
-        user = es.get(index="profiles", id=usr)
-        yourProfile = jsons.load(user['_source'], profile.Profile)
+    if es.exists(index="profiles4", id=usr):
+        user = es.get(index="profiles4", id=usr)
+        yourProfile = jsons.load(user['_source'], userProfile.UserProfile)
         
         matchesmade = matching.magic(yourProfile, es)
         count = 0
@@ -58,14 +58,14 @@ def u_click(usr):
         return tweetList
 
     usr = usr.lower()
-    if es.exists(index="profiles", id=usr):
-        user = es.get(index="profiles", id=usr)
-        Profile = jsons.load(user['_source'], profile.Profile)
+    if es.exists(index="profiles4", id=usr):
+        user = es.get(index="profiles4", id=usr)
+        Profile = jsons.load(user['_source'], userProfile.UserProfile)
         yourTweets = DataGetter.TwitterDataGetter.get_users_tweets(usr,25,client)
         if len(yourTweets) > 0:
             Profile = DataGetter.TwitterDataGetter.updateProfile(Profile, yourTweets)
             tweetList.append("Your profile has been updated!")
-            es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
+            es.index(index="profiles4", id=usr, document=jsons.dumps(Profile))
         else:
             tweetList.append("No tweets were found! Are you sure you entered the right username?")
     else:
@@ -73,7 +73,7 @@ def u_click(usr):
         if len(yourTweets) > 0:
             Profile = DataGetter.TwitterDataGetter.generateProfile(usr, yourTweets)
             tweetList.append("Your profile has been created!")
-            es.index(index="profiles", id=usr, document=jsons.dumps(Profile))
+            es.index(index="profiles4", id=usr, document=jsons.dumps(Profile))
         else:
             tweetList.append("No tweets were found! Are you sure you entered the right username?")
     return tweetList

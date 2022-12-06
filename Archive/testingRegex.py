@@ -1,4 +1,4 @@
-import profile
+import userProfile
 import tweetws
 import os
 import json
@@ -12,20 +12,20 @@ es = Elasticsearch(hosts = 'https://localhost:9200' , basic_auth=["elastic", ELA
 
 # topic = "Halsey"
 # field_str = "topics." + topic
-# resp = es.search(index="profiles", query={"exists": {"field": field_str}}, size=10000)
+# resp = es.search(index="profiles4", query={"exists": {"field": field_str}}, size=10000)
 # print("Got %d Hits:" % resp['hits']['total']['value'])
 
 # for hit in resp['hits']['hits']:
 #     print(hit["_source"]['username'])
 
-user = es.get(index="profiles", id="potus")
-yourProfile = jsons.load(user['_source'], profile.Profile)
+user = es.get(index="profiles4", id="potus")
+yourProfile = jsons.load(user['_source'], userProfile.UserProfile)
 yourTopics = yourProfile.topics
 
 Profiles = {}
 for topic in yourTopics:
     field_str = "topics." + topic
-    resp = es.search(index="profiles", query={"exists": {"field": field_str}}, size=10000)
+    resp = es.search(index="profiles4", query={"exists": {"field": field_str}}, size=10000)
     for person in resp['hits']['hits']:
         otherUser = person['_source']['username']
         if otherUser != yourProfile.username:
@@ -51,4 +51,4 @@ for prof in newdict:
 #     pattern = re.compile("^[a-zA-Z0-9_]{1,15}$")
 #     regex = pattern.match(naughtystring)
 #     if regex != None:
-#         print(es.exists(index="profiles", id=naughtystring))
+#         print(es.exists(index="profiles4", id=naughtystring))

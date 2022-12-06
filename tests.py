@@ -1,4 +1,4 @@
-import profile
+import userProfile
 import os
 import json, jsons
 
@@ -9,7 +9,7 @@ def serialization():
         with open(fileName) as infile:
             Profiles = json.load(infile)
     for prof in Profiles:
-        Profiles[prof] = jsons.load(Profiles[prof],profile.Profile)
+        Profiles[prof] = jsons.load(Profiles[prof],userProfile.UserProfile)
     
     return Profiles['halsey']
 
@@ -914,7 +914,7 @@ def test_serialization():
         ]
       }
     ]
-    halseyprof = profile.Profile("halsey",halsey_twts,halsey_stwts,132.2156862745098,0.8888888888888888,halsey_topics)
+    halseyprof = userProfile.UserProfile("halsey",halsey_twts,halsey_stwts,132.2156862745098,0.8888888888888888,halsey_topics)
     serializedProf = serialization()
     assert halseyprof.username == serializedProf.username
     

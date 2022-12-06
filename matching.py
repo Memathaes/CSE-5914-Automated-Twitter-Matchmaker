@@ -4,7 +4,7 @@ def magic(yourProfile, es):
     Profiles = {}
     for topic in yourTopics:
         field_str = "topics." + topic
-        resp = es.search(index="profiles", query={"exists": {"field": field_str}}, size=10000)
+        resp = es.search(index="profiles4", query={"exists": {"field": field_str}}, size=10000)
         for person in resp['hits']['hits']:
             otherUser = person['_source']['username']
             if otherUser != yourProfile.username:
